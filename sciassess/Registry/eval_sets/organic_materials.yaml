@@ -1,0 +1,9 @@
+organic_materials:
+  evals:
+    - solubility_data_extraction
+    - oled_property_extraction
+    - polymer_property_extraction
+    - polymer_composition_extraction
+    - polymer_chart_qa
+    - electrolyte_table_qa
+    - reaction_mechanism_qa

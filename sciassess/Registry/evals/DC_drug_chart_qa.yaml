@@ -1,0 +1,9 @@
+drug_chart_qa:
+  id: drug_chart_qa.dev.v0
+  metrics: [accuracy]
+
+drug_chart_qa.dev.v0:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: DC_drug_chart_qa/samples.jsonl
+    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_or_validate_choice

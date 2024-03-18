@@ -1,0 +1,8 @@
+reaction_mechanism_qa:
+  id: reaction_mechanism_qa.dev.v0
+  metrics: [accuracy]
+
+reaction_mechanism_qa.dev.v0:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: OM_reaction_mechanism_qa/samples.jsonl

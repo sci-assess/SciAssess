@@ -1,0 +1,10 @@
+bio_chart_qa:
+  id: bio_chart_qa.test.v1
+  metrics: [accuracy]
+  description: Test the model's ability to understand the figure from literature.
+
+bio_chart_qa.test.v1:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: BM_bio_chart_qa/samples.jsonl
+    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_or_validate_choice

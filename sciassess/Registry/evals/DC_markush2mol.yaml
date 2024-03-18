@@ -1,0 +1,9 @@
+markush2mol:
+  id: markush2mol.dev.v0
+  metrics: [accuracy]
+
+markush2mol.dev.v0:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: DC_markush2mol/samples.jsonl
+    func_comparison: sciassess.Implement.utils.metrics:compare_molecule_similarity

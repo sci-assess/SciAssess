@@ -1,0 +1,11 @@
+gene_disease_regulation:
+  id: gene_disease_regulation.test.v1
+  metrics: [value_recall]
+  description: Test the model's ability to retrieve GDAS recognition from literature. 
+
+gene_disease_regulation.test.v1:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: BM_gene_disease_regulation/samples.jsonl
+    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_triplets
+    func_comparison: sciassess.Implement.utils.metrics:match_bio_entities

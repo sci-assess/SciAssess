@@ -1,0 +1,8 @@
+reaction_qa:
+  id: reaction_qa.val.json
+  metrics: [accuracy]
+
+reaction_qa.val.json:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: DC_reaction_qa/samples.jsonl

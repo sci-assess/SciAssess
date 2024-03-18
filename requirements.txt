@@ -1,0 +1,5 @@
+evals==2.0.0
+PyMuPDF
+PyPDF2
+gensim
+google-generativeai

@@ -1,0 +1,44 @@
+solubility_extraction:
+  id: solubility_extraction.val.csv
+  metrics: [accuracy]
+solubility_extraction.val.csv:
+  class: sciassess.Implement.rag_table_extract:TableExtract
+  args:
+    samples_jsonl: OM_solubility_extraction/samples.jsonl
+    instructions: |
+      You need to follow these steps to extract tables from the paper:
+      1. Find all tables which contains the word "solubility". If you cannot find anyone, then find all tables related to "solubility".
+      2. Select the table with most salts and solvents.
+      3. Collect all the headers of the table and generate a list.
+      4. If there's no "Compound"(Compound means salt or solute) and "Solvent" in the list, place them at the first two positions in the list. 
+      5. Output the whole table in csv format and satisfy these requirements:
+        (1) Do not truncate tables using "...". Always output the complete tables.
+        (2) Quote the values only if they contain commas.
+        (3) Keep all the superscripts in the form like "^3", "^+" or "^a".
+        (4) Do not use "NaN" to replace the blank cells, just leave it empty.
+        (5) Use "x" to replace all "×", Use "()" to replace all "（）"
+        (6) Always add space before and after operators like " ± ".
+        Remember, the table format should be correct. Here is an example, the original table is:
+        ```csv
+        Table 1 solubilities (mole fraction x),,
+        t/°C,NaCl,
+        ,DMF,PC^b
+        25,1.01 x 10^-2,8.3 x 10^-3
+        15,1.25 x 10^-2,9.0 x 10^-3
+        ,CaSO4^a,
+        ,DMF,PC^b
+        25,,5.6 x 10^-2
+        15,1.83 x 10^-1,6.2 x 10^-2
+        ```
+        It should be converted to:
+        ```csv
+        Compound,Solvent,t/°C,solubilities (mole fraction x)
+        NaCl,DMF,25,1.01 x 10^-2
+        NaCl,DMF,15,1.25 x 10^-2
+        NaCl,PC^b,25,8.3 x 10^-3
+        NaCl,PC^b,15,9.0 x 10^-3
+        CaSO4^a,DMF,25,
+        CaSO4^a,DMF,15,1.83 x 10^-1
+        CaSO4^a,PC^b,25,5.6 x 10^-2
+        CaSO4^a,PC^b,15,6.2 x 10^-2
+        ```

@@ -1,0 +1,7 @@
+general_chemistry:
+  evals:
+    - abstract2title
+    - research-question-extraction
+    - balance-chemical-equation-v1
+    - mmlu-college-chemistry
+    - mmlu-high-school-chemistry

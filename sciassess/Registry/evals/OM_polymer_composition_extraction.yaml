@@ -1,0 +1,8 @@
+polymer_composition_extraction:
+  id: polymer_composition_extraction.dev.v0
+  metrics: [accuracy]
+  
+polymer_composition_extraction.dev.v0:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: OM_polymer_composition_extraction/samples.jsonl
