@@ -22,7 +22,6 @@ class MatchWithFunc(evals.Eval):
 
         func_postprocess_answer: str = None,
         func_comparison: str = None,
-        record_match_threshold: float = -1,
         **kwargs,
     ):
         super().__init__(completion_fns, *args, **kwargs)
@@ -38,7 +37,6 @@ class MatchWithFunc(evals.Eval):
 
         self.func_postprocess_answer = make_object(func_postprocess_answer) if func_postprocess_answer else None
         self.func_comparison = make_object(func_comparison) if func_comparison else None
-        self.record_match_threshold = record_match_threshold
 
     def eval_sample(self, sample: Any, *_):
         assert isinstance(sample, dict), "sample must be a dict"
@@ -63,7 +61,7 @@ class MatchWithFunc(evals.Eval):
         )
         sampled = result.get_completions()[0].strip()
 
-        extras = {"file_name": sample["file_name"], "file_link": sample["file_link"]} if "file_name" in sample else {}
+        extras = {"file_name": sample["file_name"]} if "file_name" in sample else {}
         if hasattr(result, "extras"):
             if "extracted_answer" in result.extras:
                 sampled = result.extras["extracted_answer"].rstrip(".")
@@ -96,20 +94,12 @@ class MatchWithFunc(evals.Eval):
             else:
                 evals.record.record_metrics(**metrics)
 
-                # "record_match_threshold > 0" means we regard similarity/score >= threshold means match
-                if self.record_match_threshold > 0:
-                    evals.record.record_match(correct=metrics["score"] >= self.record_match_threshold,
-                                              **metrics,
-                                              expected=str(ideal),
-                                              picked=str(sampled), sampled=extras["answer"],
-                                              prompt=prompt,
-                                              **extras)
         else:
             return evals.record_and_check_match(
                 prompt=prompt,
                 sampled=sampled,
                 expected=sample["ideal"],
-                **extras
+                # **extras
             )
 
     def run(self, recorder):
@@ -129,9 +119,15 @@ class MatchWithFunc(evals.Eval):
         else:
             record_metrics = {}
 
+        # for custom metrics
         all_sample_metrics = recorder.get_metrics()
-        scores = [m["score"] for m in all_sample_metrics if m.get("score") is not None]
-        if scores:
-            record_metrics["score"] = sum(scores) / len(scores)
+        if all_sample_metrics and len(all_sample_metrics) > 0:
+            metrics = {}
+            for metric in all_sample_metrics[0].keys():
+                metrics[metric] = 0
+                for sample_metrics in all_sample_metrics:
+                    metrics[metric] += sample_metrics[metric]
+                metrics[metric] = metrics[metric] / len(all_sample_metrics)
+            record_metrics.update(metrics)
 
         return record_metrics

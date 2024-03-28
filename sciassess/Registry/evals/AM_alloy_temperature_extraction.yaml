@@ -7,4 +7,3 @@ alloy_temperature_extraction.dev.v0:
   args:
     samples_jsonl: AM_alloy_temperature_extraction/samples.jsonl
     func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_or_validate_choice
-    func_comparison:

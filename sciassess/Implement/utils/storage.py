@@ -20,7 +20,7 @@ def update_dataset_files(raw_samples: list[dict]) -> list[dict]:
                 # If the file exists in OSS but not locally, download it from OSS
                 local_file = raw_sample[f"{ftype}file_name"] if f"{ftype}file_name" in raw_sample else \
                     os.path.join('SciAssess_library/tmp/data', os.path.basename(raw_sample[f"{ftype}file_link"]))
-
+                os.makedirs(os.path.dirname(local_file), exist_ok=True)
                 if not os.path.exists(local_file):
                     response = requests.get(raw_sample[f"{ftype}file_link"])
                     assert response.status_code == 200, f"File not found. Please check the link {raw_sample[f'{ftype}file_link']} and contact us if the problem persists"
@@ -38,11 +38,11 @@ def update_dataset_files(raw_samples: list[dict]) -> list[dict]:
                     highlight(f"""Due to copyright restrictions, we are unable to directly distribute the original PDF of the article.
                     You will need to download the corresponding PDF according to the instructions in README and store it in SciAssess_library/pdfs.
                     {local_file} does not exist.""")
-                # 如果pages不为1到-1，则进行截取并保存到tmp
+                # If the pages are not from 1 to -1, take a screenshot and save it to tmp
                 if 'pages' in raw_sample and raw_sample['pages'] != [1, -1]:
                     pages = raw_sample['pages']
                     segmented_local_file = f"SciAssess_library/tmp/segmented_pdfs/{doi}_p{pages[0]}-p{pages[1]}.pdf"
-                    os.makedirs(os.path.dirname(local_file), exist_ok=True)
+                    os.makedirs(os.path.dirname(segmented_local_file), exist_ok=True)
                     if not Path(segmented_local_file).exists():
                         reader = PdfReader(local_file)
                         writer = PdfWriter()

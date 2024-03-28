@@ -83,8 +83,16 @@ bash run_sciassess.sh your_model_name
 
 Replace `your_model_name` with the name of your model (default: `gpt3.5`).
 
+Remember to export your OpenAI API key as an environment variable:
+
+```bash
+export OPENAI_API_KEY=your_openai_api_key
+```
+
 ## Version Information
 **0.9.0** (2024-03-17) Beta version first released
+
+**0.9.1** (2024-03-28) Fix critical bugs. Now the code is executable.
 
 ## Contributing
 

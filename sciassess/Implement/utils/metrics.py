@@ -287,7 +287,7 @@ def load_w2v_model():
 
     global W2V_MODEL
     if W2V_MODEL is not None:
-        print("Word2Vec model already loaded.")
+        # print("Word2Vec model already loaded.")
         return W2V_MODEL
 
     from gensim.models import KeyedVectors

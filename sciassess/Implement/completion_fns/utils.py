@@ -4,6 +4,8 @@ import pickle
 import json
 import uuid
 from pathlib import Path
+import PyPDF2
+from evals.api import CompletionFn, CompletionResult
 
 def cache_to_disk(func):
     @wraps(func)
@@ -61,3 +63,10 @@ def extract_text(pdf_path, add_page_num: bool = False) -> list[str]:
             texts.append(text)
     return texts
 
+class ErrorCompletionResult(CompletionResult):
+    def __init__(self, prompt, exception) -> None:
+        self.prompt = prompt
+        self.exception = exception
+
+    def get_completions(self) -> list[str]:
+        return ["Error: " + str(self.exception).strip()] if self.exception else ["Unknown"]
