@@ -1,0 +1,25 @@
+[project]
+name = "SciAssess"
+version = "0.9.1"
+requires-python = ">=3.9"
+readme = "README.md"
+dependencies = [
+    "evals==2.0.0",
+    "PyMuPDF",
+    "PyPDF2",
+    "gensim",
+    "google-generativeai",
+    "sentence_transformers",
+    "wandb"
+]
+
+[project.urls]
+repository = "https://github.com/sci-assess/SciAssess"
+
+
+[project.scripts]
+scieval = "sciassess.Implement.cli.scieval:main"
+scievalset = "sciassess.Implement.cli.scievalset:main"
+
+[tool.setuptools]
+packages = ["sciassess"]

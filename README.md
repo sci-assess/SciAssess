@@ -56,7 +56,7 @@ cd SciAssess
 Install the required dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ## Dataset
