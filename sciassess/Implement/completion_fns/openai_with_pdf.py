@@ -19,7 +19,7 @@ from evals.utils.api_utils import (
     openai_completion_create_retrying,
 )
 from evals.completion_fns.openai import OpenAIChatCompletionResult, OpenAICompletionResult
-from .utils import extract_text, ErrorCompletionResult
+from .utils import extract_text, ErrorCompletionResult, call_without_throw, cache_to_disk
 
 
 class OpenAIChatCompletionFnWithPDF(CompletionFnSpec):
@@ -38,6 +38,7 @@ class OpenAIChatCompletionFnWithPDF(CompletionFnSpec):
         self.n_ctx = n_ctx
         self.extra_options = extra_options
 
+    @call_without_throw
     def __call__(
         self,
         prompt: Union[str, OpenAICreateChatPrompt],
@@ -65,19 +66,13 @@ class OpenAIChatCompletionFnWithPDF(CompletionFnSpec):
 
         openai_create_prompt[-1]["content"] += attached_file_content
 
-        try:
-            result = openai_chat_completion_create_retrying(
-                OpenAI(api_key=self.api_key, base_url=self.api_base),
-                model=self.model,
-                messages=openai_create_prompt,
-                **{**kwargs, **self.extra_options},
-            )
-            result = OpenAIChatCompletionResult(raw_data=result, prompt=openai_create_prompt)
-        except Exception as e:
-            # If there is an error, log the error and return the error message, rather than throwing an exception
-            result = repr(e)
-            print(traceback.format_exc())
-            result = ErrorCompletionResult(exception=result, prompt=openai_create_prompt)
+        result = openai_chat_completion_create_retrying(
+            OpenAI(api_key=self.api_key, base_url=self.api_base),
+            model=self.model,
+            messages=openai_create_prompt,
+            **{**kwargs, **self.extra_options},
+        )
+        result = OpenAIChatCompletionResult(raw_data=result, prompt=openai_create_prompt)
 
         record_sampling(prompt=result.prompt, sampled=result.get_completions())
         return result
