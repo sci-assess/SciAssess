@@ -1,0 +1,11 @@
+research_question_extraction:
+  id: research_question_extraction.dev.v0
+  metrics: [score]
+  description: The objective of this evaluation explores the proficiency of a model in the task of discovering Research Questions from the abstract of scholarly texts.
+
+research_question_extraction.dev.v0:
+  class: sciassess.Implement.rag_classify:RAGModelBasedClassify
+  args:
+    samples_jsonl: GC_research_question_extraction/samples.jsonl
+    eval_type: cot_classify
+    modelgraded_spec: research-question-extraction
