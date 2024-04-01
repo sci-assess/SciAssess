@@ -189,7 +189,7 @@ def tableMatching(df_ref, df_prompt, index='Compound', compare_fields=[], record
 
     if df_prompt is None or len(df_prompt) == 0:
         return {"recall_field": 0.0, "recall_index": 0.0, "recall_value": 0.0, "recall_value_strict": 0.0,
-                "accuracy_value": 0.0, "accuracy_value_strict": 0.0, "recall_SMILES": 0.0}
+                "accuracy_value": 0.0, "accuracy_value_strict": 0.0}
     metrics = {}
     index_names = ["Compound", "Name", "SMILES", "Nickname", "Substrate", "AlloyName"]
 
@@ -275,101 +275,30 @@ def tableMatching(df_ref, df_prompt, index='Compound', compare_fields=[], record
         "accuracy_value": match_score / N * metrics["recall_index"],
         "accuracy_value_strict": total_match_score / N * metrics["recall_index"],
     }
-    if "SMILES" in compare_fields_:
-        metrics["recall_SMILES"] = smiles_match_score / N
     return metrics
 
 
-W2V_MODEL = None
+EMBEDDING_MODEL = None
 
 
-def load_w2v_model():
-
-    global W2V_MODEL
-    if W2V_MODEL is not None:
-        # print("Word2Vec model already loaded.")
-        return W2V_MODEL
-
-    from gensim.models import KeyedVectors
-
-    def download_file_with_progress(url, path):
-        import requests
-        from tqdm import tqdm
-        # 尝试获取已下载的文件大小，如果文件不存在，则大小为0
-        if os.path.exists(path):
-            first_byte = os.path.getsize(path)
-        else:
-            first_byte = 0
-
-        # 获取文件总大小
-        headers = {"Range": f"bytes={first_byte}-"}
-        response = requests.get(url, headers=headers, stream=True)
-        total_size_in_bytes = int(response.headers.get('content-length', 0)) + first_byte
-
-        progress_bar = tqdm(total=total_size_in_bytes, initial=first_byte, unit='iB', unit_scale=True)
-
-        # 以追加模式打开文件
-        with open(path, 'ab') as file:
-            for data in response.iter_content(chunk_size=5120):
-                progress_bar.update(len(data))
-                file.write(data)
-        progress_bar.close()
-
-        if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
-            print("ERROR, something went wrong")
-
-    def get_word2vec_model_path():
-        W2V_MODEL_PATH = os.getenv('W2V_MODEL_PATH')
-        if not W2V_MODEL_PATH:
-            default_path = str(Path(__file__).parent / 'model/GoogleNews-vectors-negative300.bin')
-            if os.path.exists(default_path):
-                print("Warning: W2V_MODEL_PATH environment variable is not set. Using default path:", default_path)
-                W2V_MODEL_PATH = default_path
-            else:
-                print("Default path is not accessible. Attempting to download the model.")
-                # Placeholder for the model download URL
-                download_url = 'https://dp-filetrans.oss-accelerate.aliyuncs.com/linmujie/word2vec_model/GoogleNews_vectors_negative300.bin?OSSAccessKeyId=LTAI5tRnCpedMnKSH3APDceY&Expires=2070308981&Signature=EfkOdfkRpvbonrGPFIa%2BwLydc0c%3D'
-                # 定义好下载的路径
-                W2V_MODEL_PATH = str(Path(__file__).parent / 'model/GoogleNews-vectors-negative300.bin')
-
-                Path(W2V_MODEL_PATH).parent.mkdir(exist_ok=True, parents=True)
-                try:
-                    download_file_with_progress(download_url, W2V_MODEL_PATH)
-                    print(f"Model downloaded and saved to {W2V_MODEL_PATH}")
-                except Exception as e:
-                    raise Exception(f"Failed to download the model. Error: {e}")
-        return W2V_MODEL_PATH
-
-    model_path = get_word2vec_model_path()
-    W2V_MODEL = KeyedVectors.load_word2vec_format(model_path, binary=True)
-    print(f"Pretrained Word2Vec Model loaded/reloaded from {model_path}")
-    return W2V_MODEL
+def load_embedding_model():
+    global EMBEDDING_MODEL
+    if EMBEDDING_MODEL is None:
+        print('loading embedding model...')
+        from sentence_transformers import SentenceTransformer
+        EMBEDDING_MODEL = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+    return EMBEDDING_MODEL
 
 
-# 定义使用Word2Vec计算词间相似度的metric
-# sentence -> vector
 def cosine_similarity(sentence_ideal: str, sentence_pred: str) -> float:
-    model = load_w2v_model()
-    def sentence_to_vec(sentence: str, model):
-        words = sentence.split()
-        word_vectors = []
-        for word in words:
-            if word in model:
-                word_vectors.append(model[word])
+    model = load_embedding_model()
+    sentences = [sentence_ideal, sentence_pred]
+    vecs = model.encode(sentences, show_progress_bar=False)
+    vec1, vec2 = vecs
+    dot_product = np.dot(vec1, vec2)
+    cosine_sim = dot_product / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
+    return cosine_sim
 
-        if not word_vectors:
-            return np.zeros(model.vector_size)
-
-        word_vectors = np.array(word_vectors)
-        sentence_vector = word_vectors.mean(axis=0)
-        return sentence_vector
-
-    try:
-        vec1 = sentence_to_vec(sentence_ideal, model)
-        vec2 = sentence_to_vec(sentence_pred, model)
-        return 1 - cosine(vec1, vec2)
-    except KeyError as e:
-        return 0  # Return 0 similarity if word not found
 
 
 def cosine_similarity_tuples(tuple_ideal: List[Any], tuple_pred: List[Any]) -> float:
