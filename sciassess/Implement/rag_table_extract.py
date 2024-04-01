@@ -33,6 +33,7 @@ class TableExtract(MatchWithFunc):
     def run(self, recorder: RecorderBase):
         raw_samples = self.get_samples()
         samples = update_dataset_files(raw_samples)
+        self.recorder = recorder
         for sample in samples:
             sample["compare_fields"] = [field if type(field) == str else tuple(field) for field in sample["compare_fields"]]
             sample["input"] = self.instructions

@@ -1,13 +1,31 @@
 from typing import Any, Optional
 
 from sciassess.Implement.utils.storage import update_dataset_files
-
+from sciassess.Implement.completion_fns.utils import ErrorCompletionResult
 import evals
 import evals.metrics
 from evals.api import CompletionFn
 from evals.prompt.base import is_chat_prompt
 from evals.utils.misc import make_object
+from typing import Union
 
+def check_match(
+    sampled: str,
+    expected: Union[str, list[str], tuple[str]],
+) -> bool:
+    if isinstance(expected, tuple):
+        expected = list(expected)
+    elif not isinstance(expected, list):
+        expected = [expected]
+
+    picked = None
+    for option in expected:
+        if not sampled.startswith(option):
+            continue
+        picked = option
+        break
+    match = picked is not None
+    return match
 
 class MatchWithFunc(evals.Eval):
     def __init__(
@@ -25,7 +43,7 @@ class MatchWithFunc(evals.Eval):
         **kwargs,
     ):
         super().__init__(completion_fns, *args, **kwargs)
-        assert len(completion_fns) == 1, "Match only supports one completion fn"
+        # assert len(completion_fns) == 1, "Match only supports one completion fn"
         self.max_tokens = max_tokens
         self.samples_jsonl = samples_jsonl
         self.num_few_shot = num_few_shot
@@ -60,46 +78,53 @@ class MatchWithFunc(evals.Eval):
             **{k: v for k, v in sample.items() if k.startswith("file")}
         )
         sampled = result.get_completions()[0].strip()
+        is_fail = isinstance(result, ErrorCompletionResult)
 
-        extras = {"file_name": sample["file_name"]} if "file_name" in sample else {}
-        if hasattr(result, "extras"):
-            if "extracted_answer" in result.extras:
-                sampled = result.extras["extracted_answer"].rstrip(".")
-            extras = result.extras
-        else:
-            extras["answer"] = sampled
+        if hasattr(result, "extras") and "extracted_answer" in result.extras:
+            sampled = result.extras["extracted_answer"].rstrip(".")
 
         ideal = sample["ideal"][0] if isinstance(sample["ideal"], list) else sample["ideal"]
+        if is_fail:
+            metric = self.func_comparison(ideal, "", **sample) if self.func_comparison else False
+            self.recorder.record_error(
+                traceback=sampled,
+                prompt=sample["input"],
+                file_name=sample.get('file_name', None),
+                zero_metric=metric
+            )
+            return
         if self.func_postprocess_answer:
-            extras["answer"] = sampled
-            sampled = extras["extracted_answer"] = self.func_postprocess_answer(sampled, **sample)
             ideal = self.func_postprocess_answer(ideal, **sample)
+            sampled = self.func_postprocess_answer(sampled, **sample)
 
             if sampled is None or ideal is None:
-                evals.record.record_match(correct=False,
-                                          expected=str(ideal),
-                                          picked=str(sampled), sampled=extras["answer"],
-                                          prompt=prompt,
-                                          **extras)
+                metric = self.func_comparison(ideal, "", **sample) if self.func_comparison else False
+                self.recorder.record_sample(
+                    expected=sample["ideal"],
+                    result=sampled,
+                    prompt=sample["input"],
+                    metric=metric,
+                    file_name=sample.get('file_name', None)
+                )
                 return
 
         if self.func_comparison:
             metrics = self.func_comparison(ideal, sampled, **sample)
-            if type(metrics) == bool:
-                evals.record.record_match(correct=metrics,
-                                          expected=str(ideal),
-                                          picked=str(sampled), sampled=extras["answer"],
-                                          prompt=prompt,
-                                          **extras)
-            else:
-                evals.record.record_metrics(**metrics)
-
-        else:
-            return evals.record_and_check_match(
-                prompt=prompt,
-                sampled=sampled,
+            self.recorder.record_sample(
                 expected=sample["ideal"],
-                # **extras
+                result=sampled,
+                prompt=sample["input"],
+                metric=metrics,
+                file_name=sample.get('file_name', None)
+            )
+        else:
+            match = check_match(sampled, ideal)
+            self.recorder.record_sample(
+                expected=sample["ideal"],
+                result=sampled,
+                prompt=sample["input"],
+                metric=match,
+                file_name=sample.get('file_name', None)
             )
 
     def run(self, recorder):
@@ -108,6 +133,7 @@ class MatchWithFunc(evals.Eval):
         for sample in samples:
             if "input" not in sample:
                 sample["input"] = self.instructions
+        self.recorder = recorder
         self.eval_all_samples(recorder, samples)
 
         events = recorder.get_events("match")
@@ -126,6 +152,8 @@ class MatchWithFunc(evals.Eval):
             for metric in all_sample_metrics[0].keys():
                 metrics[metric] = 0
                 for sample_metrics in all_sample_metrics:
+                    if metric not in sample_metrics:
+                        continue
                     metrics[metric] += sample_metrics[metric]
                 metrics[metric] = metrics[metric] / len(all_sample_metrics)
             record_metrics.update(metrics)

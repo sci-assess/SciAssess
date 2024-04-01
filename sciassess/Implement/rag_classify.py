@@ -6,7 +6,6 @@ from random import Random
 from typing import Any, Optional, Union
 
 import evals
-import evals.record
 from evals.elsuite.modelgraded.classify_utils import classify, sample_and_concat_n_completions
 from evals.elsuite.utils import PromptFn, scrub_formatting_from_prompt
 
@@ -113,18 +112,19 @@ class RAGModelBasedClassify(evals.Eval):
             assert "choice" in test_sample
             metrics["metascore"] = choice == test_sample["choice"]
 
-        evals.record.record_metrics(**metrics)
-        if "ideal" in test_sample:
-            k, v = list(self.mg.input_outputs.items())[0]
-            evals.record.record_match(correct=metrics["score"] >= 1.0, expected=test_sample["ideal"],
-                                      picked=info["sampled"][0], sampled=completions[v],
-                                      prompt=test_sample[k], prompt_modelgrade=info["prompt"], file_name=sample_file_dict["file_name"])
+        k, v = list(self.mg.input_outputs.items())[0]
+        # TODO: fix result = ?
+        self.recorder.record_sample(expected=test_sample['ideal'], result=choice, prompt=test_sample[k], metric=metrics)
+        # self.recorder.record_match(correct=metrics["score"] >= 1.0, expected=test_sample["ideal"],
+        #                           picked=info["sampled"][0], sampled=completions[v],
+        #                           prompt=test_sample[k], prompt_modelgrade=info["prompt"], file_name=sample_file_dict["file_name"])
 
         return choice
 
     def run(self, recorder):
         raw_samples = self.get_samples()
         samples = update_dataset_files(raw_samples)
+        self.recorder = recorder
 
         self.eval_all_samples(recorder, samples)
         record_metrics = {}
