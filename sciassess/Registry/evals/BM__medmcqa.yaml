@@ -1,0 +1,7 @@
+_medmcqa:
+  id: _medmcqa.dev.v0
+  metrics: [accuracy]
+_medmcqa.dev.v0:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: BM_medmcqa/samples.jsonl
