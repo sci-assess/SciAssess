@@ -1,6 +1,6 @@
 oled_property_extraction:
   id: oled_property_extraction.val.csv
-  metrics: [accuracy]
+  metrics: [accuracy_value]
 
 oled_property_extraction.val.csv:
   class: sciassess.Implement.rag_table_extract:TableExtract

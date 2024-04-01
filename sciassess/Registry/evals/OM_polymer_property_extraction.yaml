@@ -1,6 +1,6 @@
 polymer_property_extraction:
   id: polymer_property_extraction.val.csv
-  metrics: [accuracy]
+  metrics: [accuracy_value]
 polymer_property_extraction.val.csv:
   class: sciassess.Implement.rag_table_extract:TableExtract
   args:

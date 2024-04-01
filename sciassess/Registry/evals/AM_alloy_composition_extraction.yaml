@@ -1,6 +1,6 @@
 alloy_composition_extraction:
   id: alloy_composition_extraction.dev.v0
-  metrics: [accuracy]
+  metrics: [accuracy_value]
 
 alloy_composition_extraction.dev.v0:
   class: sciassess.Implement.rag_table_extract:TableExtract

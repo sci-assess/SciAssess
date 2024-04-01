@@ -1,6 +1,6 @@
 affinity_extraction:
   id: affinity_extraction.val.csv
-  metrics: [accuracy]
+  metrics: [accuracy_value]
 
 
 affinity_extraction.val.csv:

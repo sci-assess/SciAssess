@@ -1,6 +1,6 @@
 solubility_extraction:
   id: solubility_extraction.val.csv
-  metrics: [accuracy]
+  metrics: [accuracy_value]
 solubility_extraction.val.csv:
   class: sciassess.Implement.rag_table_extract:TableExtract
   args:
