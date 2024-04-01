@@ -5,6 +5,8 @@ import json
 import uuid
 from pathlib import Path
 import PyPDF2
+import traceback
+import logging
 from evals.api import CompletionFn, CompletionResult
 
 def cache_to_disk(func):
@@ -29,7 +31,7 @@ def cache_to_disk(func):
                 call_id += json.dumps(v.__dict__)
             call_id += ","
         call_id = uuid.uuid5(uuid.NAMESPACE_DNS, call_id)
-        cache_file = str(cache_dir / f"{func.__qualname__}_{call_id}.pkl")
+        cache_file = str(cache_dir + '/' + f"{func.__qualname__}_{call_id}.pkl")
         if os.path.exists(cache_file):
             print('loading from cache:', cache_file)
             with open(cache_file, 'rb') as f:
@@ -64,8 +66,7 @@ def extract_text(pdf_path, add_page_num: bool = False) -> list[str]:
     return texts
 
 class ErrorCompletionResult(CompletionResult):
-    def __init__(self, prompt, exception) -> None:
-        self.prompt = prompt
+    def __init__(self, exception) -> None:
         self.exception = exception
 
     def get_completions(self) -> list[str]:
