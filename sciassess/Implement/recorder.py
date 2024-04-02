@@ -22,6 +22,7 @@ def df2csv(df):
 class SciRecorder(RecorderBase):
     def __init__(self, run_spec):
         super().__init__(run_spec)
+        self.count = 0
         self.run_id = run_spec.run_id
         self.completion_fns = str(run_spec.completion_fns[0] if isinstance(run_spec.completion_fns, list) else run_spec.completion_fns)
         self.eval = run_spec.eval_name.split('.')[0]
@@ -68,6 +69,7 @@ class SciRecorder(RecorderBase):
                 correct=False, expected='None', picked='None', prompt=prompt)
         else:
             super().record_metrics(**zero_metric)
+        self.count += 1
 
     def record_sample(self,
                       expected: Union[str, List[str]],
@@ -100,9 +102,11 @@ class SciRecorder(RecorderBase):
                 correct=metric, expected=str(expected), picked=str(result), prompt=prompt)
         else:
             super().record_metrics(**metric)
+        self.count += 1
 
 
     def record_final_report(self, final_report):
+        final_report['num_samples'] = self.count
         wandb.log({'samples': self.results_table})
         wandb.log({'failed_samples': self.fail_table})
         wandb.log({'final_result': final_report})
