@@ -5,7 +5,7 @@ mmlu_college_chemistry.val.ab-v1:
   class: sciassess.Implement.match_with_func:MatchWithFunc
   args:
     samples_jsonl: GC_mmlu_college_chemistry/samples.jsonl
-    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_or_validate_choice
+    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice
 
 mmlu_high_school_chemistry:
   id: mmlu_high_school_chemistry.val.ab-v1
@@ -14,4 +14,4 @@ mmlu_high_school_chemistry.val.ab-v1:
   class: sciassess.Implement.match_with_func:MatchWithFunc
   args:
     samples_jsonl: GC_mmlu_high_school_chemistry/samples.jsonl
-    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_or_validate_choice
+    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice

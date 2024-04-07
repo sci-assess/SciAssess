@@ -106,6 +106,62 @@ def fuzzy_compare_value(a: str, b: str, metric="EditDistance", **kwargs) -> Unio
         elif metric == "Word2Vec":
             pass
 
+def compare_multi_choice(ans, sampled, **kwargs) -> bool:
+    options = kwargs['option']
+    def split_option(option):
+        if ')' not in option:
+            if len(option) < 3:
+                return option.strip().replace('(', '').lower(), option.strip()
+            else:
+                # 模型可能输出了许多无关内容，取最后一个字母作为选项
+                letters = [c for c in option.lower() if c.isalpha() and c in {'a', 'b', 'c', 'd'}]
+                letter = letters[-1] if len(letters) > 0 else ''
+                return letter, option.strip()
+        else:
+            return option.split(')')[0].strip().replace('(', '').lower()[-1], ')'.join(option.split(')')[1:]).strip()
+
+    letters = []
+    contents = []
+    for op in options:
+        letter, content = split_option(op)
+        letters.append(letter)
+        contents.append(content)
+    def match_option(ans):
+        l, c = split_option(ans)
+        for letter in letters:
+            if letter in l:
+                return letter
+        for i, content in enumerate(contents):
+            if content in c:
+                return letters[i]
+        # 没有匹配到，计算content编辑距离，返回最小编辑距离的选项
+        min_dist = 100
+        min_letter = ''
+        for i, content in enumerate(contents):
+            dist = edit_distance_np(content, c)
+            if dist < min_dist:
+                min_dist = dist
+                min_letter = letters[i]
+        return min_letter
+    pred = match_option(sampled)
+    ideal = match_option(ans)
+    return pred == ideal
+
+
+def edit_distance_np(str1, str2):
+    m, n = len(str1), len(str2)
+    dp = np.zeros((m + 1, n + 1), dtype=int)
+    # 初始化矩阵的第一行和第一列
+    dp[:, 0] = np.arange(m + 1)
+    dp[0, :] = np.arange(n + 1)
+    # 计算编辑距离
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            cost = 0 if str1[i - 1] == str2[j - 1] else 1
+            dp[i, j] = min(dp[i - 1, j] + 1, dp[i, j - 1] + 1, dp[i - 1, j - 1] + cost)
+
+    return dp[m, n]
+
 
 def compare_molecule_similarity(smi1, smi2, **kwargs) -> dict:
     from rdkit import Chem

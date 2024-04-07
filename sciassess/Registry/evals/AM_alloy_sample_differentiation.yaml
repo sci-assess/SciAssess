@@ -6,5 +6,5 @@ alloy_sample_differentiation.dev.v0:
   class: sciassess.Implement.match_with_func:MatchWithFunc
   args:
     samples_jsonl: AM_alloy_sample_differentiation/samples.jsonl
-    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_or_validate_choice
+    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice
 

@@ -6,3 +6,4 @@ electrolyte_table_qa.dev.v0:
   class: sciassess.Implement.match_with_func:MatchWithFunc
   args:
     samples_jsonl: OM_electrolyte_table_qa/samples.jsonl
+    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice
