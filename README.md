@@ -1,6 +1,6 @@
 # SciAssess: A Benchmark for Evaluating Large Language Models in Scientific Literature Analysis
 
-### Version: 0.9.0
+### Version: 1.0.0
 
 SciAssess is a comprehensive benchmark designed to evaluate the proficiency of Large Language Models (LLMs) in scientific literature analysis. It focuses on assessing LLMs' abilities in memorization, comprehension, and analysis within the context of scientific literature, covering a wide range of scientific fields such as general chemistry, organic materials, and alloy materials. SciAssess provides a rigorous and thorough assessment of LLMs, supporting the ongoing development of LLM applications in scientific literature analysis.
 
@@ -90,6 +90,14 @@ export OPENAI_API_KEY=your_openai_api_key
 **0.9.0** (2024-03-17) Beta version first released
 
 **0.9.1** (2024-03-28) Fix critical bugs. Now the code is executable.
+
+**0.9.2** (2024-04-06) Optimize the metric of multiple choice questions.
+
+**0.9.3** (2024-04-07) Merge mmlu college chemistry and high school chemistry.
+
+Remove abstract2title and research_question_extraction due to uncertainty of model grading.
+
+**1.0.0** (2024-04-08) Official version released
 
 ## Contributing
 
