@@ -1,7 +1,6 @@
 general_chemistry:
   evals:
-    - _abstract2title
-    - research_question_extraction
+    # - _abstract2title
+    # - research_question_extraction
     - balance_chemical_equation
-    - mmlu_college_chemistry
-    - mmlu_high_school_chemistry
+    - mmlu_chemistry

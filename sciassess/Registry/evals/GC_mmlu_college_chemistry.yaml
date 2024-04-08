@@ -15,3 +15,12 @@ mmlu_high_school_chemistry.val.ab-v1:
   args:
     samples_jsonl: GC_mmlu_high_school_chemistry/samples.jsonl
     func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice
+
+mmlu_chemistry:
+  id: mmlu_chemistry.val.ab-v1
+  metrics: [accuracy]
+mmlu_chemistry.val.ab-v1:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: GC_mmlu_chemistry/samples.jsonl
+    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice
