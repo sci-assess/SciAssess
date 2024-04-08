@@ -13,36 +13,33 @@ For more details, please refer to our paper: [SciAssess: Benchmarking LLM Profic
 - **L3 (Analysis and Reasoning)**: The model's capability to amalgamate extracted information with its existing knowledge base for logical reasoning and analysis.
 
 ### Domains and Tasks
-| Domain            | Task                         | Ability | # Questions | Question Type        | Multimodal Content  |
-|-------------------|------------------------------|---------|-------------|----------------------|---------------------|
-| General Chemistry | MMLU High-School Chemistry   | L1      | 22          | Multiple Choice      |                     |
-|                   | MMLU College Chemistry       | L1      | 8           | Multiple Choice      |                     |
-|                   | Abstract2Title               | L2      | 254         | Open-ended Generation|                     |
-|                   | Question Extraction          | L2      | 19          | Open-ended Generation|                     |
-|                   | Balancing Equations          | L3      | 100         | Constrained Generation|                    |
-| Alloy Materials   | Composition Extraction       | L2      | 55          | Table Extraction     | Table               |
-|                   | Target Extraction            | L2      | 50          | Multiple Choice      |                     |
-|                   | Treatment Sequence           | L2      | 25          | True/False           |                     |
-|                   | Alloy ChartQA                | L2      | 15          | Multiple Choice      | Chart               |
-|                   | Sample Differentiation       | L3      | 50          | Multiple Choice      |                     |
-| Organic Materials | Electrolyte Solubility Data Extraction | L2 | 8 | Table Extraction | Table           |
-|                   | Electrolyte Table QA         | L2      | 48          | Multiple Choice      | Table               |
-|                   | Reaction Mechanism QA        | L2      | 22          | Multiple Choice      | Molecule            |
-|                   | Polymer Property Extraction  | L2      | 15          | Table Extraction     | Table               |
-|                   | Polymer Composition Extraction | L2    | 15          | Table Extraction     |                     |
-|                   | OLED Property Extraction     | L2      | 13          | Table Extraction     | Molecule, Table     |
-|                   | Polymer ChartQA              | L2      | 15          | Table Extraction     | Chart               |
-| Drug Discovery    | Affinity Data Extraction     | L2      | 15          | Table Extraction     | Molecule, Table     |
-|                   | Tag to Molecule              | L2      | 41          | Constrained Generation | Molecule          |
-|                   | Target Extraction            | L2      | 15          | Constrained Generation |                    |
-|                   | Drug ChartQA                 | L2      | 15          | Multiple Choice      | Chart               |
-|                   | Reaction QA                  | L2      | 15          | Multiple Choice      | Reaction            |
-|                   | Molecule in Document         | L3      | 45          | True/False           | Molecule            |
-|                   | Markush to Molecule          | L3      | 9           | Constrained Generation | Molecule          |
-| Biology           | MedMCQA                      | L1      | 100         | Multiple Choice      |                     |
-|                   | CompDisease Recognition      | L1      | 500         | Text Extraction      |                     |
-|                   | GeneDisease Text Mining      | L2      | 75          | Text Comprehension   |                     |
-|                   | Biology ChartQA              | L2      | 15          | Multiple Choice      | Chart               |
+| Domain            | Task                                   | Ability | # Questions | Question Type        | Multimodal Content  |
+|-------------------|----------------------------------------|---------|-------------|----------------------|---------------------|
+| General Chemistry | MMLU Chemistry                         | L1      | 30          | Multiple Choice      |                     |
+|                   | Balancing Equations                    | L3      | 100         | Constrained Generation|                    |
+| Alloy Materials   | Composition Extraction                 | L2      | 55          | Table Extraction     | Table               |
+|                   | Target Extraction                      | L2      | 50          | Multiple Choice      |                     |
+|                   | Treatment Sequence                     | L2      | 25          | True/False           |                     |
+|                   | Alloy ChartQA                          | L2      | 15          | Multiple Choice      | Chart               |
+|                   | Sample Differentiation                 | L3      | 50          | Multiple Choice      |                     |
+| Organic Materials | Electrolyte Solubility Data Extraction | L2 | 8           | Table Extraction | Table           |
+|                   | Electrolyte Table QA                   | L2      | 48          | Multiple Choice      | Table               |
+|                   | Reaction Mechanism QA                  | L2      | 22          | Multiple Choice      | Molecule            |
+|                   | Polymer Property Extraction            | L2      | 15          | Table Extraction     | Table               |
+|                   | Polymer Composition Extraction         | L2    | 15          | Table Extraction     |                     |
+|                   | OLED Property Extraction               | L2      | 13          | Table Extraction     | Molecule, Table     |
+|                   | Polymer ChartQA                        | L2      | 15          | Table Extraction     | Chart               |
+| Drug Discovery    | Affinity Data Extraction               | L2      | 15          | Table Extraction     | Molecule, Table     |
+|                   | Tag to Molecule                        | L2      | 41          | Constrained Generation | Molecule          |
+|                   | Target Extraction                      | L2      | 15          | Constrained Generation |                    |
+|                   | Drug ChartQA                           | L2      | 15          | Multiple Choice      | Chart               |
+|                   | Reaction QA                            | L2      | 15          | Multiple Choice      | Reaction            |
+|                   | Molecule in Document                   | L3      | 45          | True/False           | Molecule            |
+|                   | Markush to Molecule                    | L3      | 9           | Constrained Generation | Molecule          |
+| Biology           | MedMCQA                                | L1      | 100         | Multiple Choice      |                     |
+|                   | CompDisease Recognition                | L1      | 500         | Text Extraction      |                     |
+|                   | GeneDisease Text Mining                | L2      | 75          | Text Comprehension   |                     |
+|                   | Biology ChartQA                        | L2      | 15          | Multiple Choice      | Chart               |
 
 ## Installation
 
