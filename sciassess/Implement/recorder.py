@@ -96,7 +96,7 @@ class SciRecorder(RecorderBase):
                 f.write(json.dumps(sample_record) + '\n')
 
             # wandb
-            self.results_table.add_data(expected, result, prompt, metric, kwargs.get('file_name', 'None'))
+            self.results_table.add_data(str(expected), str(result), prompt, metric, kwargs.get('file_name', 'None'))
         if isinstance(metric, bool):
             super().record_match(
                 correct=metric, expected=str(expected), picked=str(result), prompt=prompt)
