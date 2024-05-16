@@ -1,0 +1,7 @@
+AlloyName,Composition,Composition,Composition,Composition,Composition,Composition,Composition,Composition,Composition,Composition
+,other_element_info,Al,Cr,Mo,Nb,Mn,Si,V,Fe,Zr
+Number of data pairs containing this element,"{'Sn': '247', 'Cu   b': '3', 'Bi': '7', 'Ta   e': '39', 'O': '61'}",699,163,467,105,21,150,272,175,275
+Minimum (wt.%),"{'percentage': 'wt.%', 'Sn': '0', 'Cu   b': '2.50', 'Bi': '0.35', 'Ta   e': '1.00', 'O': '0.05'}",0 wt.%,0 wt.%,0 wt.%,0 wt.%,0 wt.%,0 wt.%,0 wt.%,0.15 wt.%,0 wt.%
+Maximum (wt.%),"{'percentage': 'wt.%', 'Sn': '11.00', 'Cu   b': '2.50', 'Bi': '0.35', 'Ta   e': '1.00', 'O': '0.33'}",8.00 wt.%,11.00 wt.%,15.00 wt.%,7.00 wt.%,8.00 wt.%,0.50 wt.%,16.00 wt.%,5.00 wt.%,11.00 wt.%
+Mean,"{'Sn': '3.38', 'Cu   b': '2.50', 'Bi': '0.35', 'Ta   e': '1.00', 'O': '0.16'}",4.91,4.78,4.89,1.98,4.90,0.20,6.49,1.36,4.73
+S.D.,"{'Sn': '2.08', 'Cu   b': '0.00', 'Bi': '0.00', 'Ta   e': '0.00', 'O': '0.09'}",1.69,3.63,4.70,0.89,3.33,0.11,4.32,0.92,2.78
