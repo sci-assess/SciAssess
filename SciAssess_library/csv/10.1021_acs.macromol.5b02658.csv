@@ -1,0 +1,5 @@
+Nickname,PCE_max(%),PCE_ave(%),Voc (V),Jsc (mA cm^2),FF
+PNDTI-T,1.23,1.2,0.56,4.8,0.46
+PNDTI-TT,2.07,2.0,0.62,6.4,0.5
+PNDTI-DTT,3.28,3.2,0.66,9.6,0.51
+PNDTI-BT,2.6,,0.66,8.1,0.49

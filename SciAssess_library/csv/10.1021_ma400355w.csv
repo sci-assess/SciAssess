@@ -1,0 +1,4 @@
+Nickname,PCE_max(%),PCE_ave(%),Voc (V),Jsc (mA cm^2),FF
+PIDT-EHNT,1.49,1.34,0.86,4.33,0.4
+PIDT-DTNT,2.97,2.52,0.8,8.26,0.45
+PIDT-C12NT,5.05,4.88,0.9,10.21,0.55
