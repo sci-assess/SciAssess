@@ -6,6 +6,7 @@ polymer_property_extraction.val.csv:
   args:
     samples_jsonl: OM_polymer_property_extraction/samples.jsonl
     instructions: |
+      You are an expert in the field of polymer solar cells researcher.
       Please give a complete list of Nickname, PCE_max(%), PCE_ave(%), Voc (V), Jsc (mA cm^2), FF;
       * Output in csv format with columns of those attribution, do not write units only the value like "10.5".
       * If there are multiple tables, concat them. Don't give me reference or using "...", give me complete table!
