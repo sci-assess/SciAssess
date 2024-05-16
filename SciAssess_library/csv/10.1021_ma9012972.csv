@@ -1,0 +1,4 @@
+Nickname,PCE_max(%),PCE_ave(%),Voc (V),Jsc (mA cm^2),FF
+PDPP-DTS,2.1,,0.55,7.5,0.508
+PDPP-BDT,2.53,,0.68,8.4,0.443
+PDPP-BDP,4.31,,0.68,10.1,0.627

@@ -1,0 +1,5 @@
+Nickname,PCE_max(%),PCE_ave(%),Voc (V),Jsc (mA cm^2),FF
+PBDTT-BT,1.85,,0.88,5.83,0.36
+PBDTF-BT,2.88,,0.85,8.41,0.403
+PBDFT-BT,4.42,,0.73,9.94,0.609
+PBDFF-BT,2.6,,0.8,5.84,0.556
