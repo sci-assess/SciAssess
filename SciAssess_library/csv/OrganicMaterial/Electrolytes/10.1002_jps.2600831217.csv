@@ -1,0 +1,32 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Chrysene,Ethanol(0 vol%)/Water Mixtures,23 °C,Not found,8.46 log M
+Benzo[a]pyrene,Ethanol(0 vol%)/Water Mixtures,23 °C,Not found,7.90 log M
+Perylene,Ethanol(0 vol%)/Water Mixtures,23 °C,Not found,8.83 log M
+Hexachlorobenzene,Ethanol(0 vol%)/Water Mixtures,23 °C,Not found,7.74 log M
+Pentachlorobenzene,Ethanol(0 vol%)/Water Mixtures,23 °C,Not found,6.12 log M
+Chrysene,Ethanol(20 vol%)/Water Mixtures,23 °C,Not found,7.21 log M
+Benzo[a]pyrene,Ethanol(20 vol%)/Water Mixtures,23 °C,Not found,6.91 log M
+Perylene,Ethanol(20 vol%)/Water Mixtures,23 °C,Not found,7.30 log M
+Hexachlorobenzene,Ethanol(20 vol%)/Water Mixtures,23 °C,Not found,7.04 log M
+Pentachlorobenzene,Ethanol(20 vol%)/Water Mixtures,23 °C,Not found,5.67 log M
+Chrysene,Ethanol(40 vol%)/Water Mixtures,23 °C,Not found,5.58 log M
+Benzo[a]pyrene,Ethanol(40 vol%)/Water Mixtures,23 °C,Not found,4.87 log M
+Perylene,Ethanol(40 vol%)/Water Mixtures,23 °C,Not found,6.13 log M
+Hexachlorobenzene,Ethanol(40 vol%)/Water Mixtures,23 °C,Not found,5.49 log M
+Pentachlorobenzene,Ethanol(40 vol%)/Water Mixtures,23 °C,Not found,3.83 log M
+Chrysene,Ethanol(60 vol%)/Water Mixtures,23 °C,Not found,4.27 log M
+Benzo[a]pyrene,Ethanol(60 vol%)/Water Mixtures,23 °C,Not found,3.70 log M
+Perylene,Ethanol(60 vol%)/Water Mixtures,23 °C,Not found,4.68 log M
+Hexachlorobenzene,Ethanol(60 vol%)/Water Mixtures,23 °C,Not found,4.15 log M
+Pentachlorobenzene,Ethanol(60 vol%)/Water Mixtures,23 °C,Not found,2.62 log M
+Chrysene,Ethanol(80 vol%)/Water Mixtures,23 °C,Not found,3.49 log M
+Benzo[a]pyrene,Ethanol(80 vol%)/Water Mixtures,23 °C,Not found,2.90 log M
+Perylene,Ethanol(80 vol%)/Water Mixtures,23 °C,Not found,4.01 log M
+Hexachlorobenzene,Ethanol(80 vol%)/Water Mixtures,23 °C,Not found,3.34 log M
+Pentachlorobenzene,Ethanol(80 vol%)/Water Mixtures,23 °C,Not found,1.85 log M
+Chrysene,Ethanol(100 vol%)/Water Mixtures,23 °C,Not found,2.78 log M
+Benzo[a]pyrene,Ethanol(100 vol%)/Water Mixtures,23 °C,Not found,2.24 log M
+Perylene,Ethanol(100 vol%)/Water Mixtures,23 °C,Not found,3.33 log M
+Hexachlorobenzene,Ethanol(100 vol%)/Water Mixtures,23 °C,Not found,2.50 log M
+Pentachlorobenzene,Ethanol(100 vol%)/Water Mixtures,23 °C,Not found,1.08 log M
+

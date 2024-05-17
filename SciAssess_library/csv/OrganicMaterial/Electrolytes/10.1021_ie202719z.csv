@@ -1,0 +1,11 @@
+solute_name,solvent_name,temperature,pressure,solubility
+HOC2mim][Tf2N],water,298.15 K,Not found,0.6637 wt%
+[C2mim][Tf2N],water,298.15 K,Not found,0.3275 wt%
+[C1OC2mim][Tf2N],water,298.15 K,Not found,0.3134 wt%
+[HSO3C3py][Tf2N],water,298.15 K,Not found,0.7833 wt%
+[HOC3py][Tf2N],water,298.15 K,Not found,0.6173 wt%
+[C2C1mim][Tf2N],water,298.15 K,Not found,0.2473 wt%
+[C2C1phmim][Tf2N],water,298.15 K,Not found,0.1980 wt%
+[C4py][Tf2N],water,298.15 K,Not found,0.2687 wt%
+[C4-4-mpy][Tf2N],water,298.15 K,Not found,0.2268 wt%
+[C4DMApy][Tf2N],water,298.15 K,Not found,0.1751 wt%

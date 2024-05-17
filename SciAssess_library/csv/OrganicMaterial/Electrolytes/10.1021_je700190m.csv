@@ -1,0 +1,71 @@
+solute_name,solvent_name,temperature,pressure,solubility
+lactose anhydrate,water/ethanol(100/0,w%),310 K,Not found,0.29 ± 0.02 g/g solution
+maltose monohydrate,water/ethanol(100/0,w%),310 K,Not found,0.519 ± 0.005 g/g solution
+raffinose pentahydrate,water/ethanol(100/0,w%),310 K,Not found,0.30 ± 0.01 g/g solution
+sucrose,water/ethanol(100/0,w%),310 K,Not found,0.701 ± 0.002 g/g solution
+trehalose dihydrate,water/ethanol(100/0,w%),310 K,Not found,0.508 ± 0.003 g/g solution
+mannitol,water/ethanol(100/0,w%),310 K,Not found,0.238 ± 0.001 g/g solution
+sorbitol,water/ethanol(100/0,w%),310 K,Not found,0.762 ± 0.006 g/g solution
+lactose anhydrate,water/ethanol(87.5/12.5,w%),310 K,Not found,0.212 ± 0.007 g/g solution
+maltose monohydrate,water/ethanol(87.5/12.5,w%),310 K,Not found,0.46 ± 0.01 g/g solution
+raffinose pentahydrate,water/ethanol(87.5/12.5,w%),310 K,Not found,0.24 ± 0.01 g/g solution
+sucrose,water/ethanol(87.5/12.5,w%),310 K,Not found,0.663 ± 0.003 g/g solution
+trehalose dihydrate,water/ethanol(87.5/12.5,w%),310 K,Not found,0.461 ± 0.004 g/g solution
+mannitol,water/ethanol(87.5/12.5,w%),310 K,Not found,0.185 ± 0.001 g/g solution
+sorbitol,water/ethanol(87.5/12.5,w%),310 K,Not found,0.734 ± 0.003 g/g solution
+lactose anhydrate,water/ethanol(75/25,w%),310 K,Not found,0.13 ± 0.02 g/g solution
+maltose monohydrate,water/ethanol(75/25,w%),310 K,Not found,0.39 ± 0.02 g/g solution
+raffinose pentahydrate,water/ethanol(75/25,w%),310 K,Not found,0.18 ± 0.01 g/g solution
+sucrose,water/ethanol(75/25,w%),310 K,Not found,0.624 ± 0.006 g/g solution
+trehalose dihydrate,water/ethanol(75/25,w%),310 K,Not found,0.394 ± 0.006 g/g solution
+mannitol,water/ethanol(75/25,w%),310 K,Not found,0.132 ± 0.006 g/g solution
+sorbitol,water/ethanol(75/25,w%),310 K,Not found,0.72 ± 0.03 g/g solution
+lactose anhydrate,water/ethanol(62.5/37.5,w%),310 K,Not found,0.064 ± 0.002 g/g solution
+maltose monohydrate,water/ethanol(62.5/37.5,w%),310 K,Not found,0.284 ± 0.004 g/g solution
+raffinose pentahydrate,water/ethanol(62.5/37.5,w%),310 K,Not found,0.1169 ± 0.0009 g/g solution
+sucrose,water/ethanol(62.5/37.5,w%),310 K,Not found,0.56 ± 0.02 g/g solution
+trehalose dihydrate,water/ethanol(62.5/37.5,w%),310 K,Not found,0.295 ± 0.001 g/g solution
+mannitol,water/ethanol(62.5/37.5,w%),310 K,Not found,0.093 ± 0.001 g/g solution
+sorbitol,water/ethanol(62.5/37.5,w%),310 K,Not found,0.66 ± 0.03 g/g solution
+lactose anhydrate,water/ethanol(50/50,w%),310 K,Not found,0.035 ± 0.001 g/g solution
+maltose monohydrate,water/ethanol(50/50,w%),310 K,Not found,0.186 ± 0.007 g/g solution
+raffinose pentahydrate,water/ethanol(50/50,w%),310 K,Not found,0.063 ± 0.003 g/g solution
+sucrose,water/ethanol(50/50,w%),310 K,Not found,0.46 ± 0.02 g/g solution
+trehalose dihydrate,water/ethanol(50/50,w%),310 K,Not found,0.190 ± 0.004 g/g solution
+mannitol,water/ethanol(50/50,w%),310 K,Not found,0.060 ± 0.002 g/g solution
+sorbitol,water/ethanol(50/50,w%),310 K,Not found,0.57 ± 0.02 g/g solution
+lactose anhydrate,water/ethanol(37.5/62.5,w%),310 K,Not found,0.016 ± 0.001 g/g solution
+maltose monohydrate,water/ethanol(37.5/62.5,w%),310 K,Not found,0.107 ± 0.009 g/g solution
+raffinose pentahydrate,water/ethanol(37.5/62.5,w%),310 K,Not found,0.018 ± 0.001 g/g solution
+sucrose,water/ethanol(37.5/62.5,w%),310 K,Not found,0.31 ± 0.02 g/g solution
+trehalose dihydrate,water/ethanol(37.5/62.5,w%),310 K,Not found,0.11 ± 0.02 g/g solution
+mannitol,water/ethanol(37.5/62.5,w%),310 K,Not found,0.034 ± 0.003 g/g solution
+sorbitol,water/ethanol(37.5/62.5,w%),310 K,Not found,0.472 ± 0.004 g/g solution
+lactose anhydrate,water/ethanol(25/75,w%),310 K,Not found,0.0072 ± 0.0005 g/g solution
+maltose monohydrate,water/ethanol(25/75,w%),310 K,Not found,0.0470 ± 0.0006 g/g solution
+raffinose pentahydrate,water/ethanol(25/75,w%),310 K,Not found,0.007 ± 0.001 g/g solution
+sucrose,water/ethanol(25/75,w%),310 K,Not found,0.119 ± 0.004 g/g solution
+trehalose dihydrate,water/ethanol(25/75,w%),310 K,Not found,0.024 ± 0.001 g/g solution
+mannitol,water/ethanol(25/75,w%),310 K,Not found,0.0135 ± 0.0001 g/g solution
+sorbitol,water/ethanol(25/75,w%),310 K,Not found,0.25 ± 0.03 g/g solution
+lactose anhydrate,water/ethanol(15/85,w%),310 K,Not found,0.0021 ± 0.0007 g/g solution
+maltose monohydrate,water/ethanol(15/85,w%),310 K,Not found,0.024 ± 0.002 g/g solution
+raffinose pentahydrate,water/ethanol(15/85,w%),310 K,Not found,0.0027 ± 0.0004 g/g solution
+sucrose,water/ethanol(15/85,w%),310 K,Not found,0.0253 ± 0.0004 g/g solution
+trehalose dihydrate,water/ethanol(15/85,w%),310 K,Not found,0.006 ± 0.001 g/g solution
+mannitol,water/ethanol(15/85,w%),310 K,Not found,0.006 ± 0.001 g/g solution
+sorbitol,water/ethanol(15/85,w%),310 K,Not found,0.101 ± 0.002 g/g solution
+lactose anhydrate,water/ethanol(5/95,w%),310 K,Not found,0.001 ± 0.001 g/g solution
+maltose monohydrate,water/ethanol(5/95,w%),310 K,Not found,0.006 ± 0.001 g/g solution
+raffinose pentahydrate,water/ethanol(5/95,w%),310 K,Not found,0.0008 ± 0.0006 g/g solution
+sucrose,water/ethanol(5/95,w%),310 K,Not found,0.0007 ± 0.0002 g/g solution
+trehalose dihydrate,water/ethanol(5/95,w%),310 K,Not found,0.003 ± 0.001 g/g solution
+mannitol,water/ethanol(5/95,w%),310 K,Not found,0.002 ± 0.001 g/g solution
+sorbitol,water/ethanol(5/95,w%),310 K,Not found,0.021 ± 0.001 g/g solution
+lactose anhydrate,water/ethanol(0/100,w%),310 K,Not found,0.0002 ± 0.0005 g/g solution
+maltose monohydrate,water/ethanol(0/100,w%),310 K,Not found,0.0174 ± 0.0008 g/g solution
+raffinose pentahydrate,water/ethanol(0/100,w%),310 K,Not found,0.0000 ± 0.0003 g/g solution
+sucrose,water/ethanol(0/100,w%),310 K,Not found,0.003 ± 0.001 g/g solution
+trehalose dihydrate,water/ethanol(0/100,w%),310 K,Not found,0.0010 ± 0.0004 g/g solution
+mannitol,water/ethanol(0/100,w%),310 K,Not found,0.0018 ± 0.0004 g/g solution
+sorbitol,water/ethanol(0/100,w%),310 K,Not found,0.0100 ± 0.0002 g/g solution

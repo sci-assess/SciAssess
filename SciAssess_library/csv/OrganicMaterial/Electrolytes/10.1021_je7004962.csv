@@ -1,0 +1,56 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Salicylic Acid,Water,298 K,Not found,2.20 x 10^-3 w%
+Salicylic Acid,Water,303 K,Not found,2.92 x 10^-3 w%
+Salicylic Acid,Water,308 K,Not found,3.50 x 10^-3 w%
+Salicylic Acid,Water,313 K,Not found,4.11 x 10^-3 w%
+Salicylic Acid,Water,318 K,Not found,5.38 x 10^-3 w%
+Salicylic Acid,Water,323 K,Not found,6.27 x 10^-3 w%
+Salicylic Acid,Water,328 K,Not found,7.44 x 10^-3 w%
+Salicylic Acid,Water,333 K,Not found,9.55 x 10^-3 w%
+Salicylic Acid,Water,338 K,Not found,11.64 x 10^-3 w%
+Salicylic Acid,Water,343 K,Not found,13.92 x 10^-3 w%
+Salicylic Acid,Water,348 K,Not found,17.10 x 10^-3 w%
+Salicylic Acid,Ethanol,298 K,Not found,325.38 x 10^-3 w%
+Salicylic Acid,Ethanol,303 K,Not found,356.96 x 10^-3 w%
+Salicylic Acid,Ethanol,308 K,Not found,385.13 x 10^-3 w%
+Salicylic Acid,Ethanol,313 K,Not found,405.53 x 10^-3 w%
+Salicylic Acid,Ethanol,318 K,Not found,427.40 x 10^-3 w%
+Salicylic Acid,Ethanol,323 K,Not found,448.90 x 10^-3 w%
+Salicylic Acid,Ethanol,328 K,Not found,477.86 x 10^-3 w%
+Salicylic Acid,Ethanol,333 K,Not found,499.58 x 10^-3 w%
+Salicylic Acid,Ethanol,338 K,Not found,525.19 x 10^-3 w%
+Salicylic Acid,Ethanol,343 K,Not found,543.40 x 10^-3 w%
+Salicylic Acid,Ethanol,348 K,Not found,569.77 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,298 K,Not found,2.99 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,303 K,Not found,3.77 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,308 K,Not found,4.89 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,313 K,Not found,6.31 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,318 K,Not found,7.69 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,323 K,Not found,10.19 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,328 K,Not found,12.55 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,333 K,Not found,15.12 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,338 K,Not found,18.01 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,343 K,Not found,21.27 x 10^-3 w%
+Salicylic Acid,Carbon Tetrachloride,348 K,Not found,25.02 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,298 K,Not found,200.76 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,303 K,Not found,217.88 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,308 K,Not found,235.82 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,313 K,Not found,252.46 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,318 K,Not found,269.24 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,323 K,Not found,285.96 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,328 K,Not found,301.02 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,333 K,Not found,318.02 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,338 K,Not found,334.76 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,343 K,Not found,351.51 x 10^-3 w%
+Salicylic Acid,Ethyl Acetate,348 K,Not found,369.21 x 10^-3 w%
+Salicylic Acid,Xylene,298 K,Not found,6.16 x 10^-3 w%
+Salicylic Acid,Xylene,303 K,Not found,8.43 x 10^-3 w%
+Salicylic Acid,Xylene,308 K,Not found,11.01 x 10^-3 w%
+Salicylic Acid,Xylene,313 K,Not found,13.82 x 10^-3 w%
+Salicylic Acid,Xylene,318 K,Not found,17.51 x 10^-3 w%
+Salicylic Acid,Xylene,323 K,Not found,22.16 x 10^-3 w%
+Salicylic Acid,Xylene,328 K,Not found,27.04 x 10^-3 w%
+Salicylic Acid,Xylene,333 K,Not found,33.54 x 10^-3 w%
+Salicylic Acid,Xylene,338 K,Not found,40.13 x 10^-3 w%
+Salicylic Acid,Xylene,343 K,Not found,48.35 x 10^-3 w%
+Salicylic Acid,Xylene,348 K,Not found,57.82 x 10^-3 w%

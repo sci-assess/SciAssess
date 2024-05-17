@@ -1,0 +1,11 @@
+solute_name,solvent_name,temperature,pressure,solubility
+water,[C2mim][Tf2N],25 ℃,Not found,1.60 M
+water,[C3C1pyrr][Tf2N],25 ℃,Not found,0.96 M
+water,[C4mim][Tf2N],25 ℃,Not found,1.20 M
+water,[C6mim][Tf2N],25 ℃,Not found,0.79 M
+water,[C8mim][Tf2N],25 ℃,Not found,0.63 M
+[C2mim][Tf2N],water,25 ℃,Not found,42 mM
+[C3C1pyrr][Tf2N],water,25 ℃,Not found,26 mM
+[C4mim][Tf2N],water,25 ℃,Not found,16 mM
+[C6mim][Tf2N],water,25 ℃,Not found,5 mM
+[C8mim][Tf2N],water,25 ℃,Not found,2.5 mM

@@ -1,0 +1,31 @@
+solute_name,solvent_name,temperature,pressure,solubility
+phenytoin,pH 6.4 buffer,Not found,Not found,8.0*10-5 M
+phenytoin,cyclohexane,Not found,Not found,0.16*10-3 M
+phenytoin,SIBLM,Not found,Not found,5.5*10-4 M
+3-acyloxymethyl phenytoin R=−CH3,pH 6.4 buffer,Not found,Not found,3.4*10-5 M
+3-acyloxymethyl phenytoin R=−CH3,cyclohexane,Not found,Not found,0.19*10-3 M
+3-acyloxymethyl phenytoin R=−CH3,SIBLM,Not found,Not found,2.7*10-4 M
+3-acyloxymethyl phenytoin R=−C2H5,pH 6.4 buffer,Not found,Not found,1.24*10-5 M
+3-acyloxymethyl phenytoin R=−C2H5,cyclohexane,Not found,Not found,0.24*10-3 M
+3-acyloxymethyl phenytoin R=−C2H5,SIBLM,Not found,Not found,1.3*10-4 M
+3-acyloxymethyl phenytoin R=−C3H7,pH 6.4 buffer,Not found,Not found,0.85*10-5 M
+3-acyloxymethyl phenytoin R=−C3H7,cyclohexane,Not found,Not found,1.08*10-3 M
+3-acyloxymethyl phenytoin R=−C3H7,SIBLM,Not found,Not found,1.4*10-4 M
+3-acyloxymethyl phenytoin R=−C4H9,pH 6.4 buffer,Not found,Not found,4.3*10-5 M
+3-acyloxymethyl phenytoin R=−C4H9,cyclohexane,Not found,Not found,14.7*10-3 M
+3-acyloxymethyl phenytoin R=−C4H9,SIBLM,Not found,Not found,4.3*10-4 M
+3-acyloxymethyl phenytoin R=−C5H11,pH 6.4 buffer,Not found,Not found,0.13*10-5 M
+3-acyloxymethyl phenytoin R=−C5H11,cyclohexane,Not found,Not found,4.5*10-3 M
+3-acyloxymethyl phenytoin R=−C5H11,SIBLM,Not found,Not found,1.9*10-4 M
+3-acyloxymethyl phenytoin R=−C6H13,pH 6.4 buffer,Not found,Not found,0.05*10-5 M
+3-acyloxymethyl phenytoin R=−C6H13,cyclohexane,Not found,Not found,9.9*10-3 M
+3-acyloxymethyl phenytoin R=−C6H13,SIBLM,Not found,Not found,2.1*10-4 M
+3-acyloxymethyl phenytoin R=−C7H15,pH 6.4 buffer,Not found,Not found,0.03*10-5 M
+3-acyloxymethyl phenytoin R=−C7H15,cyclohexane,Not found,Not found,150*10-3 M
+3-acyloxymethyl phenytoin R=−C7H15,SIBLM,Not found,Not found,5.4*10-4 M
+3-acyloxymethyl phenytoin R=−C8H17,pH 6.4 buffer,Not found,Not found,Not found
+3-acyloxymethyl phenytoin R=−C8H17,cyclohexane,Not found,Not found,48*10-3 M
+3-acyloxymethyl phenytoin R=−C8H17,SIBLM,Not found,Not found,3.4*10-4 M
+3-acyloxymethyl phenytoin R=−C9H119,pH 6.4 buffer,Not found,Not found,Not found
+3-acyloxymethyl phenytoin R=−C9H119,cyclohexane,Not found,Not found,701*10-3 M
+3-acyloxymethyl phenytoin R=−C9H119,SIBLM,Not found,Not found,6.1*10-4 M

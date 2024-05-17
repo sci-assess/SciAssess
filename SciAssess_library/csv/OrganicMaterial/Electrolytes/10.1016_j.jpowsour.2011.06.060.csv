@@ -1,0 +1,5 @@
+solute_name,solvent_name,temperature,pressure,solubility
+FLBDOB,PC,298.2 K,Not found,0.275 mol dm−3
+LBOB,PC,298.2 K,Not found,0.362 mol dm−3
+FLDFBDB,PC,298.2 K,Not found,0.443 mol dm−3
+LDFBDB,PC,298.2 K,Not found,0.518 mol dm−3

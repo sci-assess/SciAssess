@@ -1,0 +1,16 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Water,toluene,513.1 K,Not found,7.5 ± 0.6 wt.%
+Water,toluene,533.1 K,Not found,11.5 ± 1.3 wt.%
+Water,toluene,553.2 K,Not found,19.0 ± 2.5 wt.%
+Water,1-methylnaphthalene,533.3 K,Not found,5.7 ± 0.9 wt.%
+Water,1-methylnaphthalene,553.6 K,Not found,7.4 ± 1.4 wt.%
+Water,1-methylnaphthalene,573.2 K,Not found,13.6 ± 3.0 wt.%
+Water,Athabasca bitumen,548.2 K,Not found,3.7 ± 1.1 wt.%
+Water,Athabasca bitumen,573.1 K,Not found,5.3 ± 1.5 wt.%
+Water,Athabasca bitumen,583.2 K,Not found,6.2 ± 1.8 wt.%
+Water,Athabasca bitumen,593.1 K,Not found,7.7 ± 2.2 wt.%
+Water,Athabasca bitumen,603.5 K,Not found,8.8 ± 2.2 wt.%
+Water,Athabasca bitumen,613.4 K,Not found,11.3 ± 1.2 wt.%
+Water,Athabasca bitumen,623.2 K,Not found,13.5 ± 1.1 wt.%
+Water,Athabasca bitumen,633.8 K,Not found,15.2 ± 1.4 wt.%
+Water,Athabasca bitumen,644 K,Not found,16.9 ± 1.5 wt.%

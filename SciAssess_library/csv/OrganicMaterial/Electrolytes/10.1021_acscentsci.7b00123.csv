@@ -1,0 +1,8 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Li2S6,TTE,70 °C,Not found,0.11 mg/mL
+Li2S6,ACN−TTE,70 °C,Not found,0.20 mg/mL
+Li2S4,G4-LiTFSI,70 °C,Not found,4.90 mg/mL
+Li2S4,G4-LiTFSI,25 °C,Not found,0.57 mg/mL
+Li2S8,TTE,70 °C,Not found,0.013 mg/mL
+Li2S8,ACN−TTE,70 °C,Not found,0.035 mg/mL
+Li2S8,G4-LiTFSI,25 °C,Not found,0.190 mg/mL 

@@ -1,0 +1,73 @@
+111.5
+1.83 ( 0.01
+111.5
+1.66 ( 0.01
+111.5
+0.9 ( 0.1
+182.4
+5.11 ( 0.01
+182.4
+4.45 ( 0.01
+182.4
+3.6 ( 0.1
+243.2
+8.4 ( 0.2
+253.3
+7.4 ( 0.1
+243.2
+6.20 ( 0.01
+374.9
+13.99 ( 0.01
+374.9
+12.4 ( 0.1
+374.9
+10.90 ( 0.01
+506.6
+19.7 ( 0.5
+486.4
+16.8 ( 0.9
+506.6
+15.7 ( 0.5
+638.3
+25.96 ( 0.01
+628.2
+22.5 ( 0.8
+638.3
+21.0 ( 1.0
+solute_name,solvent_name,temperature,pressure,solubility
+methane,water,303.2 K,111.5 kPa,1.83 ± 0.01 x 10^-5 mol dm^-3
+methane,water,303.2 K,182.4 kPa,5.11 ± 0.01 x 10^-5 mol dm^-3
+methane,water,303.2 K,243.2 kPa,8.4 ± 0.2 x 10^-5 mol dm^-3
+methane,water,303.2 K,374.9 kPa,13.99 ± 0.01 x 10^-5 mol dm^-3
+methane,water,303.2 K,506.6 kPa,19.7 ± 0.5 x 10^-5 mol dm^-3
+methane,water,303.2 K,638.3 kPa,25.96 ± 0.01 x 10^-5 mol dm^-3
+methane,water,313.2 K,111.5 kPa,1.66 ± 0.01 x 10^-5 mol dm^-3
+methane,water,313.2 K,182.4 kPa,4.45 ± 0.01 x 10^-5 mol dm^-3
+methane,water,313.2 K,243.2 kPa,7.4 ± 0.1 x 10^-5 mol dm^-3
+methane,water,313.2 K,374.9 kPa,12.4 ± 0.1 x 10^-5 mol dm^-3
+methane,water,313.2 K,486.4 kPa,16.8 ± 0.9 x 10^-5 mol dm^-3
+methane,water,313.2 K,628.2 kPa,22.5 ± 0.8 x 10^-5 mol dm^-3
+methane,water,323.2 K,111.5 kPa,0.9 ± 0.1 x 10^-5 mol dm^-3
+methane,water,323.2 K,182.4 kPa,3.6 ± 0.1 x 10^-5 mol dm^-3
+methane,water,323.2 K,243.2 kPa,6.20 ± 0.01 x 10^-5 mol dm^-3
+methane,water,323.2 K,374.9 kPa,10.90 ± 0.01 x 10^-5 mol dm^-3
+methane,water,323.2 K,506.6 kPa,15.70 ± 0.5 x 10^-5 mol dm^-3
+methane,water,323.2 K,638.3 kPa,21.0 ± 1.0 x 10^-5 mol dm^-3
+methane,hexadecane,303.2 K,60.8 kPa,2.7 ± 0.4 x 10^-5 mol dm^-3
+methane,hexadecane,303.2 K,121.6 kPa,7.5 ± 0.5 x 10^-5 mol dm^-3
+methane,hexadecane,303.2 K,182.4 kPa,12.8 ± 0.5 x 10^-5 mol dm^-3
+methane,hexadecane,303.2 K,283.7 kPa,20.5 ± 0.5 x 10^-5 mol dm^-3
+methane,hexadecane,303.2 K,395.2 kPa,31.0 ± 0.8 x 10^-5 mol dm^-3
+methane,hexadecane,303.2 K,506.6 kPa,43.9 ± 0.6 x 10^-5 mol dm^-3
+methane,hexadecane,313.2 K,60.8 kPa,1.78 ± 0.01 x 10^-5 mol dm^-3
+methane,hexadecane,313.2 K,121.6 kPa,6.2 ± 0.2 x 10^-5 mol dm^-3
+methane,hexadecane,313.2 K,182.4 kPa,11.1 ± 0.4 x 10^-5 mol dm^-3
+methane,hexadecane,313.2 K,283.7 kPa,18.9 ± 0.5 x 10^-5 mol dm^-3
+methane,hexadecane,313.2 K,395.2 kPa,28.8 ± 0.7 x 10^-5 mol dm^-3
+methane,hexadecane,313.2 K,506.6 kPa,40.8 ± 0.7 x 10^-5 mol dm^-3
+methane,hexadecane,323.2 K,60.8 kPa,1.5 ± 0.5 x 10^-5 mol dm^-3
+methane,hexadecane,323.2 K,121.6 kPa,5.9 ± 0.7 x 10^-5 mol dm^-3
+methane,hexadecane,323.2 K,182.4 kPa,10.8 ± 0.7 x 10^-5 mol dm^-3
+methane,hexadecane,323.2 K,273.6 kPa,18.5 ± 0.7 x 10^-5 mol dm^-3
+methane,hexadecane,323.2 K,385.0 kPa,28.4 ± 0.6 x 10^-5 mol dm^-3
+methane,hexadecane,323.2 K,506.6 kPa,39.7 ± 0.5 x 10^-5 mol dm^-3
