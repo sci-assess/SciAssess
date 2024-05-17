@@ -1,0 +1,10 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Li[1-Me-12-Me-CB11Me10],Cyclohexane,21±0.5°C,Not found,1.04±0.19 g/L
+Li[1-Et-12-Me-CB11Me10],Cyclohexane,21±0.5°C,Not found,2.89±0.22 g/L
+Li[1-Pr-12-Me-CB11Me10],Cyclohexane,21±0.5°C,Not found,2.91±0.20 g/L
+Li[1-Bu-12-Me-CB11Me10],Cyclohexane,21±0.5°C,Not found,3.09±0.23 g/L
+Li[1-Hex-12-Me-CB11Me10],Cyclohexane,21±0.5°C,Not found,3.55±0.24 g/L
+Li[1-2-EtHex-12-Me-CB11Me10],Cyclohexane,21±0.5°C,Not found,4.57±0.27 g/L
+Li[1-Hex-12-Et-CB11Me10],Cyclohexane,21±0.5°C,Not found,3.63±0.25 g/L
+Li[1-Hex-12-i-Bu-CB11Me10],Cyclohexane,21±0.5°C,Not found,4.32±0.24 g/L
+Li[1-Hex-12-Octyl-CB11Me10],Cyclohexane,21±0.5°C,Not found,4.77±0.21 g/L

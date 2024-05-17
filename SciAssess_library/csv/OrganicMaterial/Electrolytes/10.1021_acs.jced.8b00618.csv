@@ -1,0 +1,68 @@
+solute_name,solvent_name,temperature,pressure,solubility,
+LiCl,[BMIM][OTf],298.15 K,0.1 MPa,2.85 mol %
+LiCl,[BMIM][OTf],303.15 K,0.1 MPa,3.00 mol %
+LiCl,[BMIM][OTf],313.15 K,0.1 MPa,3.40 mol %
+LiCl,[BMIM][OTf],318.15 K,0.1 MPa,4.33 mol %
+LiCl,[BMIM][OTf],323.15 K,0.1 MPa,5.60 mol %
+LiCl,[BMIM][OTf],333.15 K,0.1 MPa,7.53 mol %
+LiCl,[BMIM][OTf],343.15 K,0.1 MPa,9.38 mol %
+LiCl,[BMIM][N(CN)2],298.15 K,0.1 MPa,7.56 mol %
+LiCl,[BMIM][N(CN)2],303.15 K,0.1 MPa,8.07 mol %
+LiCl,[BMIM][N(CN)2],313.15 K,0.1 MPa,9.27 mol %
+LiCl,[BMIM][N(CN)2],323.15 K,0.1 MPa,10.8 mol %
+LiCl,[BMIM][N(CN)2],333.15 K,0.1 MPa,13.1 mol %
+LiCl,[BMIM][N(CN)2],343.15 K,0.1 MPa,15.2 mol %
+LiCl,[BMIM][BF4],298.15 K,0.1 MPa,3.77 mol %
+LiCl,[BMIM][BF4],303.15 K,0.1 MPa,4.06 mol %
+LiCl,[BMIM][BF4],313.15 K,0.1 MPa,5.36 mol %
+LiCl,[BMIM][BF4],323.15 K,0.1 MPa,6.78 mol %
+LiCl,[BMIM][BF4],333.15 K,0.1 MPa,8.70 mol %
+LiCl,[BMIM][BF4],343.15 K,0.1 MPa,10.5 mol %
+LiBr,[BMIM][N(CN)2],298.15 K,0.1 MPa,9.00 mol %
+LiBr,[BMIM][N(CN)2],303.15 K,0.1 MPa,9.50 mol %
+LiBr,[BMIM][N(CN)2],313.15 K,0.1 MPa,10.7 mol %
+LiBr,[BMIM][N(CN)2],323.15 K,0.1 MPa,12.6 mol %
+LiBr,[BMIM][N(CN)2],333.15 K,0.1 MPa,15.0 mol %
+LiBr,[BMIM][N(CN)2],343.15 K,0.1 MPa,18.4 mol %
+LiBr,[BMIM][BF4],298.15 K,0.1 MPa,6.20 mol %
+LiBr,[BMIM][BF4],303.15 K,0.1 MPa,6.60 mol %
+LiBr,[BMIM][BF4],313.15 K,0.1 MPa,8.10 mol %
+LiBr,[BMIM][BF4],323.15 K,0.1 MPa,10.7 mol %
+LiBr,[BMIM][BF4],333.15 K,0.1 MPa,13.0 mol %
+LiBr,[BMIM][BF4],343.15 K,0.1 MPa,17.0 mol %
+LiTFSI,[BMIM][N(CN)2],298.15 K,0.1 MPa,11.2 mol %
+LiTFSI,[BMIM][N(CN)2],303.15 K,0.1 MPa,11.7 mol %
+LiTFSI,[BMIM][N(CN)2],313.15 K,0.1 MPa,13.3 mol %
+LiTFSI,[BMIM][N(CN)2],323.15 K,0.1 MPa,15.3 mol %
+LiTFSI,[BMIM][N(CN)2],333.15 K,0.1 MPa,17.7 mol %
+LiTFSI,[BMIM][N(CN)2],343.15 K,0.1 MPa,20.5 mol %
+LiTFSI,[BMIM][BF4],298.15 K,0.1 MPa,9.40 mol %
+LiTFSI,[BMIM][BF4],303.15 K,0.1 MPa,9.80 mol %
+LiTFSI,[BMIM][BF4],313.15 K,0.1 MPa,10.9 mol %
+LiTFSI,[BMIM][BF4],323.15 K,0.1 MPa,13.0 mol %
+LiTFSI,[BMIM][BF4],333.15 K,0.1 MPa,15.3 mol %
+LiTFSI,[BMIM][BF4],343.15 K,0.1 MPa,17.7 mol %
+LiPF6,[BMIM][N(CN)2],298.15 K,0.1 MPa,13.5 mol %
+LiPF6,[BMIM][N(CN)2],303.15 K,0.1 MPa,13.9 mol %
+LiPF6,[BMIM][N(CN)2],313.15 K,0.1 MPa,15.5 mol %
+LiPF6,[BMIM][N(CN)2],323.15 K,0.1 MPa,17.6 mol %
+LiPF6,[BMIM][N(CN)2],333.15 K,0.1 MPa,20.3 mol %
+LiPF6,[BMIM][N(CN)2],343.15 K,0.1 MPa,24.2 mol %
+LiPF6,[BMIM][BF4],298.15 K,0.1 MPa,10.3 mol %
+LiPF6,[BMIM][BF4],303.15 K,0.1 MPa,10.8 mol %
+LiPF6,[BMIM][BF4],313.15 K,0.1 MPa,12.5 mol %
+LiPF6,[BMIM][BF4],323.15 K,0.1 MPa,14.1 mol %
+LiPF6,[BMIM][BF4],333.15 K,0.1 MPa,16.3 mol %
+LiPF6,[BMIM][BF4],343.15 K,0.1 MPa,19.6 mol %
+LiF,[BMIM][N(CN)2],298.15 K,0.1 MPa,6.34 × 10^-2 mol %
+LiF,[BMIM][N(CN)2],303.15 K,0.1 MPa,6.37 × 10^-2 mol %
+LiF,[BMIM][N(CN)2],313.15 K,0.1 MPa,6.46 × 10^-2 mol %
+LiF,[BMIM][N(CN)2],323.15 K,0.1 MPa,6.72 × 10^-2 mol %
+LiF,[BMIM][N(CN)2],333.15 K,0.1 MPa,7.11 × 10^-2 mol %
+LiF,[BMIM][N(CN)2],343.15 K,0.1 MPa,7.25 × 10^-2 mol %
+LiF,[BMIM][BF4],298.15 K,0.1 MPa,3.18 × 10^-2 mol %
+LiF,[BMIM][BF4],303.15 K,0.1 MPa,3.20 × 10^-2 mol % 
+LiF,[BMIM][BF4],313.15 K,0.1 MPa,3.23 × 10^-2 mol %
+LiF,[BMIM][BF4],323.15 K,0.1 MPa,3.30 × 10^-2 mol %
+LiF,[BMIM][BF4],333.15 K,0.1 MPa,3.33 × 10^-2 mol %
+LiF,[BMIM][BF4],343.15 K,0.1 MPa,3.41 × 10^-2 mol %

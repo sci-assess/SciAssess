@@ -1,0 +1,63 @@
+solute_name,solvent_name,temperature,pressure,solubility
+microcrystalline cellulose,[Cmim][CH3COO],40 °C,Not found,11.5 wt%
+microcrystalline cellulose,[Cmim][CH3COO],50 °C,Not found,12.5 wt%
+microcrystalline cellulose,[Cmim][CH3COO],60 °C,Not found,13.0 wt%
+microcrystalline cellulose,[Cmim][CH3COO],70 °C,Not found,15.5 wt%
+microcrystalline cellulose,[C4mim][HSCH2COO],40 °C,Not found,<1.0 wt%
+microcrystalline cellulose,[C4mim][HSCH2COO],50 °C,Not found,9.5 wt%
+microcrystalline cellulose,[C4mim][HSCH2COO],60 °C,Not found,12.5 wt%
+microcrystalline cellulose,[C4mim][HSCH2COO],70 °C,Not found,13.5 wt%
+microcrystalline cellulose,[C4mim][HCOO],40 °C,Not found,7.5 wt%
+microcrystalline cellulose,[C4mim][HCOO],50 °C,Not found,8.5 wt%
+microcrystalline cellulose,[C4mim][HCOO],60 °C,Not found,9.0 wt%
+microcrystalline cellulose,[C4mim][HCOO],70 °C,Not found,12.5 wt%
+microcrystalline cellulose,[C4mim][(C6H5)COO],40 °C,Not found,<1.0 wt%
+microcrystalline cellulose,[C4mim][(C6H5)COO],50 °C,Not found,<1.0 wt%
+microcrystalline cellulose,[C4mim][(C6H5)COO],60 °C,Not found,<1.0 wt%
+microcrystalline cellulose,[C4mim][(C6H5)COO],70 °C,Not found,12.0 wt%
+microcrystalline cellulose,[C4mim][H2NCH2COO],40 °C,Not found,<1.0 wt%
+microcrystalline cellulose,[C4mim][H2NCH2COO],50 °C,Not found,2.0 wt%
+microcrystalline cellulose,[C4mim][H2NCH2COO],60 °C,Not found,8.0 wt%
+microcrystalline cellulose,[C4mim][H2NCH2COO],70 °C,Not found,12.0 wt%
+microcrystalline cellulose,[C4mim][HOCH2COO],40 °C,Not found,insoluble
+microcrystalline cellulose,[C4mim][HOCH2COO],50 °C,Not found,7.5 wt%
+microcrystalline cellulose,[C4mim][HOCH2COO],60 °C,Not found,9.0 wt%
+microcrystalline cellulose,[C4mim][HOCH2COO],70 °C,Not found,10.5 wt%
+microcrystalline cellulose,[C4mim][CH3CHOHCOO],40 °C,Not found,insoluble
+microcrystalline cellulose,[C4mim][CH3CHOHCOO],50 °C,Not found,insoluble
+microcrystalline cellulose,[C4mim][CH3CHOHCOO],60 °C,Not found,8.0 wt%
+microcrystalline cellulose,[C4mim][CH3CHOHCOO],70 °C,Not found,9.5 wt%
+microcrystalline cellulose,[C4mim][N(CN)2],40 °C,Not found,insoluble
+microcrystalline cellulose,[C4mim][N(CN)2],50 °C,Not found,insoluble
+microcrystalline cellulose,[C4mim][N(CN)2],60 °C,Not found,insoluble
+microcrystalline cellulose,[C4mim][N(CN)2],70 °C,Not found,insoluble
+microcrystalline cellulose,[C4mim][CH3COO],40 °C,Not found,11.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO],50 °C,Not found,12.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO],60 °C,Not found,13.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO],70 °C,Not found,15.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO],80 °C,Not found,19.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiAc,40 °C,Not found,12.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiAc,50 °C,Not found,16.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiAc,60 °C,Not found,17.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiAc,70 °C,Not found,19.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiAc,80 °C,Not found,20.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiCl,40 °C,Not found,12.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiCl,50 °C,Not found,14.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiCl,60 °C,Not found,16.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiCl,70 °C,Not found,18.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiCl,80 °C,Not found,20.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiBr,40 °C,Not found,11.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiBr,50 °C,Not found,13.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiBr,60 °C,Not found,15.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiBr,70 °C,Not found,18.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiBr,80 °C,Not found,19.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiClO4,40 °C,Not found,12.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiClO4,50 °C,Not found,15.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiClO4,60 °C,Not found,17.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiClO4,70 °C,Not found,20.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiClO4,80 °C,Not found,21.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiNO3,40 °C,Not found,12.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiNO3,50 °C,Not found,15.0 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiNO3,60 °C,Not found,18.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiNO3,70 °C,Not found,19.5 wt%
+microcrystalline cellulose,[C4mim][CH3COO]/LiNO3,80 °C,Not found,21.0 wt%

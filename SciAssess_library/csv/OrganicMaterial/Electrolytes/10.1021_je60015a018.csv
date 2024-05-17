@@ -1,0 +1,26 @@
+solute_name,solvent_name,temperature,pressure,solubility
+LiOH,H2O,140 ℉,Not found,13.8 g per 100 g H2O
+LiOH,H2O,176 ℉,Not found,15.3 g per 100 g H2O
+LiOH,H2O,194 ℉,Not found,16.5 g per 100 g H2O
+LiOH,H2O,212 ℉,Not found,17.5 g per 100 g H2O
+LiOH,H2O,248 ℉,Not found,17.7 g per 100 g H2O
+LiOH,H2O,284 ℉,Not found,16.8 g per 100 g H2O
+LiOH,H2O,302 ℉,Not found,16.6 g per 100 g H2O
+LiOH,H2O,320 ℉,Not found,16 g per 100 g H2O
+LiOH,H2O,356 ℉,Not found,15.2 g per 100 g H2O
+LiOH,H2O,374 ℉,Not found,14.7 g per 100 g H2O
+LiOH,H2O,402 ℉,Not found,14.2 g per 100 g H2O
+LiOH,H2O,509 ℉,Not found,13.5 g per 100 g H2O
+LiOH,H2O,563 ℉,Not found,14.1 g per 100 g H2O
+LiOH,H2O,611 ℉,Not found,15 g per 100 g H2O
+NaOH,H2O,140 ℉,Not found,292 g per 100 g H2O
+NaOH,H2O,176 ℉,Not found,314 g per 100 g H2O
+NaOH,H2O,212 ℉,Not found,328 g per 100 g H2O
+NaOH,H2O,248 ℉,Not found,364 g per 100 g H2O
+NaOH,H2O,284 ℉,Not found,392 g per 100 g H2O
+NaOH,H2O,320 ℉,Not found,424 g per 100 g H2O
+NaOH,H2O,356 ℉,Not found,464 g per 100 g H2O
+NaOH,H2O,392 ℉,Not found,496 g per 100 g H2O
+NaOH,H2O,428 ℉,Not found,600 g per 100 g H2O
+NaOH,H2O,464 ℉,Not found,1067 g per 100 g H2O
+NaOH,H2O,500 ℉,Not found,2930 g per 100 g H2O

@@ -1,0 +1,10 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Ibuprofen,Water,32 C,Not found,0.09 mg/ml
+Ibuprofen,Ethanol/Water (25:75 v/v),32 C,Not found,343 mg/ml
+Ibuprofen,Ethanol/Water (50:50 v/v),32 C,Not found,453 mg/ml
+Ibuprofen,Ethanol/Water (75:25 v/v),32 C,Not found,489 mg/ml
+Ibuprofen,Ethanol,32 C,Not found,500 mg/ml
+Ibuprofen,Water (pH 2.0),32 C,Not found,2.8 mg/ml
+Ibuprofen,Water (pH 3.0),32 C,Not found,3.1 mg/ml
+Ibuprofen,Water (pH 5.0),32 C,Not found,0.41 mg/ml
+Ibuprofen,Water (pH 6.0),32 C,Not found,1.33 mg/ml

@@ -1,0 +1,13 @@
+solute_name,solvent_name,temperature,pressure,solubility
+LiTFSI,bmimACET,25 °C,Not found,0.18 M
+LiTFSI,bmimSCN,25 °C,Not found,1.3 M
+LiTFSI,bmimPF6,25 °C,Not found,0.06 M
+LiTFSI,EMITFSI,25 °C,Not found,0.4 M
+LiClO4,bmimACET,25 °C,Not found,0.10 M
+LiClO4,bmimSCN,25 °C,Not found,4.1 M
+LiClO4,bmimPF6,25 °C,Not found,0.09 M
+LiClO4,EMITFSI,25 °C,Not found,0.3 M
+LiPF6,bmimACET,25 °C,Not found,0.34 M
+LiPF6,bmimSCN,25 °C,Not found,0.60 M
+LiPF6,bmimPF6,25 °C,Not found,0.08 M
+LiPF6,EMITFSI,25 °C,Not found,0.1 M

@@ -1,0 +1,11 @@
+solute_name,solvent_name,temperature,pressure,solubility
+FLU,Water,298.2 K,Not found,7.40x10^-6 mol dm^-3
+FLU,Water,310.2 K,Not found,5.20x10^-5 mol dm^-3
+MEF,Water,298.2 K,Not found,5.75x10^-7 mol dm^-3
+MEF,Water,310.2 K,Not found,3.55x10^-6 mol dm^-3
+NIF,Water,298.2 K,Not found,7.61x10^-5 mol dm^-3
+NIF,Water,310.2 K,Not found,1.35x10^-4 mol dm^-3
+DIC,Water,298.2 K,Not found,1.01x10^-4 mol dm^-3
+DIC,Water,310.2 K,Not found,1.16x10^-4 mol dm^-3
+MEC,Water,298.2 K,Not found,1.58x10^-7 mol dm^-3
+MEC,Water,310.2 K,Not found,2.11x10^-7 mol dm^-3

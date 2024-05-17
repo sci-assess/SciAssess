@@ -1,0 +1,43 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Tricin,Water,288.15 K,0.1 MPa,0.0005 mol fraction
+Tricin,Water,293.16 K,0.1 MPa,0.0010 mol fraction
+Tricin,Water,298.15 K,0.1 MPa,0.0014 mol fraction
+Tricin,Water,303.15 K,0.1 MPa,0.0021 mol fraction
+Tricin,Water,308.16 K,0.1 MPa,0.0035 mol fraction
+Tricin,Water,313.18 K,0.1 MPa,0.0056 mol fraction
+Tricin,Water,318.15 K,0.1 MPa,0.0081 mol fraction
+Tricin,Ethanol-Water (80.08:19.92),288.17 K,0.1 MPa,0.0065 mol fraction
+Tricin,Ethanol-Water (80.08:19.92),293.16 K,0.1 MPa,0.0089 mol fraction
+Tricin,Ethanol-Water (80.08:19.92),298.15 K,0.1 MPa,0.0117 mol fraction
+Tricin,Ethanol-Water (80.08:19.92),303.18 K,0.1 MPa,0.0160 mol fraction
+Tricin,Ethanol-Water (80.08:19.92),308.15 K,0.1 MPa,0.0201 mol fraction
+Tricin,Ethanol-Water (80.08:19.92),313.14 K,0.1 MPa,0.0260 mol fraction
+Tricin,Ethanol-Water (80.08:19.92),318.15 K,0.1 MPa,0.0312 mol fraction
+Tricin,Ethanol-Water (60.85:39.15),288.17 K,0.1 MPa,0.0202 mol fraction
+Tricin,Ethanol-Water (60.85:39.15),293.14 K,0.1 MPa,0.0279 mol fraction
+Tricin,Ethanol-Water (60.85:39.15),298.15 K,0.1 MPa,0.0385 mol fraction
+Tricin,Ethanol-Water (60.85:39.15),303.14 K,0.1 MPa,0.0491 mol fraction
+Tricin,Ethanol-Water (60.85:39.15),308.15 K,0.1 MPa,0.0563 mol fraction
+Tricin,Ethanol-Water (60.85:39.15),313.17 K,0.1 MPa,0.0698 mol fraction
+Tricin,Ethanol-Water (60.85:39.15),318.16 K,0.1 MPa,0.0755 mol fraction
+Tricin,Ethanol-Water (40.26:59.74),288.17 K,0.1 MPa,0.0318 mol fraction
+Tricin,Ethanol-Water (40.26:59.74),293.14 K,0.1 MPa,0.0437 mol fraction
+Tricin,Ethanol-Water (40.26:59.74),298.15 K,0.1 MPa,0.0545 mol fraction
+Tricin,Ethanol-Water (40.26:59.74),303.14 K,0.1 MPa,0.0661 mol fraction
+Tricin,Ethanol-Water (40.26:59.74),308.15 K,0.1 MPa,0.0753 mol fraction
+Tricin,Ethanol-Water (40.26:59.74),313.17 K,0.1 MPa,0.0871 mol fraction
+Tricin,Ethanol-Water (40.26:59.74),318.16 K,0.1 MPa,0.0997 mol fraction
+Tricin,Ethanol-Water (20.08:79.92),288.16 K,0.1 MPa,0.0501 mol fraction
+Tricin,Ethanol-Water (20.08:79.92),293.17 K,0.1 MPa,0.0672 mol fraction
+Tricin,Ethanol-Water (20.08:79.92),298.15 K,0.1 MPa,0.0853 mol fraction
+Tricin,Ethanol-Water (20.08:79.92),303.18 K,0.1 MPa,0.1021 mol fraction
+Tricin,Ethanol-Water (20.08:79.92),308.15 K,0.1 MPa,0.1293 mol fraction
+Tricin,Ethanol-Water (20.08:79.92),313.16 K,0.1 MPa,0.1610 mol fraction
+Tricin,Ethanol-Water (20.08:79.92),318.17 K,0.1 MPa,0.1969 mol fraction
+Tricin,Pure Ethanol,288.18 K,0.1 MPa,0.0594 mol fraction
+Tricin,Pure Ethanol,293.18 K,0.1 MPa,0.0885 mol fraction
+Tricin,Pure Ethanol,298.15 K,0.1 MPa,0.1256 mol fraction
+Tricin,Pure Ethanol,303.17 K,0.1 MPa,0.1716 mol fraction
+Tricin,Pure Ethanol,308.15 K,0.1 MPa,0.2191 mol fraction
+Tricin,Pure Ethanol,313.18 K,0.1 MPa,0.3001 mol fraction
+Tricin,Pure Ethanol,318.16 K,0.1 MPa,0.3827 mol fraction

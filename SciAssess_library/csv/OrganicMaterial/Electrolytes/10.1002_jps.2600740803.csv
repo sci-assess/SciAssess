@@ -1,0 +1,9 @@
+solute_name,solvent_name,temperature,pressure,solubility,
+"le, HOCH2CH2N(CH3)3+",Water,25 °C,Not found,>1 M
+"1f, HOCH2CH2NH3+",Water,25 °C,Not found,>1 M
+"1g, NH4+",Water,25 °C,Not found,0.4 M
+"1h, (HOCH2)3CNH3+",Water,25 °C,Not found,0.069 M
+"1i, (CH3)(HOCH2)2CNH3+",Water,25 °C,Not found,0.9 M
+"1j, (CH3)2(HOCH2)CNH3+",Water,25 °C,Not found,0.057 M
+"1k, (CH3)3CNH3+",Water,25 °C,Not found,0.013 M
+"1l",Water,25 °C,Not found,4.4 *10^-4 M
