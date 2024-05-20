@@ -2,11 +2,12 @@ import os
 from pathlib import Path
 import requests
 from PyPDF2 import PdfReader, PdfWriter
+from typing import List
 
 def highlight(str: str) -> str:
     return f"\033[1;32m {str}\033[0m"
 
-def update_dataset_files(raw_samples: list[dict]) -> list[dict]:
+def update_dataset_files(raw_samples: List[dict]) -> List[dict]:
     """
     Update the file links (doi) in the dataset to local files.
     Extract a section from a PDF file and save it as a new file if necessary.
@@ -46,7 +47,7 @@ def update_dataset_files(raw_samples: list[dict]) -> list[dict]:
                     if not Path(segmented_local_file).exists():
                         reader = PdfReader(local_file)
                         writer = PdfWriter()
-                        for i in range(pages[0] - 1, pages[0]):
+                        for i in range(pages[0] - 1, pages[1]):
                             writer.add_page(reader.pages[i])
 
                         with open(segmented_local_file, 'wb') as output_pdf:
@@ -55,4 +56,6 @@ def update_dataset_files(raw_samples: list[dict]) -> list[dict]:
 
         if "answerfile_name" in raw_sample and Path(raw_sample["answerfile_name"]).exists():
             raw_sample["ideal"] = Path(raw_sample["answerfile_name"]).read_text()
+        elif "answerfile_name" in raw_sample and not Path(raw_sample["answerfile_name"]).exists():
+            print(raw_sample["answerfile_name"])
     return raw_samples

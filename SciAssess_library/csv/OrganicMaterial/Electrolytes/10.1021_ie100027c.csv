@@ -1,3 +1,4 @@
+solute_name,solvent_name,temperature,pressure,solubility
 KCl,methanol,293.15 K,Not found,0.0708 mol kg−1
 KCl,methanol,298.15 K,Not found,0.0736 mol kg−1
 KCl,methanol,303.15 K,Not found,0.0754 mol kg−1
