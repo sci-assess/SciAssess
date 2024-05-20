@@ -13,3 +13,42 @@
 {"answerfile_name": "SciAssess_library/csv/DrugDiscovery/10.1016_j.ejmech.2016.04.051.csv", "answerfile_link": "https://dp-filetrans-bj.oss-cn-beijing.aliyuncs.com/changjunhan/10.1016_j.ejmech.2016.04.051.csv", "compare_fields": ["Compound", "SMILES", ["Affinities", "A2780 (EC50)"]], "doi": "10.1016/j.ejmech.2016.04.051", "pages": [1, -1]}
 {"answerfile_name": "SciAssess_library/csv/DrugDiscovery/10.1016_j.tet.2004.09.011.csv", "answerfile_link": "https://dp-filetrans-bj.oss-cn-beijing.aliyuncs.com/changjunhan/10.1016_j.tet.2004.09.011.csv", "compare_fields": ["Compound", "SMILES", ["Affinities", "NADH oxidase chain 1 (IC50)"]], "doi": "10.1016/j.tet.2004.09.011", "pages": [1, -1]}
 {"answerfile_name": "SciAssess_library/csv/DrugDiscovery/10.1016_s0960-894x__01__00004-x.csv", "answerfile_link": "https://dp-filetrans-bj.oss-cn-beijing.aliyuncs.com/changjunhan/10.1016_s0960-894x__01__00004-x.csv", "compare_fields": ["Compound", "SMILES", ["Affinities", "Prostaglandin COX-1 (IC50)"]], "doi": "10.1016/s0960-894x(01)00004-x", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery/10_1021_acsmedchemlett_4c00137.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "CD73 (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00137", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00168.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "Jeko-1 (EC50)"]], "doi": "10.1021/acsmedchemlett.4c00168", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00133.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "MPO (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00133", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00045.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "mHTT (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00045", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00044.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "NIK (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00044", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00119.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "RIPK1 (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00119", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00023.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "HPK1 (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00023", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00087.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "HEK293-Blue-h TLR7 (EC50)"]], "doi": "10.1021/acsmedchemlett.4c00087", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00118.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "rhACC1 (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00118", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00179.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "EU-1 cells (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00179", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00177.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "MASTL (Ki)"]], "doi": "10.1021/acsmedchemlett.4c00177", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00520.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "α7 nAChR (EC50)"]], "doi": "10.1021/acsmedchemlett.3c00520", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00076.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "pEGFR (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00076", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00012.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "RFMS1 (IC50)"]], "doi": "10.1021/acsmedchemlett.4c00012", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00011.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "RIPK1 (EC50)"]], "doi": "10.1021/acsmedchemlett.4c00011", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00056.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "KD"]], "doi": "10.1021/acsmedchemlett.4c00056", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_4c00046.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "AT2R (Ki)"]], "doi": "10.1021/acsmedchemlett.4c00046", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00271.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "GCS (EC50)"]], "doi": "10.1021/acsmedchemlett.3c00271", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00324.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "PAFR (IC50)"]], "doi": "10.1021/acsmedchemlett.3c00324", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00441.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "PKal (IC50)"]], "doi": "10.1021/acsmedchemlett.3c00441", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00388.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "TBPS binding (IC50)"]], "doi": "10.1021/acsmedchemlett.3c00388", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00443.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "TG2 {IC50}"]], "doi": "10.1021/acsmedchemlett.3c00443", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00312.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "hP2X3(CHO) (IC50)"]], "doi": "10.1021/acsmedchemlett.3c00312", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00177.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "hAHR (EC50)"]], "doi": "10.1021/acsmedchemlett.3c00177", "pages": [1, -1]}
+{"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00180.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "IL4I1 (EC50)"]], "doi": "10.1021/acsmedchemlett.3c00180", "pages": [1, -1]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

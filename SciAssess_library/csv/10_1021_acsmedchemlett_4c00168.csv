@@ -1,0 +1,8 @@
+﻿Compound,SMILES,Affinities
+,,Jeko-1 (EC50)
+1,CC[C@@]1(O)C(=O)OCc2c1cc1n(c2=O)Cc2c-1nc1cc(F)c(C)c3c1c2[C@@H](NC(=O)[C@H](O)CCO)CC3,1.4
+4,CC[C@@]1(O)C(=O)OCc4c1cc3c2nc6cc(F)c(C)c5CC[C@H](NC(=O)[C@](C)(O)CO)c(c2Cn3c4=O)c56,1.2
+8,CC[C@@]1(O)C(=O)OCc4c1cc3c2nc6cc(F)c(C)c5CC[C@H](NC(=O)[C@](F)(F)C(C)O)c(c2Cn3c4=O)c56,1.6
+16,CC[C@@]1(O)C(=O)OCc4c1cc3c2nc6cc(F)c(C)c5CC[C@H](NC(=O)[C@](C)(N)C(F)(F)F)c(c2Cn3c4=O)c56,1.6
+32,CC[C@@]1(O)C(=O)OCc4c1cc3c2nc6cc(F)c(C)c5CC[C@H](NC(=O)[C@@H](C)CO)c(c2Cn3c4=O)c56,1.4
+35,CC[C@@]1(O)C(=O)OCc4c1cc3c2nc6cc(F)c(C)c5CC[C@H](NC(=O)C(F)CO)c(c2Cn3c4=O)c56,1.5

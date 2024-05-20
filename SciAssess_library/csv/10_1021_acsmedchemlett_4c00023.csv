@@ -1,0 +1,8 @@
+﻿Compound,SMILES,Affinities
+,,HPK1 (IC50)
+55,Cc5c(N4CCc3cnc(Nc2ccc(N1CCN(C)CC1)cc2)nc3C4)cnc6OCCNc56,＜100
+84,Cc5c(N4CCc3cnc(Nc2ccc1COCCc1c2)nc3C4)cnc6OCCNc56,＜100
+113,CON6CCN(c5ccc(Nc4ncc3CCN(c2cnc1OCCNc1c2C)Cc3n4)cc5)CC6,＜100
+145,CCc4c(N3CCc2cnc(Nc1ccc(CS(C)(=O)=O)cc1)nc2C3)cnc5OCCNc45,＜100
+185,Cc5c(N4CCc3cnc(Nc2ccc(Cn1nccn1)cc2)nc3C4)cnc6OCCNc56,＜100
+187,Cc5c(N4CCc3cnc(Nc2ccc(Cn1cccn1)cc2)nc3C4)cnc6OCCNc56,＜100

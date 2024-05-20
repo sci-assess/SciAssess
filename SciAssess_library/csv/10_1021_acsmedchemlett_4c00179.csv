@@ -1,0 +1,11 @@
+﻿Compound,SMILES,Affinities
+,,EU-1 cells (IC50)
+238,O=C(CCl)Nc3cc(OCCO)c2c(=O)c1c(OCCO)cccc1c(=O)c2c3,740±120
+260,CC(=O)CCOc2cccc3c(=O)c1cc(NC(=O)CCl)cc(OCCC(C)=O)c1c(=O)c23,450±20
+295,CC(=O)CCCOc2cccc3c(=O)c1cc(NC(=O)CCl)cc(OCCCC(C)=O)c1c(=O)c23,430±60
+345,CC(=O)CCCCOc2cccc3c(=O)c1cc(NC(=O)CCl)cc(OCCCCC(C)=O)c1c(=O)c23,790±30
+336,CC(=O)CCCOc2cc(NC(=O)CCl)cc3c(=O)c1cccc(O)c1c(=O)c23,849±29
+350,C#CC(=O)Nc3cc(OCCCC(C)=O)c2c(=O)c1c(OCCCC(C)=O)cccc1c(=O)c2c3,190±10
+353,C=CC(=O)Nc3cc(OCCCC(C)=O)c2c(=O)c1c(OCCCC(C)=O)cccc1c(=O)c2c3,6210±450
+354,C=CS(=O)(=O)Nc3cc(OCCCC(C)=O)c2c(=O)c1c(OCCCC(C)=O)cccc1c(=O)c2c3,3450±450
+349,CC(=O)CCCOc2cccc3c(=O)c1cc(NC(C)=O)cc(OCCCC(C)=O)c1c(=O)c23,＞100000

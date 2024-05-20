@@ -1,0 +1,8 @@
+﻿Compound,SMILES,Affinities
+,,CD73 (IC50)
+2,O=c5[nH]cc(c4cc(N3C[C@H](Oc1cc2c(cn1)CNN2CC(F)(F)F)C(F)(F)C3)nc(C(F)F)n4)c(=O)[nH]5,3.93
+4,O=c5[nH]cc(c4cc(N3C[C@H](Oc1cc2c(cn1)cnn2CC(F)(F)F)C(F)(F)C3)ncn4)c(=O)[nH]5,3.282
+8,N#Cc5nc(c1c[nH]c(=O)[nH]c1=O)cc(N4C[C@H](Oc2cc3c(cn2)CNN3CC(F)(F)F)C(F)(F)C4)n5,2.041
+9,N#Cc5nc(c1c[nH]c(=O)[nH]c1=O)cc(N4C[C@H](Oc2cc3c(cn2)cnn3CC(F)(F)F)C(F)(F)C4)n5,1.157
+22,Cc5nc(c1c[nH]c(=O)[nH]c1=O)cc(N4C[C@H](Oc2cc3c(cn2)CNN3CC(F)F)C(F)(F)C4)n5,2.966
+27,Cc5nc(c1c[nH]c(=O)[nH]c1=O)cc(N4C[C@H](Oc2cc3c(cn2)nnn3CC(F)(F)F)C(F)(F)C4)n5,3.967
