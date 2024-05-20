@@ -1,0 +1,25 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Toluene,Distilled Water,25.0 ℃,Not found,534.8 ppm
+Ethylbenzene,Distilled Water,25.0 ℃,Not found,161.2 ppm
+o-Xylene,Distilled Water,25.0 ℃,Not found,170.5 ppm
+m-Xylene,Distilled Water,25.0 ℃,Not found,146.0 ppm
+p-Xylene,Distilled Water,25.0 ℃,Not found,156.0 ppm
+Isopropylbenzene,Distilled Water,25.0 ℃,Not found,65.3 ppm
+"1,2,4-Trimethylbenzene",Distilled Water,25.0 ℃,Not found,59.0 ppm
+"1,2,3-Trimethylbenzene",Distilled Water,25.0 ℃,Not found,75.2 ppm
+"1,3,5-Trimethylbenzene",Distilled Water,25.0 ℃,Not found,48.2 ppm
+n-Butylbenzene,Distilled Water,25.0 ℃,Not found,11.8 ppm
+s-Butylbenzene,Distilled Water,25.0 ℃,Not found,17.6 ppm
+t-Butylbenzene,Distilled Water,25.0 ℃,Not found,29.5 ppm
+Toluene,seawater,25.0 ℃,Not found,379.3 ppm
+Ethylbenzene,seawater,25.0 ℃,Not found,111.0 ppm
+o-Xylene,seawater,25.0 ℃,Not found,129.6 ppm
+m-Xylene,seawater,25.0 ℃,Not found,106.0 ppm
+p-Xylene,seawater,25.0 ℃,Not found,110.9 ppm
+Isopropylbenzene,seawater,25.0 ℃,Not found,42.5 ppm
+"1,2,4-Trimethylbenzene",seawater,25.0 ℃,Not found,39.6 ppm
+"1,2,3-Trimethylbenzene",seawater,25.0 ℃,Not found,48.6 ppm
+"1,3,5-Trimethylbenzene",seawater,25.0 ℃,Not found,31.3 ppm
+n-Butylbenzene,seawater,25.0 ℃,Not found,7.09 ppm
+s-Butylbenzene,seawater,25.0 ℃,Not found,11.9 ppm
+t-Butylbenzene,seawater,25.0 ℃,Not found,21.2 ppm

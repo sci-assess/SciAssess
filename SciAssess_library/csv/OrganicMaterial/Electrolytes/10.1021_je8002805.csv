@@ -1,0 +1,16 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Water,[(C6H13)3P(C14H29)][N(SO2CF3)2],298.15 K,1 atm,0.087 mol fraction
+Water,[(C6H13)3P(C14H29][N(CN)2],298.15 K,1 atm,0.510 mol fraction
+Water,[(C6H13)3P(C14H29)][Br],298.15 K,1 atm,0.678 mol fraction
+Water,[(C6H13)3P(C14H29)][Cl],298.15 K,1 atm,0.817 mol fraction
+Water,[(C6H13)3P(C14H29][CH3(CH2)8CO2],298.15 K,1 atm,0.864 mol fraction
+Water,[(C6H13)3P(C14H29)][PO2(C2H3(CH3)CH2C(CH3)3)],298.15 K,1 atm,0.891 mol fraction
+Water,[(C6H13)3P(C14H29)][N(SO2CF3)2],298.15 K,1 atm,0.230 mol fraction
+Water,[(C6H13)3P(C14H29][N(CN)2],298.15 K,1 atm,0.494 mol fraction
+Water,[(C6H13)3P(C14H29)][Br],298.15 K,1 atm,0.596 mol fraction
+Water,[(C6H13)3P(C14H29)][Cl],298.15 K,1 atm,0.824 mol fraction
+Water,[(C6H13)3P(C14H29][CH3(CH2)8CO2],298.15 K,1 atm,0.907 mol fraction
+Water,[(C6H13)3P(C14H29)][PO2(C2H3(CH3)CH2C(CH3)3)],298.15 K,1 atm,0.918 mol fraction
+Water,[(C6H13)3P(C14H29][N(CN)2],298.15 K,1 atm,0.511 mol fraction
+Water,[(C6H13)3P(C14H29)][Cl],298.15 K,1 atm,0.829 mol fraction
+Water,[(C6H13)3P(C14H29)][PO2(C2H3(CH3)CH2C(CH3)3)],298.15 K,1 atm,0.878 mol fraction

@@ -1,0 +1,6 @@
+solute_name,solvent_name,temperature,pressure,solubility
+SiO2,H2O+CO2(x=0.185),800 ℃,1000 MPa,0.594
+SiO2,H2O+CO2(x=0.337),800 ℃,1000 MPa,0.340
+SiO2,H2O+CO2(x=0.499),800 ℃,1000 MPa,0.209
+SiO2,H2O+CO2(x=0.503),800 ℃,1000 MPa,0.163
+SiO2,H2O+CO2(x=0.676),800 ℃,1000 MPa,0.112

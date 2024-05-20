@@ -1,0 +1,60 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Water,[C6C6im][NTf2],288.15 K,0.1 MPa,0.1233 ± 0.0003 w%
+Water,[C6C6im][NTf2],293.15 K,0.1 MPa,0.1364 ± 0.0005 w%
+Water,[C6C6im][NTf2],298.15 K,0.1 MPa,0.1489 ± 0.0004 w%
+Water,[C6C6im][NTf2],303.15 K,0.1 MPa,0.1599 ± 0.0004 w%
+Water,[C6C6im][NTf2],308.15 K,0.1 MPa,0.1708 ± 0.0006 w%
+Water,[C6C6im][NTf2],313.15 K,0.1 MPa,0.1846 ± 0.0005 w%
+Water,[C6C6im][NTf2],318.15 K,0.1 MPa,0.1929 ± 0.0007 w%
+Water,[C7C7im][NTf2],288.15 K,0.1 MPa,0.1141 ± 0.0002 w%
+Water,[C7C7im][NTf2],293.15 K,0.1 MPa,0.1247 ± 0.0004 w%
+Water,[C7C7im][NTf2],298.15 K,0.1 MPa,0.1365 ± 0.0004 w%
+Water,[C7C7im][NTf2],303.15 K,0.1 MPa,0.1484 ± 0.0003 w%
+Water,[C7C7im][NTf2],308.15 K,0.1 MPa,0.1610 ± 0.0006 w%
+Water,[C7C7im][NTf2],313.15 K,0.1 MPa,0.1727 ± 0.0005 w%
+Water,[C7C7im][NTf2],318.15 K,0.1 MPa,0.1831 ± 0.0005 w%
+Water,[C8C8im][NTf2],288.15 K,0.1 MPa,0.1046 ± 0.0003 w%
+Water,[C8C8im][NTf2],293.15 K,0.1 MPa,0.1134 ± 0.0003 w%
+Water,[C8C8im][NTf2],298.15 K,0.1 MPa,0.1246 ± 0.0002 w%
+Water,[C8C8im][NTf2],303.15 K,0.1 MPa,0.1354 ± 0.0005 w%
+Water,[C8C8im][NTf2],308.15 K,0.1 MPa,0.1527 ± 0.0005 w%
+Water,[C8C8im][NTf2],313.15 K,0.1 MPa,0.1663 ± 0.0003 w%
+Water,[C8C8im][NTf2],318.15 K,0.1 MPa,0.1769 ± 0.0002 w%
+Water,[C9C9im][NTf2],288.15 K,0.1 MPa,0.0915 ± 0.0004 w%
+Water,[C9C9im][NTf2],293.15 K,0.1 MPa,0.1016 ± 0.0004 w%
+Water,[C9C9im][NTf2],298.15 K,0.1 MPa,0.1128 ± 0.0003 w%
+Water,[C9C9im][NTf2],303.15 K,0.1 MPa,0.1257 ± 0.0004 w%
+Water,[C9C9im][NTf2],308.15 K,0.1 MPa,0.1409 ± 0.0005 w%
+Water,[C9C9im][NTf2],313.15 K,0.1 MPa,0.1551 ± 0.0006 w%
+Water,[C9C9im][NTf2],318.15 K,0.1 MPa,0.1696 ± 0.0006 w%
+Water,[C10C10im][NTf2],308.15 K,0.1 MPa,0.1337 ± 0.0005 w%
+Water,[C10C10im][NTf2],313.15 K,0.1 MPa,0.1447 ± 0.0006 w%
+Water,[C10C10im][NTf2],318.15 K,0.1 MPa,0.1532 ± 0.0006 w%
+Water,[C11C11im][NTf2],308.15 K,0.1 MPa,0.1248 ± 0.0006 w%
+Water,[C11C11im][NTf2],313.15 K,0.1 MPa,0.1343 ± 0.0006 w%
+Water,[C11C11im][NTf2],318.15 K,0.1 MPa,0.1450 ± 0.0004 w%
+Water,[C9C1im][NTf2],288.15 K,0.1 MPa,0.1542 ± 0.0003 w%
+Water,[C9C1im][NTf2],293.15 K,0.1 MPa,0.1622 ± 0.0004 w%
+Water,[C9C1im][NTf2],298.15 K,0.1 MPa,0.1736 ± 0.0003 w%
+Water,[C9C1im][NTf2],303.15 K,0.1 MPa,0.1825 ± 0.0005 w%
+Water,[C9C1im][NTf2],308.15 K,0.1 MPa,0.1946 ± 0.0005 w%
+Water,[C9C1im][NTf2],313.15 K,0.1 MPa,0.2078 ± 0.0004 w%
+Water,[C9C1im][NTf2],318.15 K,0.1 MPa,0.2148 ± 0.0004 w%
+Water,[C10C1im][NTf2],288.15 K,0.1 MPa,0.1472 ± 0.0006 w%
+Water,[C10C1im][NTf2],293.15 K,0.1 MPa,0.1545 ± 0.0005 w%
+Water,[C10C1im][NTf2],298.15 K,0.1 MPa,0.1645 ± 0.0005 w%
+Water,[C10C1im][NTf2],303.15 K,0.1 MPa,0.1754 ± 0.0006 w%
+Water,[C10C1im][NTf2],308.15 K,0.1 MPa,0.1878 ± 0.0004 w%
+Water,[C10C1im][NTf2],313.15 K,0.1 MPa,0.1992 ± 0.0004 w%
+Water,[C10C1im][NTf2],318.15 K,0.1 MPa,0.2099 ± 0.0005 w%
+Water,[C11C1im][NTf2],288.15 K,0.1 MPa,0.1383 ± 0.0005 w%
+Water,[C11C1im][NTf2],293.15 K,0.1 MPa,0.1471 ± 0.0006 w%
+Water,[C11C1im][NTf2],298.15 K,0.1 MPa,0.1567 ± 0.0006 w%
+Water,[C11C1im][NTf2],303.15 K,0.1 MPa,0.1652 ± 0.0004 w%
+Water,[C11C1im][NTf2],308.15 K,0.1 MPa,0.1761 ± 0.0004 w%
+Water,[C11C1im][NTf2],313.15 K,0.1 MPa,0.1908 ± 0.0004 w%
+Water,[C11C1im][NTf2],318.15 K,0.1 MPa,0.2026 ± 0.0005 w%
+
+
+
+

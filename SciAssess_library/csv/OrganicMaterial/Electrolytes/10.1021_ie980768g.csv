@@ -1,0 +1,9 @@
+solute_name,solvent_name,temperature,pressure,solubility
+carbon dioxide,water,71 ℃,10 MPa,0.0166 mole fraction
+carbon dioxide,water,71 ℃,12.5 MPa,0.0182 mole fraction
+carbon dioxide,water,71 ℃,15 MPa,0.0197 mole fraction
+carbon dioxide,water,71 ℃,20 MPa,0.0213 mole fraction
+carbon dioxide,water,71 ℃,50 MPa,0.0256 mole fraction
+carbon dioxide,water,71 ℃,50 MPa,0.8205 mole fraction
+carbon dioxide,water,71 ℃,75 MPa,0.0285 mole fraction
+carbon dioxide,water,71 ℃,75 MPa,0.8260 mole fraction

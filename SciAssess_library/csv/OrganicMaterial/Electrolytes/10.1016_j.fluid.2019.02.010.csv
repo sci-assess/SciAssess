@@ -1,0 +1,4 @@
+solute_name,solvent_name,temperature,pressure,solubility
+HMF,deca-thy,303 K,101 kPa,80 wt%
+HMF,deca-n8888Br,303 K,101 kPa,75 wt%
+HMF,thy-lid,303 K,101 kPa,85 wt%

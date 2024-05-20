@@ -1,0 +1,13 @@
+solute_name,solvent_name,temperature,pressure,solubility,
+Acycloguanosine,50 mM Na phosphate,Not found,Not found,1
+Acycloguanosine,50 mM arginine,Not found,Not found,0.97±0.03
+Acycloguanosine,0.1M arginine,Not found,Not found,1.03±0.02
+Acycloguanosine,0.5M arginine,Not found,Not found,1.56±0.02
+Acycloguanosine,1M arginine,Not found,Not found,1.89±0.17
+Acycloguanosine,2 M arginine,Not found,Not found,2.64±0.05
+Acycloguanosine,50 mM Na glutamate,Not found,Not found,0.91±0.02
+Acycloguanosine,1 M Na glutamate,Not found,Not found,0.83±0.01
+Acycloguanosine,2 M Na glutamate,Not found,Not found,0.59±0.01
+Acycloguanosine,1 M arginine,Not found,Not found,1.89±0.17
+Acycloguanosine,1 M arginine/1 M glutamate,Not found,Not found,1.71±0.08
+Acycloguanosine,50 mM arginine/50 mM glutamate,Not found,Not found,0.97±0.04

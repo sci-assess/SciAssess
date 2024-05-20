@@ -1,0 +1,11 @@
+solute_name,solvent_name,temperature,pressure,solubility
+methane,methanol,280.15 K,2.112 MPa,0.017 mole fraction
+methane,methanol,280.15 K,3.078 MPa,0.025 mole fraction
+methane,methanol,280.15 K,4.1 MPa,0.034 mole fraction
+methane,methanol,280.15 K,4.848 MPa,0.041 mole fraction
+methane,methanol,280.15 K,6.027 MPa,0.051 mole fraction
+methane,ethanol,280.15 K,1.575 MPa,0.018 mole fraction
+methane,ethanol,280.15 K,2.107 MPa,0.025 mole fraction
+methane,ethanol,280.15 K,3.051 MPa,0.038 mole fraction
+methane,ethanol,280.15 K,4.282 MPa,0.053 mole fraction
+methane,ethanol,280.15 K,5.683 MPa,0.07 mole fraction

@@ -1,0 +1,12 @@
+solute_name,solvent_name,temperature,pressure,solubility
+Water,Basalt,1100 ℃,1034 bar,3.09 wt%
+Water,Andesite,1100 ℃,1034 bar,4.49 wt%
+Water,Basalt,2000 ℃,2000 bar,4.59 wt%
+Water,Andesite,2000 ℃,2000 bar,6.04 wt%
+Water,Basalt,3000 ℃,3000 bar,5.93 wt%
+Water,Andesite,3000 ℃,3000 bar,7.40 wt%
+Water,Basalt,4000 ℃,4000 bar,7.30 wt%
+Water,Andesite,4000 ℃,4000 bar,8.70 wt%
+Water,Basalt,5343 ℃,5343 bar,8.51 wt%
+Water,Andesite,5309 ℃,6067 bar,10.08 wt%
+Water,Basalt,6067 ℃,6067 bar,9.37 wt%

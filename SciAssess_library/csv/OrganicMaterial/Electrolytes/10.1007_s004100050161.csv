@@ -1,0 +1,17 @@
+solute_name,solvent_name,temperature,pressure,solubility
+water,α1(Mg,Fe)2SiO4,1100 ℃,2.5 GPa,135 ppm
+water,α2(Mg,Fe)2SiO4,1100 ℃,5 GPa,496 ppm
+water,α3(Mg,Fe)2SiO4,1100 ℃,6.5 GPa,>290 ppm
+water,α4(Mg,Fe)2SiO4,1100 ℃,8 GPa,867 ppm
+water,α5(Mg,Fe)2SiO4,1000 ℃,8 GPa,886 ppm
+water,α6(Mg,Fe)2SiO4,1100 ℃,8 GPa,898 ppm
+water,α7(Mg,Fe)2SiO4,1100 ℃,8 GPa,>490 ppm
+water,α8(Mg,Fe)2SiO4,1100 ℃,9 GPa,984 ppm
+water,α9(Mg,Fe)2SiO4,1100 ℃,10 GPa,1070 ppm
+water,α10(Mg,Fe)2SiO4,1100 ℃,12 GPa,1510 ppm
+water,α11(Mg,Fe)2SiO4,1100 ℃,13 GPa,1090 ppm
+water,β1(Mg,Fe)2SiO4,1100 ℃,14 GPa,>21300 ppm
+water,β2(Mg,Fe)2SiO4,1100 ℃,15 GPa,>23200 ppm
+water,β3(Mg,Fe)2SiO4,1100 ℃,15 GPa,>24100 ppm
+water,γ1(Mg,Fe)2SiO4,1100 ℃,19.5 GPa,1970 ppm
+water,γ2(Mg,Fe)2SiO4,1100 ℃,19.5 GPa,>26200 ppm
