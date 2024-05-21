@@ -7,7 +7,7 @@ oled_property_extraction.val.csv:
   args:
     samples_jsonl: OM_oled_property_extraction/samples.jsonl
     instructions: |
-      Please give a complete list of Host, Host's SMILES structure (if exists), Dopant, Assistant Dopant (if exists), Td/Tg/ET, Von,max EQE/CE/PE,EQE/CE/PE, and CIE [x, y]
+      You are an expert in the field of organic photovoltics. Please give a complete list of Host, Host's SMILES structure (if exists), Dopant, Assistant Dopant (if exists), Td/Tg/ET, Von,max EQE/CE/PE,EQE/CE/PE, and CIE [x, y]
       * Output in csv format with columns of those attributes, do not write units only the value like "10.5".
       * Quote the column name or Host's Name or Dopant's Name if it contains space or special characters like ",".
       * If there are multiple tables, concat them. Don't give me reference or using "...", give me complete table!
