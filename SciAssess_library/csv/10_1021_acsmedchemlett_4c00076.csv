@@ -1,0 +1,8 @@
+﻿Compound,SMILES,Affinities
+,,pEGFR (IC50)
+1,O=C(Nc1nccs1)C(c2ncn3C[C@H](F)Cc23)n7cc6c(Cl)cc(c5ccc(N4CCOCC4)cc5)c(Cl)c6n7,6
+2,Cc6c(c2ccc(N1CCOCC1)cc2)cc(C(F)F)c7cn(C(C(=O)Nc3nccs3)c4ncn5C[C@H](F)Cc45)nc67,7
+3,Cc7c(c2ccc(N1CCOCC1)cc2)cc(C(F)F)c8cn(C(C(=O)Nc3nccs3)c4ncn5c4CCC56CC6)nc78,10
+4,O=C(Nc1nccs1)C(c2ncn3CCCc23)n7cc6c(F)cc(C#Cc5ccc(CN4CCC(O)CC4)cc5)cc6n7,6
+5,Cc6c(C#Cc2ccc(CN1CCC(CO)CC1)cc2)cc(C(F)F)c7cn(C(C(=O)Nc3nccs3)c4ncn5CCCc45)nc67,3
+6,Cc7c(C#Cc2ccc(CN1CCC(CO)CC1)cc2)cc(C(F)F)c8cn(C(C(=O)Nc3nccs3)c4ncn5c4CCC56CC6)nc78,2

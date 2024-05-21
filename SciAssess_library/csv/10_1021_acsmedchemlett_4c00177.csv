@@ -1,0 +1,8 @@
+﻿Compound,SMILES,Affinities
+,,MASTL (Ki)
+8,CCC(C)(N)c4ccnc(Nc3cc2cc(c1cnnn1C)nc(N)c2cn3)c4,0.021
+9,CCC(C)(N)c4ccnc(Nc3cc2cc(c1cnnn1C)nc(N)c2cn3)c4,0.03
+11,CCC(C)(NC)c4ccnc(Nc3cc2cc(c1cnnn1C)nc(N)c2cn3)c4,0.018
+12,CCC(C)(NC)c4ccnc(Nc3cc2cc(c1cnnn1C)nc(N)c2cn3)c4,0.029
+16,CNC(c4ccnc(Nc3cc2cc(c1cnnn1C)nc(N)c2cn3)c4)C5CC5,0.029
+22,CCC(NC)c4ccnc(Nc3cc2cc(c1cnnn1C)nc(N)c2cn3)c4,0.02

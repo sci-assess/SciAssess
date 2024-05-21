@@ -1,0 +1,8 @@
+﻿Compound,SMILES,Affinities
+,,mHTT (IC50)
+1,Cc1cn2nc(-c3cc(F)c4nc(C5CCNCC5)cn4c3)cc(C)c2n1,＜100
+99,Cc6cn5nc(c4cc(F)c3nc(C2CCN(C1COC1)CC2)cn3c4)cc(C)c5n6,＜100
+160,Cc5cn4nc(c3cc(F)c2nc(C1CCNC1)cn2c3)cc(C)c4n5,＜100
+167,Cc6cn5nc(c4cc(F)c3nc(C2CCN(C1CC1)CC2)cn3c4)cc(C(F)F)c5n6,＜100
+374,Cc5cn4nc(c3cc(F)c2nn(C1CCNCC1)nc2c3)cc(C(F)F)c4n5,＜100
+506,Cc5cn4nc(c3cc(F)c2nc(N1CCC(N(C)C)CC1)cn2c3)cc(C(F)(F)F)c4n5,＜100

@@ -1,0 +1,8 @@
+﻿Compound,SMILES,Affinities
+,,RIPK1 (IC50)
+1,Nc1cc(N2CCC(C(=O)N3OCC[C@H]3c3cc(F)cc(F)c3)CC2)ncn1,13
+2,Cc4c(F)cc([C@@H]1CCON1C(=O)C3CCN(c2cc(N)ncn2)CC3)cc4C#N,23
+3,N#Cc4cc(F)cc([C@@H]1CCON1C(=O)C3CCN(c2cc(N)ncn2)CC3)c4,17
+5,COc4ncnc(N3CCC(C(=O)N1OCC[C@H]1c2cc(F)cc(C#N)c2)CC3)c4F,18
+6,COc4cc(N3CCC(C(=O)N1OCC[C@H]1c2cc(F)c(C)c(C#N)c2)CC3)ncn4,22
+7,COc4cc(N3CCC(C(=O)N1OCC[C@H]1c2cc(F)cc(Cl)c2)CC3)ncn4,17
