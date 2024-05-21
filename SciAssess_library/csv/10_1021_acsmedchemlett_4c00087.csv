@@ -1,0 +1,8 @@
+﻿Compound,SMILES,Affinities
+,,HEK293-Blue-h TLR7 (EC50)
+13A,CCP(C)(=O)c4nc(N)c3[nH]c(=O)n(Cc2ccc(N1CCN(C)CC1)nc2)c3n4,6
+13B,CCP(C)(=O)c4nc(N)c3[nH]c(=O)n(Cc2ccc(N1CCN(C)CC1)nc2)c3n4,5
+14B,CCP(C)(=O)c4nc(N)c3[nH]c(=O)n(Cc2ccc(N1CCN(S(C)(=O)=O)CC1)nc2)c3n4,7
+16A,CCP(C)(=O)c3nc(N)c2[nH]c(=O)n(Cc1ccc(OCCN(C)C)nc1)c2n3,1
+16B,CCP(C)(=O)c3nc(N)c2[nH]c(=O)n(Cc1ccc(OCCN(C)C)nc1)c2n3,6
+18A,CCP(C)(=O)c3nc(N)c2[nH]c(=O)n(Cc1ccc(NCCN(C)C)nc1)c2n3,4

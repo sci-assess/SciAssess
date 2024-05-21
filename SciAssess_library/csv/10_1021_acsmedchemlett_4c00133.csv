@@ -1,0 +1,8 @@
+﻿Compound,SMILES,Affinities
+,,MPO (IC50)
+1b,O=c3[nH]c(=S)n(Cc1ccccc1C2CCCCN2)c4cc[nH]c34,2.1
+10b,O=c3[nH]c(=S)n(Cc1ccccc1C2CC(C(F)(F)F)CCN2)c4cc[nH]c34,1.5
+12b,O=c3[nH]c(=S)n(Cc1ccccc1C2CC(C(F)F)CCN2)c4cc[nH]c34,2.7
+13b,O=c3[nH]c(=S)n(Cc1ccccc1C2C[C@H](C(F)(F)F)CCN2)c4nc[nH]c34,2.3
+18b,O=c3[nH]c(=S)n(Cc1ccccc1C2CC(C(F)(F)F)CCN2)c4nc[nH]c34,2.7
+19b,O=c3[nH]c(=S)n(Cc1ccccc1C2CC([C@@H](F)F)CCN2)c4cc[nH]c34,1.3

@@ -1,0 +1,10 @@
+﻿Compound,SMILES,Affinities
+,,PAFR (IC50)
+22,Cc1[n]2-c3c(C(=NC4(CC4)c2nn1)c1c(Cl)cccc1)c1C[C@@H](Cc1s3)C(NC1c2c(ccc(c2)F)CC1)=O,0.6
+53,Cc1[n]2-c3c(C(=NC4(CC4)c2nn1)c1c(Cl)cccc1)c1C[C@@H](Cc1s3)C(N[C@@H]1c2c(cccc2F)CC1)=O,0.5
+58,Cc1[n]2-c3c(C(=NC4(CC4)c2nn1)c1c(Cl)cccc1)c1C[C@@H](Cc1s3)C(N[C@@H]1Cc2c(cccc2)CC1)=O,0.4
+61,Cc1[n]2-c3c(C(=NC4(CC4)c2nn1)c1c(Cl)cccc1)c1C[C@@H](Cc1s3)C(NC1c2c(cc(cc2)F)CC1)=O,0.6
+79,Cc1[n]2-c3c(C(=NC4(CC4)c2nn1)c1c(Cl)cccc1)c1C[C@@H](Cc1s3)C(N(C1CCC(C)(C)CC1)C)=O,0.9
+104,CCCN(C([C@H]1Cc2c(sc3-[n]4c(nnc4C)C4(CC4)N=C(c4c(Cl)cccc4)c32)C1)=O)CCC,0.9
+,,
+,,
