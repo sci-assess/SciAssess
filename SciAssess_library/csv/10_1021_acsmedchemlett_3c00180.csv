@@ -1,0 +1,14 @@
+﻿Compound,SMILES,Affinities
+,,IL4I1 (EC50)
+75,O=C1c2c(ccc(c2)Cc2c(=O)[nH]c3c(cccc3)c2)CC1,0.9
+86,O=C(c1cccc(c1)Cc1c(=O)[nH]c2c(cccc2)c1)C,0.9
+98,C(C1(CC1)c1ccc(Cc2c(=O)[nH]c3c(cccc3)c2)cc1)#N,1
+121,c12NC(=O)Oc1cc(Cc1c(=O)[nH]c3c(cccc3)c1)cc2,0.9
+136,C(c1c2ccccc2oc1)c1c(=O)[nH]c2c(cccc2)c1,0.5
+170,C(c1cc(Cl)c2OCC(=O)Nc2c1)c1c(=O)[nH]c2c(cccc2)c1,1
+,,
+,,
+,,
+,,
+,,
+,,
