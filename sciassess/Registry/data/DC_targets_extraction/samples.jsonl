@@ -38,15 +38,3 @@
 {"input": "You are an expert in the field of biochemistry, please show which targets (protein / cell line) this paper's experiments do against. Here is a output demonstration: 'A549, HepG2'", "ideal": "PRDX1, SW620, HCT116, 293T, LX2, L292", "doi": "10.1021/acs.jmedchem.4c00023", "pages": [1, -1]}
 {"input": "You are an expert in the field of biochemistry, please show which targets (protein / cell line) this paper's experiments do against. Here is a output demonstration: 'A549, HepG2'", "ideal": "CRBN, GPX4, GAPDH, A549, A549R, SW620, SW620/AD300", "doi": "10.1021/acs.jmedchem.4c00545", "pages": [1, -1]}
 {"input": "You are an expert in the field of biochemistry, please show which targets (protein / cell line) this paper's experiments do against. Here is a output demonstration: 'A549, HepG2'", "ideal": "AMPK", "doi": "10.1021/acs.jmedchem.3C01267", "pages": [1, -1]}
-
-
-
-
-
-
-
-
-
-
-
-

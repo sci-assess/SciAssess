@@ -38,17 +38,3 @@
 {"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00312.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "hP2X3(CHO) (IC50)"]], "doi": "10.1021/acsmedchemlett.3c00312", "pages": [1, -1]}
 {"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00177.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "hAHR (EC50)"]], "doi": "10.1021/acsmedchemlett.3c00177", "pages": [1, -1]}
 {"answerfile_name": "SciAssess_library/csv/DrugDiscovery10_1021_acsmedchemlett_3c00180.csv", "answerfile_link": "", "compare_fields": ["Compound", "SMILES", ["Affinities", "IL4I1 (EC50)"]], "doi": "10.1021/acsmedchemlett.3c00180", "pages": [1, -1]}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
