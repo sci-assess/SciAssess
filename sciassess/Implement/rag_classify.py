@@ -114,7 +114,7 @@ class RAGModelBasedClassify(evals.Eval):
 
         k, v = list(self.mg.input_outputs.items())[0]
         # TODO: fix result = ?
-        self.recorder.record_sample(expected=test_sample['ideal'], result=str(completions), prompt=test_sample[k], metric=metrics)
+        self.recorder.record_sample(expected=test_sample['ideal'], result=str(completions), prompt=str(test_sample[k]), metric=metrics, file_name=sample_file_dict.get("file_name", None))
         # self.recorder.record_match(correct=metrics["score"] >= 1.0, expected=test_sample["ideal"],
         #                           picked=info["sampled"][0], sampled=completions[v],
         #                           prompt=test_sample[k], prompt_modelgrade=info["prompt"], file_name=sample_file_dict["file_name"])
