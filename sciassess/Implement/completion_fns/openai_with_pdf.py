@@ -29,6 +29,7 @@ class OpenAIChatCompletionFnWithPDF(CompletionFnSpec):
         api_base: Optional[str] = None,
         api_key: Optional[str] = None,
         n_ctx: Optional[int] = None,
+        pdf_parser: Optional[str] = 'pypdf',
         extra_options: Optional[dict] = {},
         **kwargs,
     ):
@@ -37,6 +38,7 @@ class OpenAIChatCompletionFnWithPDF(CompletionFnSpec):
         self.api_key = api_key
         self.n_ctx = n_ctx
         self.extra_options = extra_options
+        self.pdf_parser = pdf_parser
 
     @call_without_throw
     def __call__(
@@ -59,7 +61,9 @@ class OpenAIChatCompletionFnWithPDF(CompletionFnSpec):
         openai_create_prompt: OpenAICreateChatPrompt = prompt.to_formatted_prompt()
 
         if "file_name" in kwargs:
-            attached_file_content = "\nThe file is as follows:\n\n" + "".join(extract_text(kwargs["file_name"]))
+            attached_file_content = "\nThe file is as follows:\n\n" + "".join(extract_text(kwargs["file_name"], self.pdf_parser))
+            if self.model.startswith('gpt-3.5'):
+                attached_file_content = attached_file_content[:160000] # chunk size for gpt-3.5
             kwargs.pop('file_name')
         else:
             attached_file_content = ""
@@ -73,6 +77,9 @@ class OpenAIChatCompletionFnWithPDF(CompletionFnSpec):
             **{**kwargs, **self.extra_options},
         )
         result = OpenAIChatCompletionResult(raw_data=result, prompt=openai_create_prompt)
+
+        if len(result.get_completions()) == 0:
+            result = ErrorCompletionResult(exception=Exception("No completions returned"))
 
         record_sampling(prompt=result.prompt, sampled=result.get_completions())
         return result
