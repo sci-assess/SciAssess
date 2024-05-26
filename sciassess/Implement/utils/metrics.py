@@ -352,7 +352,7 @@ def load_embedding_model():
     if EMBEDDING_MODEL is None:
         print('loading embedding model...')
         from sentence_transformers import SentenceTransformer
-        EMBEDDING_MODEL = SentenceTransformer('/mnt/vepfs/fs_users/xumj/ckpts/all-mpnet-base-v2')
+        EMBEDDING_MODEL = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
     return EMBEDDING_MODEL
 
 
