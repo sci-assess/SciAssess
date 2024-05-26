@@ -5,3 +5,4 @@ _medmcqa.dev.v0:
   class: sciassess.Implement.match_with_func:MatchWithFunc
   args:
     samples_jsonl: BM_medmcqa/samples.jsonl
+    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice

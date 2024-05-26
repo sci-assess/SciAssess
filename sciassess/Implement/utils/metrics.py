@@ -11,6 +11,13 @@ import pandas as pd
 from sciassess.Implement.utils.postprocess import normalize, fuzzy_normalize_name, fuzzy_normalize_value
 
 
+def get_edit_distance_score(str1, str2):
+    import Levenshtein
+    base_score = max(len(str1), len(str2))
+    dist = Levenshtein.distance(str1, str2)
+    return 1- dist / base_score
+
+
 def fuzzy_match(s1: str, s2: str, **kwargs) -> bool:
     s1 = normalize(s1)
     s2 = normalize(s2)
@@ -19,7 +26,6 @@ def fuzzy_match(s1: str, s2: str, **kwargs) -> bool:
         return s1 == s2
 
     return s1 in s2 or s2 in s1
-
 
 def fuzzy_compare_name(a: str, b: str, metric="EditDistance", **kwargs) -> Union[bool, float]:
     def is_float(str):
@@ -43,7 +49,8 @@ def fuzzy_compare_name(a: str, b: str, metric="EditDistance", **kwargs) -> Union
     else:
         if metric == "EditDistance":
             import Levenshtein
-            return 1 - Levenshtein.distance(a.lower(), b.lower()) / (len(a) + len(b))
+            return 1 - Levenshtein.distance(a.lower(), b.lower()) / max(len(a), len(b))
+            # return 1 - Levenshtein.distance(a.lower(), b.lower()) / (len(a) + len(b))
         elif metric == "Word2Vec":
             pass
 
@@ -242,7 +249,6 @@ def match_list_bipartite(ind0: list, ind1: list, threshold: float = 0.9,
 
 def tableMatching(df_ref, df_prompt, index='Compound', compare_fields=[], record=True, file_name=None, **kwargs):
     assert len(df_ref) > 0, "Prompt table is empty."
-
     if df_prompt is None or len(df_prompt) == 0:
         return {"recall_field": 0.0, "recall_index": 0.0, "recall_value": 0.0, "recall_value_strict": 0.0,
                 "accuracy_value": 0.0, "accuracy_value_strict": 0.0}
@@ -251,7 +257,7 @@ def tableMatching(df_ref, df_prompt, index='Compound', compare_fields=[], record
 
     if index not in [None, ""]:
         df_ref[index] = df_ref[index].astype(str)
-        df_ref = df_ref.set_index(index)
+        df_ref = df_ref.set_index(index)                   
         df_prompt[index] = df_prompt[index].astype(str)
         df_prompt = df_prompt.set_index(index)
 
@@ -304,9 +310,15 @@ def tableMatching(df_ref, df_prompt, index='Compound', compare_fields=[], record
                 pval = df_prompt.loc[idx, col]
                 p = str(pval.iloc[0]) if type(pval) == pd.Series else str(pval)
             except:
-                p = 'not found'
+                # p = 'not found'
+                p = ""
 
             _is_matching = fuzzy_compare_name(gt, p) if col != "SMILES" else compare_molecule_strict(gt, p)
+            # _is_matching = get_edit_distance_score(
+            #     gt.replace(' ', '').lower(), 
+            #     p.replace(' ', '').lower()
+            # ) if col != "SMILES" else compare_molecule_strict(gt, p)
+            
             if col == "SMILES":
                 smiles_match_score += float(_is_matching)
             if record:
@@ -320,10 +332,8 @@ def tableMatching(df_ref, df_prompt, index='Compound', compare_fields=[], record
                 )
             _total_matching *= float(_is_matching)
             match_score += float(_is_matching) / M
-
         total_match_score += _total_matching
         _total_matching = 1.0
-
     metrics = {
         **metrics,
         "recall_value": match_score / N,
@@ -355,11 +365,8 @@ def cosine_similarity(sentence_ideal: str, sentence_pred: str) -> float:
     cosine_sim = dot_product / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
     return cosine_sim
 
-
-
 def cosine_similarity_tuples(tuple_ideal: List[Any], tuple_pred: List[Any]) -> float:
     return min([cosine_similarity(word_ideal, word_pred) for word_ideal, word_pred in zip(tuple_ideal, tuple_pred)])
-
 
 def match_bio_entities(words_ideal: list[Union[str, tuple]], words_pred: list[Union[str, tuple]], **kwargs):
     """
@@ -390,3 +397,25 @@ def match_bio_entities(words_ideal: list[Union[str, tuple]], words_pred: list[Un
         "f1_score": f1_score
     }
 
+def match_targets_extracted(ideals: str, result: str, **kwargs):
+    ideals = ideals.split(',')
+    sum_score = 0
+    for ideal in ideals:
+        ideal = ideal.strip()
+        if len(ideal) > len(result):
+            tmp_score = get_edit_distance_score(ideal.lower(), result.lower())
+        else:
+            tmp_score = 0
+            for i in range(len(result) - len(ideal)):
+                tmp_score = max(tmp_score, get_edit_distance_score(ideal.lower(), result[i: i+len(ideal)].lower()))
+        sum_score += tmp_score
+        print(ideal, result, tmp_score)
+    avg_score = sum_score / len(ideals)
+    return {
+        "score": avg_score
+    }
+    
+def compare_without_space(ideals: str, result: str, **kwargs):
+    ideals = ideals.replace(' ', '').lower()
+    result = result.replace(' ', '').lower()
+    return ideals == result
