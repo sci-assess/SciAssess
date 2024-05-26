@@ -49,7 +49,8 @@ def fuzzy_compare_name(a: str, b: str, metric="EditDistance", **kwargs) -> Union
     else:
         if metric == "EditDistance":
             import Levenshtein
-            return 1 - Levenshtein.distance(a.lower(), b.lower()) / (len(a) + len(b))
+            return 1 - Levenshtein.distance(a.lower(), b.lower()) / max(len(a), len(b))
+            # return 1 - Levenshtein.distance(a.lower(), b.lower()) / (len(a) + len(b))
         elif metric == "Word2Vec":
             pass
 
@@ -312,7 +313,7 @@ def tableMatching(df_ref, df_prompt, index='Compound', compare_fields=[], record
                 # p = 'not found'
                 p = ""
 
-            # _is_matching = fuzzy_compare_name(gt, p) if col != "SMILES" else compare_molecule_strict(gt, p)
+            _is_matching = fuzzy_compare_name(gt, p) if col != "SMILES" else compare_molecule_strict(gt, p)
             _is_matching = get_edit_distance_score(
                 gt.replace(' ', '').lower(), 
                 p.replace(' ', '').lower()

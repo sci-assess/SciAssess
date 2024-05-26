@@ -200,12 +200,12 @@ def extract_table(sampled: str, format: str = "csv",
                   index: Union[str, list, tuple] = ("Compound", ""), compare_fields: list = [],
                   **kwargs):
     import pandas as pd
-    def extract_table_with_comma3(sampled: str, format: str = "csv",
+    def extract_table_with_comma4(sampled: str, format: str = "csv",
                   index: Union[str, list, tuple] = ("Compound", ""), compare_fields: list = [],
                   **kwargs):
         pattern = re.compile(r',')
         lines = sampled.strip().split('\n')
-        matching_lines = [line for line in lines if len(pattern.findall(line)) > 3]
+        matching_lines = [line for line in lines if len(pattern.findall(line)) > 4]
         table_str = '\n'.join(matching_lines)
         return table_str
     
@@ -265,7 +265,7 @@ def extract_table(sampled: str, format: str = "csv",
                 table = pd.read_csv(fname, header=header_rows)
         elif format == "csv":
             try: 
-                code_content = extract_table_with_comma3(sampled)
+                code_content = extract_table_with_comma4(sampled)
                 code_content_processed = parse_csv_text(code_content)
                 table = pd.read_csv(StringIO(code_content_processed))
             except:
