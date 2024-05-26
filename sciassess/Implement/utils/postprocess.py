@@ -265,7 +265,7 @@ def extract_table(sampled: str, format: str = "csv",
                 table = pd.read_csv(fname, header=header_rows)
         elif format == "csv":
             try: 
-                code_content = extract_table_with_comma4(sampled)
+                code_content = extract_table_with_comma3(sampled)
                 code_content_processed = parse_csv_text(code_content)
                 table = pd.read_csv(StringIO(code_content_processed))
             except:
