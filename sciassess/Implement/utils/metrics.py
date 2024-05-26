@@ -85,28 +85,34 @@ def fuzzy_compare_value(a: str, b: str, metric="EditDistance", **kwargs) -> Unio
             return True
         except ValueError:
             return False
-
-    unit_str = ["nM", "uM", "µM", "mM", "%", " %", "wt.%", "at.%", "at%", "wt%"]
-    nan_str = ["n/a", "nan", "na", "n.a.", "nd", "not determined", "not tested", "inactive"]
-    a = a.strip()
-    b = b.strip()
-    if is_float(a) and is_float(b):
-        return np.allclose(float(a), float(b), equal_nan=True, atol=1e-2, rtol=1e-2)
-    elif fuzzy_normalize_value(a) == "bal" or fuzzy_normalize_value(b) == "bal":
-        return True
-    elif fuzzy_normalize_value(a) == fuzzy_normalize_value(b):
-        return True
-    elif ((a[-2:] in unit_str or a[-1] in unit_str or a.split()[-1] in unit_str) and
-          (b[-2:] in unit_str or b[-1] in unit_str or b.split()[-1] in unit_str)):
-        a = standardize_unit(a)
-        b = standardize_unit(b)
-        return a == b
-    elif a.lower() in nan_str and b.lower() in nan_str:
-        return True
-    if ((a.lower().startswith(b.lower()) or a.lower().endswith(b.lower())) or
-        (b.lower().startswith(a.lower()) or b.lower().endswith(a.lower()))):
-        return True
-    else:
+    try:
+        unit_str = ["nM", "uM", "µM", "mM", "%", " %", "wt.%", "at.%", "at%", "wt%"]
+        nan_str = ["n/a", "nan", "na", "n.a.", "nd", "not determined", "not tested", "inactive"]
+        a = a.strip()
+        b = b.strip()
+        if is_float(a) and is_float(b):
+            return np.allclose(float(a), float(b), equal_nan=True, atol=1e-2, rtol=1e-2)
+        elif fuzzy_normalize_value(a) == "bal" or fuzzy_normalize_value(b) == "bal":
+            return True
+        elif fuzzy_normalize_value(a) == fuzzy_normalize_value(b):
+            return True
+        elif ((a[-2:] in unit_str or a[-1] in unit_str or a.split()[-1] in unit_str) and
+            (b[-2:] in unit_str or b[-1] in unit_str or b.split()[-1] in unit_str)):
+            a = standardize_unit(a)
+            b = standardize_unit(b)
+            return a == b
+        elif a.lower() in nan_str and b.lower() in nan_str:
+            return True
+        if ((a.lower().startswith(b.lower()) or a.lower().endswith(b.lower())) or
+            (b.lower().startswith(a.lower()) or b.lower().endswith(a.lower()))):
+            return True
+        else:
+            if metric == "EditDistance":
+                import Levenshtein
+                return 1 - Levenshtein.distance(a.lower(), b.lower()) / max(len(a), len(b))
+            elif metric == "Word2Vec":
+                pass
+    except:
         if metric == "EditDistance":
             import Levenshtein
             return 1 - Levenshtein.distance(a.lower(), b.lower()) / max(len(a), len(b))
@@ -347,7 +353,7 @@ def load_embedding_model():
     if EMBEDDING_MODEL is None:
         print('loading embedding model...')
         from sentence_transformers import SentenceTransformer
-        EMBEDDING_MODEL = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+        EMBEDDING_MODEL = SentenceTransformer('/mnt/vepfs/fs_users/xumj/ckpts/all-mpnet-base-v2')
     return EMBEDDING_MODEL
 
 
