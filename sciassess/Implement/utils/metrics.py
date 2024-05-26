@@ -310,14 +310,9 @@ def tableMatching(df_ref, df_prompt, index='Compound', compare_fields=[], record
                 pval = df_prompt.loc[idx, col]
                 p = str(pval.iloc[0]) if type(pval) == pd.Series else str(pval)
             except:
-                # p = 'not found'
-                p = ""
+                p = 'not found'
 
             _is_matching = fuzzy_compare_value(gt, p) if col != "SMILES" else compare_molecule_strict(gt, p)
-            # _is_matching = get_edit_distance_score(
-            #     gt.replace(' ', '').lower(), 
-            #     p.replace(' ', '').lower()
-            # ) if col != "SMILES" else compare_molecule_strict(gt, p)
             
             if col == "SMILES":
                 smiles_match_score += float(_is_matching)
@@ -352,7 +347,7 @@ def load_embedding_model():
     if EMBEDDING_MODEL is None:
         print('loading embedding model...')
         from sentence_transformers import SentenceTransformer
-        EMBEDDING_MODEL = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+        EMBEDDING_MODEL = SentenceTransformer('/mnt/vepfs/fs_users/xumj/ckpts/all-mpnet-base-v2')
     return EMBEDDING_MODEL
 
 
