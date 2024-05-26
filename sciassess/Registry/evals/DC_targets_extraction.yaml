@@ -4,7 +4,7 @@ targets_extraction:
   description: Test the model's ability to retrieve protein/cell line targets from literature.
 
 targets_extraction.test.v1:
-  class: sciassess.Implement.rag_classify:RAGModelBasedClassify
+  class: sciassess.Implement.match_with_func:MatchWithFunc
   args:
     samples_jsonl: DC_targets_extraction/samples.jsonl
-    modelgraded_spec: coverage
+    func_comparison: sciassess.Implement.utils.metrics:match_targets_extracted

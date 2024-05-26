@@ -200,7 +200,15 @@ def extract_table(sampled: str, format: str = "csv",
                   index: Union[str, list, tuple] = ("Compound", ""), compare_fields: list = [],
                   **kwargs):
     import pandas as pd
-
+    def extract_table_with_comma3(sampled: str, format: str = "csv",
+                  index: Union[str, list, tuple] = ("Compound", ""), compare_fields: list = [],
+                  **kwargs):
+        pattern = re.compile(r',')
+        lines = sampled.strip().split('\n')
+        matching_lines = [line for line in lines if len(pattern.findall(line)) > 3]
+        table_str = '\n'.join(matching_lines)
+        return table_str
+    
     def parse_csv_text(csvtext: str) -> str:
         lines = csvtext.strip().split("\n")
         tuple_pattern = r"\((\"[\s\S]*?\"),(\"[\s\S]*?\")\)"
@@ -256,25 +264,29 @@ def extract_table(sampled: str, format: str = "csv",
             if pd.isna(table.iloc[0, 0]):
                 table = pd.read_csv(fname, header=header_rows)
         elif format == "csv":
-            starts = index if type(index) == str else index[0]
-            table_pattern_format = table_pattern.format(index0=starts)
-            if re.search(csv_pattern, sampled) is not None:
-                code = re.search(csv_pattern, sampled).group()
-                code_content = re.sub(csv_pattern, r"\1", code)
+            try: 
+                code_content = extract_table_with_comma3(sampled)
+                code_content_processed = parse_csv_text(code_content)
+                table = pd.read_csv(StringIO(code_content_processed))
+            except:
+                starts = index if type(index) == str else index[0]
+                table_pattern_format = table_pattern.format(index0=starts)
+                if re.search(csv_pattern, sampled) is not None:
+                    code = re.search(csv_pattern, sampled).group()
+                    code_content = re.sub(csv_pattern, r"\1", code)
 
-            elif re.search(table_pattern_format, "\n" + sampled) is not None:
-                code = re.search(table_pattern_format, "\n" + sampled).group().strip()
-                code_content = re.sub(table_pattern_format, r"\1", code)
-            else:
-                code_content = sampled
-            code_content_processed = parse_csv_text(code_content)
-            # table = pd.read_csv(StringIO(code_content_processed), header=header_rows)
-            table = pd.read_csv(StringIO(code_content_processed))
+                elif re.search(table_pattern_format, "\n" + sampled) is not None:
+                    code = re.search(table_pattern_format, "\n" + sampled).group().strip()
+                    code_content = re.sub(table_pattern_format, r"\1", code)
+                else:
+                    code_content = sampled
+                code_content_processed = parse_csv_text(code_content)
+                # table = pd.read_csv(StringIO(code_content_processed), header=header_rows)
+                table = pd.read_csv(StringIO(code_content_processed))
             if table.shape[0] == 0:
                 table = pd.DataFrame()
             elif pd.isna(table.iloc[0, 0]):
                 table = pd.read_csv(StringIO(code_content_processed), header=header_rows)
-
         elif format == "json":
             code = re.search(json_pattern, sampled).group()
             code_content = re.sub(json_pattern, r"\1", code).replace("\"", "")
