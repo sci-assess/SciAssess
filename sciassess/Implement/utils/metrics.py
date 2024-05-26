@@ -314,10 +314,10 @@ def tableMatching(df_ref, df_prompt, index='Compound', compare_fields=[], record
                 p = ""
 
             _is_matching = fuzzy_compare_name(gt, p) if col != "SMILES" else compare_molecule_strict(gt, p)
-            _is_matching = get_edit_distance_score(
-                gt.replace(' ', '').lower(), 
-                p.replace(' ', '').lower()
-            ) if col != "SMILES" else compare_molecule_strict(gt, p)
+            # _is_matching = get_edit_distance_score(
+            #     gt.replace(' ', '').lower(), 
+            #     p.replace(' ', '').lower()
+            # ) if col != "SMILES" else compare_molecule_strict(gt, p)
             
             if col == "SMILES":
                 smiles_match_score += float(_is_matching)
