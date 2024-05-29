@@ -1,6 +1,0 @@
-general_chemistry:
-  evals:
-    # - _abstract2title
-    # - research_question_extraction
-    - balance_chemical_equation
-    - mmlu_chemistry

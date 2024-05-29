@@ -1,0 +1,6 @@
+general_ability:
+  evals:
+    - mmlu_science
+    - cmmlu_science
+    - xiezhi_chinese_science
+    - xiezhi_english_science
