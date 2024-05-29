@@ -1,6 +1,6 @@
 from typing import Any, Optional
 
-from sciassess.Implement.utils.storage import update_dataset_files
+from sciassess.Implement.utils.storage import update_dataset_files, prepare_few_shot
 from sciassess.Implement.completion_fns.utils import ErrorCompletionResult
 import evals
 import evals.metrics
@@ -8,6 +8,7 @@ from evals.api import CompletionFn
 from evals.prompt.base import is_chat_prompt
 from evals.utils.misc import make_object
 from typing import Union
+import os
 
 def check_match(
     sampled: str,
@@ -65,12 +66,6 @@ class MatchWithFunc(evals.Eval):
         ), "sample['ideal'] must be a string or list of strings"
 
         prompt = sample["input"]
-        if self.num_few_shot > 0:
-            assert is_chat_prompt(sample["input"]), "few shot requires chat prompt"
-            prompt = sample["input"][:-1]
-            for s in self.few_shot[: self.num_few_shot]:
-                prompt += s["sample"]
-            prompt += sample["input"][-1:]
 
         result = self.completion_fn(
             prompt=prompt,
@@ -129,6 +124,14 @@ class MatchWithFunc(evals.Eval):
 
     def run(self, recorder):
         raw_samples = self.get_samples()
+        n_shot_path = os.path.join(os.path.dirname(self.samples_jsonl), 'n_shot.jsonl')
+        # few_shot
+        try:
+            self.samples_jsonl = n_shot_path
+            n_shot_samples = self.get_samples()
+            raw_samples = prepare_few_shot(raw_samples, n_shot_samples)
+        except:
+            pass
         samples = update_dataset_files(raw_samples)
         for sample in samples:
             if "input" not in sample:

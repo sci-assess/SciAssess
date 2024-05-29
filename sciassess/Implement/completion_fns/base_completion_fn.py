@@ -14,7 +14,6 @@ class SimpleCompletionResult(CompletionResult):
         return [self.response.strip()] if self.response else ["Unknown"]
 
 class BaseCompletionFn(CompletionFn):
-
     def __init__(
             self,
             instructions: Optional[str] = "You are a helpful assistant.",

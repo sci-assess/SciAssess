@@ -1,4 +1,5 @@
 import os
+import random
 from pathlib import Path
 import requests
 from PyPDF2 import PdfReader, PdfWriter
@@ -59,3 +60,39 @@ def update_dataset_files(raw_samples: List[dict]) -> List[dict]:
         elif "answerfile_name" in raw_sample and not Path(raw_sample["answerfile_name"]).exists():
             print(raw_sample["answerfile_name"])
     return raw_samples
+
+import random
+def prepare_few_shot(raw_samples, n_shot_samples):
+    n_shot = int(os.environ.get('N_SHOT', 3))
+    examples = []
+    for sample in n_shot_samples:
+        example_input = None
+        for item in sample['input']:
+            if item['role'] != 'user':
+                continue
+            example_input = item['content']
+            break
+        if example_input is not None:
+            example_output = sample['ideal']
+            examples.append({'input': example_input, 'output': example_output})
+    n_shot = min(len(examples), n_shot)
+    if n_shot == 0:
+        return raw_samples
+    for sample in raw_samples:
+        n_shot_text = "Here is input/output examples:\n"
+        for example in random.choices(examples, k=n_shot):
+            n_shot_text += "<input>\n"
+            n_shot_text += example['input'] + '\n'
+            n_shot_text += "<input>\n"
+            n_shot_text += "<output>\n"
+            n_shot_text += example['output'] + '\n'
+            n_shot_text += "<output>\n"
+            n_shot_text += '\n'
+
+        if sample['input'][0]['role'] != 'system':
+            sample['input'][0]['content'] = '\n\n' + n_shot_text + sample['input'][0]['content']
+        else:
+            sample['input'][0]['content'] = sample['input'][0]['content'] + n_shot_text
+
+    return raw_samples
+
