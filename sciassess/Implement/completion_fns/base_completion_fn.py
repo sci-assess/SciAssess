@@ -40,11 +40,6 @@ class BaseCompletionFn(CompletionFn):
         messages[-1]['content'] += attached_file_content
         return self.get_completions(messages=messages, **kwargs)
 
-    @abs
-    def get_completions(self, messages, **kwargs) -> str:
-        # 接受一个messages列表，如[{"role": "user", "content": "你好"}]
-        # 返回一个字符串
-        return "Hello, world!"
 
     def get_completions(self, messages: List[Dict], **kwargs: Any) -> str:
         raise NotImplementedError
