@@ -29,7 +29,7 @@ eval_results_filenames = sorted(eval_results_filenames, key=os.path.getctime)
 # get metric for all evals
 def get_metric_for_eval(eval):
     for file in os.listdir(f"{PROJECT_PATH}/sciassess/Registry/evals"):
-        if file.endswith(f"{eval}.yaml"):
+        if file.endswith(f"_{eval}.yaml"):
             with open(f"{PROJECT_PATH}/sciassess/Registry/evals/{file}") as f:
                 eval_yaml = yaml.safe_load(f)
             return eval_yaml[eval]['metrics'][0]
