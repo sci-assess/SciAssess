@@ -79,7 +79,7 @@ def prepare_few_shot(raw_samples, n_shot_samples):
     if n_shot == 0:
         return raw_samples
     for sample in raw_samples:
-        n_shot_text = "Here is input/output examples:\n"
+        n_shot_text = "\nHere is input/output examples:\n"
         for example in random.choices(examples, k=n_shot):
             n_shot_text += "<input>\n"
             n_shot_text += example['input'] + '\n'
