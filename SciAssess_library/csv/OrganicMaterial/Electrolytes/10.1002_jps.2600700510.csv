@@ -1,4 +1,21 @@
 solute_name,solvent_name,temperature,pressure,solubility
+I,n-octanol,20 ℃,Not found,81 mg/l
+II,n-octanol,20 ℃,Not found,100 mg/l
+III,n-octanol,20 ℃,Not found,120 mg/l
+IV,n-octanol,20 ℃,Not found,170 mg/l
+V,n-octanol,20 ℃,Not found,410 mg/l
+VI,n-octanol,20 ℃,Not found,800 mg/l
+VII,n-octanol,20 ℃,Not found,950 mg/l
+VIII,n-octanol,20 ℃,Not found,1670 mg/l
+IX,n-octanol,20 ℃,Not found,2100 mg/l
+X,n-octanol,20 ℃,Not found,2430 mg/l
+Atrazine,water,20 ℃,Not found,10400 mg/l
+Coronene,water,20 ℃,Not found,14400 mg/l
+DDT,water,20 ℃,Not found,28600-31800 mg/l
+Hexachlorocyclohexane,water,20 ℃,Not found,15000 mg/l
+Hexachlorobenzene,water,20 ℃,Not found,4350 mg/l
+p-Dichlorobenzene,water,20 ℃,Not found,260000 mg/l
+"1,2,4-Trichlorobenzene",water,20 ℃,Not found,Miscible
 XI,water,20 ℃,Not found,0.2-2 mg/l
 XII,water,20 ℃,Not found,0.002-0.02 mg/l
 XIII,water,20 ℃,Not found,2*10^-6-10^-5 mg/l
