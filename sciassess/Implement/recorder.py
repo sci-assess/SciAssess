@@ -26,7 +26,10 @@ class SciRecorder(RecorderBase):
         self.run_id = run_spec.run_id
         self.completion_fns = str(run_spec.completion_fns[0] if isinstance(run_spec.completion_fns, list) else run_spec.completion_fns)
         self.eval = run_spec.eval_name.split('.')[0]
-        self.project_name = f"{self.eval}-{self.completion_fns}"
+        self.project_name = run_spec.run_config['project_name']
+        if len(self.project_name) == 0:
+            self.project_name = f"{self.completion_fns}"
+        self.id = f"{self.eval}"
         self.log_path = \
             (f"{PROJECT_PATH}/SciAssess_library/logs/eval_records/"
              f"{run_spec.run_id}-{self.completion_fns}-{self.eval}.jsonl")
@@ -40,7 +43,7 @@ class SciRecorder(RecorderBase):
             wandb.ensure_configured()
             if not wandb.api.api_key:
                 raise ValueError("Wandb login not detected. Please run 'wandb login'.")
-            wandb.init(project=self.project_name, id=run_spec.run_id, reinit=True)
+            wandb.init(project=self.project_name, id=self.eval, reinit=True)
             wandb.config.completion_fns = self.completion_fns
             wandb.config.run_id = self.run_id
             wandb.config.eval = self.eval

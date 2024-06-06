@@ -49,6 +49,7 @@ def get_parser() -> argparse.ArgumentParser:
         action="append",
         help="Path to the registry",
     )
+    parser.add_argument("--project_name", type=str, default="")
     return parser
 
 
@@ -110,6 +111,7 @@ def run(args: SciEvalArguments, registry: Optional[Registry] = None) -> str:
         "eval_spec": eval_spec,
         "seed": args.seed,
         "command": " ".join(map(shlex.quote, sys.argv)),
+        "project_name": args.project_name
     }
 
     eval_name = eval_spec.key
