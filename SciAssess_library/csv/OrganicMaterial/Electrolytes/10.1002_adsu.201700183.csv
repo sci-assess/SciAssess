@@ -1,9 +1,9 @@
 solute_name,solvent_name,temperature,pressure,solubility
-P13FSI,O2,25 oC,Not found,8.17 × 10^-3 mM
-P13TFSI,O2,25 oC,Not found,11.71 × 10^-3 mM
-P14TFSI,O2,25 oC,Not found,14 × 10^-3 mM    
-BdImTFSI,O2,25 oC,Not found,18.81 × 10^-3 mM
-N1223FSI,O2,25 oC,Not found,7.71 × 10^-3 mM
-PYR14TFSI,O2,25 oC,Not found,13.6 × 10^-3 mM
-DME,O2,25 oC,Not found,8.76 × 10^-3 mM
-DMSO,O2,25 oC,Not found,2.10 × 10^-3 mM
+O2,P13FSI,25 oC,Not found,8.17 × 10^-3 mM
+O2,P13TFSI,25 oC,Not found,11.71 × 10^-3 mM
+O2,P14TFSI,25 oC,Not found,14 × 10^-3 mM    
+O2,BdImTFSI,25 oC,Not found,18.81 × 10^-3 mM
+O2,N1223FSI,25 oC,Not found,7.71 × 10^-3 mM
+O2,PYR14TFSI,25 oC,Not found,13.6 × 10^-3 mM
+O2,DME,25 oC,Not found,8.76 × 10^-3 mM
+O2,DMSO,25 oC,Not found,2.10 × 10^-3 mM
