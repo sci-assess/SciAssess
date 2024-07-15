@@ -6,4 +6,3 @@ biomedicine:
     - disease_entities_recognition
     - gene_disease_function
     - gene_disease_regulation
-    - _medmcqa
