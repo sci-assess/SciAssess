@@ -43,7 +43,7 @@ class SciRecorder(RecorderBase):
             wandb.ensure_configured()
             if not wandb.api.api_key:
                 raise ValueError("Wandb login not detected. Please run 'wandb login'.")
-            wandb.init(project=self.project_name, id=self.eval, reinit=True)
+            wandb.init(project=self.project_name, name=self.eval, reinit=True)
             wandb.config.completion_fns = self.completion_fns
             wandb.config.run_id = self.run_id
             wandb.config.eval = self.eval

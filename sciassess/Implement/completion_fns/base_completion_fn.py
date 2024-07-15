@@ -31,6 +31,8 @@ class BaseCompletionFn(CompletionFn):
     def __call__(self, prompt: Union[str, list[dict]], **kwargs: Any):
         if isinstance(prompt, str):
             messages = [{"role": "user", "content": prompt}]
+        else:
+            messages = prompt
         if "file_name" in kwargs:
             attached_file_content = "\nThe file is as follows:\n\n" + "".join(extract_text(kwargs["file_name"], self.pdf_parser))
             kwargs.pop('file_name')
