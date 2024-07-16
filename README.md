@@ -152,7 +152,7 @@ such as :
 
 ```
 export OPENAI_API_KEY="EMPTY"
-openai_api_base = "http://localhost:8000/v1"
+export OPENAI_API_KEY="http://localhost:8000/v1"
 ```
 
 (How to utilize the vllm to set up an openAI-like server of Qwen2-instruct-7B model? please surf the :https://huggingface.co/Qwen/Qwen2-7B-Instruct)
