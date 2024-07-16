@@ -97,7 +97,20 @@ Install the required dependencies:
 
 ```bash
 pip install -e .
+pip install Levenshtein
+pip install munkres
+pip install rdkit
 ```
+
+login the wandb:
+
+```bash
+wandb login
+```
+
+Additional Considerations:
+
+In some task evaluations, we use models from `sentence-transformers` on Hugging Face. Please ensure that you can connect to Hugging Face. If you are unable to connect, you might consider manually downloading the corresponding models and updating the model import path in `./sciassess/Implement/utils/metrics.py` to reflect the location where you have placed the models.
 
 ## Dataset
 
@@ -129,7 +142,118 @@ Remember to export your OpenAI API key as an environment variable:
 export OPENAI_API_KEY=your_openai_api_key
 ```
 
+
+
+**Here is an example of evaluating a Qwen2-7B-instruct model locally:**
+
+Firstly, utilize the vllm to set up an openAI-like server of Qwen2-7B-instruct modell,and set your OPENAI_API_BASE and OPENAI_API_KEY.
+
+such as :
+
+```
+export OPENAI_API_KEY="EMPTY"
+openai_api_base = "http://localhost:8000/v1"
+```
+
+(How to utilize the vllm to set up an openAI-like server of Qwen2-instruct-7B model? please surf the :https://huggingface.co/Qwen/Qwen2-7B-Instruct)
+
+
+
+Secondly,download the pdfs and put it all to the `./SciAssess/SciAssess_library/pdfs`
+
+
+
+Thirdly, in the `./SciAssess/sciassess/Implement/completion_fns` create a file called "qwen2.py"
+
+and paste the code to the "qwen2.py":
+
+```python
+import logging
+from typing import List,Dict,Any,Union
+from evals.api import CompletionResult
+from .base_completion_fn import BaseCompletionFn
+from openai import OpenAI
+import time
+from sciassess.Implement.completion_fns.utils import call_without_throw
+from .utils import extract_text
+
+openai_api_key="EMPTY"
+openai_api_base = "http://localhost:8000/v1"
+logger = logging.getLogger(__name__)
+
+client= OpenAI(
+    api_key=openai_api_key,
+    base_url=openai_api_base,
+)
+
+class Qwen2CompletionResult(CompletionResult):
+    def __init__(self,response:str) -> None:
+        self.response = response
+
+    def get_completions(self) -> List[str]:
+        return [self.response.strip()] if self.response else ["Unknown"]
+    
+class Qwen2CompletionFn(BaseCompletionFn):
+    def __init__(self,**kwargs):
+        super().__init__(**kwargs)
+        self.model="Qwen2-7B-Instruct"
+
+    def get_completions(self, messages, **kwargs) -> str:
+        chat_response= client.chat.completions.create(
+            model=self.model,
+            messages=messages,
+        )
+        response = chat_response.choices[0].message.content
+        return  Qwen2CompletionResult(response)        
+
+    @call_without_throw
+    def __call__(self, prompt: Union[str, list[dict]], **kwargs: Any):
+        if isinstance(prompt, str):
+            messages = [{"role": "user", "content": prompt}]
+        else:
+            messages = prompt
+        if "file_name" in kwargs:
+            attached_file_content = "\nThe file is as follows:\n\n" + "".join(extract_text(kwargs["file_name"], self.pdf_parser))
+            #wyc-temp-change
+            attached_file_content = attached_file_content[:2048]   
+            kwargs.pop('file_name')
+        else:
+            attached_file_content = ""
+
+        messages[-1]['content'] += attached_file_content
+        return self.get_completions(messages=messages, **kwargs) 
+
+```
+
+
+
+Fourthly,in the `./SciAssess/sciassess/Registry/completion_fns`,create a file called "qwen2.yaml"
+
+and here is the code:
+
+```yaml
+qwen2:
+    class: sciassess.Implement.completion_fns.qwen2:Qwen2CompletionFn
+```
+
+
+
+Finally, in the project root directory :
+
+```bash
+bash runsciassess.sh qwen2
+```
+
+
+
+
+
+
+
+
+
 ## Version Information
+
 **0.9.0** (2024-03-17) Beta version first released
 
 **0.9.1** (2024-03-28) Fix critical bugs. Now the code is executable.
@@ -142,9 +266,13 @@ Remove abstract2title and research_question_extraction due to uncertainty of mod
 
 **1.0.0** (2024-04-08) Official version released
 
+
+
 ## Contributing
 
 We welcome contributions to the SciAssess benchmark. If you have any suggestions or improvements, please feel free to open an issue or create a pull request.
+
+
 
 ## Citation
 
