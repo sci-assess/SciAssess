@@ -10,4 +10,4 @@ scievalset "$MODEL" biomedicine --registry_path "${SCRIPT_DIR}/sciassess/Registr
 scievalset "$MODEL",gpt-4-1106-preview drug_discovery --registry_path "${SCRIPT_DIR}/sciassess/Registry"
 scievalset "$MODEL",gpt-4-1106-preview general_ability --registry_path "${SCRIPT_DIR}/sciassess/Registry"
 scievalset "$MODEL" organic_materials --registry_path "${SCRIPT_DIR}/sciassess/Registry"
-python collect "$MODEL"
+python collect.py "$MODEL"
