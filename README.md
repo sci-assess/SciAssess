@@ -246,6 +246,7 @@ bash runsciassess.sh qwen2
 
 
 
+**And here we also provide a fine-tuning example,please refer to** [finetune-example-config/readme.md]
 
 
 
