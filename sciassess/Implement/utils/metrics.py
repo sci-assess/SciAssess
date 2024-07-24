@@ -15,6 +15,8 @@ def get_edit_distance_score(str1, str2):
     import Levenshtein
     base_score = max(len(str1), len(str2))
     dist = Levenshtein.distance(str1, str2)
+    if base_score == 0:
+        return 0
     return 1- dist / base_score
 
 
