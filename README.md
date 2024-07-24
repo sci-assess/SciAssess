@@ -241,7 +241,7 @@ qwen2:
 Finally, in the project root directory :
 
 ```bash
-bash runsciassess.sh qwen2
+bash run_sciassess.sh qwen2
 ```
 
 
