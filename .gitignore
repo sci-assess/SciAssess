@@ -5,8 +5,7 @@ utils
 __pycache__/
 __pycache__
 */__pycache__
-SciAssess_library/
-SciAssess_library/*
+SciAssess_library/pdfs/*
 SciAssess.egg-info/
 SciAssess.egg-info/*
 wandb/
