@@ -1,5 +1,5 @@
 AlloyName,Composition,Composition,Composition,Composition,Composition,Composition,Composition
 ,Ni,Cr,Mo,Mn,Si,Fe,C
-1,5.788 wt.%,22.887 wt.%,3.195 wt.%,1.617 wt.%,0.452 wt.%,Balanced wt.%,0.011 wt.%
-2,6.378 wt.%,24.945 wt.%,3.678 wt.%,1.004 wt.%,0.350 wt.%,Balanced wt.%,0.019 wt.%
-3,7.405 wt.%,25.172 wt.%,3.531 wt.%,0.596 wt.%,0.398 wt.%,Balanced wt.%,0.017 wt.%
+alloy_1,5.788 wt.%,22.887 wt.%,3.195 wt.%,1.617 wt.%,0.452 wt.%,Balanced wt.%,0.011 wt.%
+alloy_2,6.378 wt.%,24.945 wt.%,3.678 wt.%,1.004 wt.%,0.350 wt.%,Balanced wt.%,0.019 wt.%
+alloy_3,7.405 wt.%,25.172 wt.%,3.531 wt.%,0.596 wt.%,0.398 wt.%,Balanced wt.%,0.017 wt.%

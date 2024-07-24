@@ -1,8 +1,8 @@
 AlloyName,Composition,Composition,Composition,Composition,Composition,Composition,Composition,Composition
 ,Co,Al,W,Ni,Cr,Ta,Mo,Re
-1,8.7 at.%,24.0 at.%,2.5 at.%,Bal.,7.1 at.%,2.5 at.%,0.34 at.%,1.18 at.%
-2,4.6 at.%,42.2 at.%,0.03 at.%,Bal.,2.2 at.%,0.07 at.%,0.05 at.%,0.03 at.%
-3,7.7 at.%,24.2 at.%,1.75 at.%,Bal.,6.1 at.%,1.9 at.%,0.5 at.%,0.84 at.%
-4,5.3 at.%,37.8 at.%,0.06 at.%,Bal.,3.8 at.%,0.5 at.%,0.01 at.%,0.0 at.%
-5,9.8 at.%,13.8 at.%,2.24 at.%,Bal.,7.7 at.%,2.23 at.%,0.28 at.%,1.07 at.%
-6,9.9 at.%,13.8 at.%,2.22 at.%,Bal.,8.3 at.%,2.1 at.%,0.3 at.%,1.0 at.%
+alloy_1,8.7 at.%,24.0 at.%,2.5 at.%,Bal.,7.1 at.%,2.5 at.%,0.34 at.%,1.18 at.%
+alloy_2,4.6 at.%,42.2 at.%,0.03 at.%,Bal.,2.2 at.%,0.07 at.%,0.05 at.%,0.03 at.%
+alloy_3,7.7 at.%,24.2 at.%,1.75 at.%,Bal.,6.1 at.%,1.9 at.%,0.5 at.%,0.84 at.%
+alloy_4,5.3 at.%,37.8 at.%,0.06 at.%,Bal.,3.8 at.%,0.5 at.%,0.01 at.%,0.0 at.%
+alloy_5,9.8 at.%,13.8 at.%,2.24 at.%,Bal.,7.7 at.%,2.23 at.%,0.28 at.%,1.07 at.%
+alloy_6,9.9 at.%,13.8 at.%,2.22 at.%,Bal.,8.3 at.%,2.1 at.%,0.3 at.%,1.0 at.%
