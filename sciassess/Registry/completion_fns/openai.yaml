@@ -1,24 +1,29 @@
 gpt3.5:
   class: sciassess.Implement.completion_fns.openai-azure:OpenAIChatCompletionFnAzure
   args:
-    model: gpt-35-turbo-16k
+      model: gpt-35-turbo-16k
+      api_version: '2023-10-01-preview'
 
 gpt4:
   class: sciassess.Implement.completion_fns.openai-azure:OpenAIChatCompletionFnAzure
   args:
-    model: gpt-4-128k
+      model: gpt-4-128k
+      api_version: '2023-10-01-preview'
 
 gpt4o:
   class: sciassess.Implement.completion_fns.openai-azure:OpenAIChatCompletionFnAzure
   args:
-    model: gpt-4o
+      model: gpt-4o
+      api_version: '2024-03-01-preview'
 
 o1-preview:
   class: sciassess.Implement.completion_fns.o1-azure:O1Azure
   args:
-    model: o1-preview
+      model: o1-preview
+      api_version: '2024-09-01-preview'
 
 o1-mini:
   class: sciassess.Implement.completion_fns.o1-azure:O1Azure
   args:
-    model: o1-mini
+      model: o1-mini
+      api_version: '2024-09-01-preview'

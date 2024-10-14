@@ -15,11 +15,6 @@ from evals.prompt.base import (
     OpenAICreatePrompt,
     Prompt,
 )
-from evals.record import record_sampling
-from evals.utils.api_utils import (
-    openai_chat_completion_create_retrying,
-    openai_completion_create_retrying,
-)
 from evals.completion_fns.openai import OpenAIChatCompletionResult, OpenAICompletionResult
 from .utils import extract_text, ErrorCompletionResult, call_without_throw, cache_to_disk
 from openai import AzureOpenAI
@@ -54,6 +49,7 @@ class OpenAIChatCompletionFnAzure(CompletionFn):
         self,
         model: Optional[str] = None,
         n_ctx: Optional[int] = None,
+        api_version = '2023-10-01-preview',
         pdf_parser: Optional[str] = 'pypdf',
         extra_options: Optional[dict] = {},
         cache_dir = os.path.join(PROJECT_PATH, "SciAssess_library/tmp/pypdf"),
@@ -64,6 +60,7 @@ class OpenAIChatCompletionFnAzure(CompletionFn):
         self.n_ctx = n_ctx
         self.extra_options = extra_options
         self.pdf_parser = pdf_parser
+        self.api_version = api_version
         self.cache_dir = cache_dir
         Path(self.cache_dir).mkdir(parents=True, exist_ok=True)
 
@@ -102,11 +99,10 @@ class OpenAIChatCompletionFnAzure(CompletionFn):
         choose_api = random.choice(self.key_pool)
         api_base = choose_api["api_base"]
         api_key = choose_api['api_key']
-        api_version = "2024-03-01-preview" if self.model.startswith('gpt-4o') else "2023-10-01-preview"
         client = AzureOpenAI(
             azure_endpoint=api_base,
             api_key=api_key,
-            api_version=api_version
+            api_version=self.api_version
         )
         response = client.chat.completions.create(
             model=self.model,
@@ -116,11 +112,4 @@ class OpenAIChatCompletionFnAzure(CompletionFn):
             stream=False
         )
         result = SimpleCompletionResult(response.choices[0].message.content)
-        # result = OpenAIChatCompletionResult(raw_data=response, prompt=openai_create_prompt)
-        # try:
-        #     result.get_completions()[0]
-        # except:
-        #     raise Exception("no response error")
-
-        # record_sampling(prompt=result.prompt, sampled=result.get_completions())
         return result

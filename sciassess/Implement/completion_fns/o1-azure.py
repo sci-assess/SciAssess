@@ -46,6 +46,7 @@ class O1Azure(CompletionFn):
         self,
         model: Optional[str] = None,
         n_ctx: Optional[int] = None,
+        api_version = '2024-09-01-preview',
         pdf_parser: Optional[str] = 'pypdf',
         extra_options: Optional[dict] = {},
         cache_dir = os.path.join(PROJECT_PATH, "SciAssess_library/tmp/pypdf"),
@@ -56,6 +57,7 @@ class O1Azure(CompletionFn):
         self.n_ctx = n_ctx
         self.extra_options = extra_options
         self.pdf_parser = pdf_parser
+        self.api_version = api_version
         self.cache_dir = cache_dir
         Path(self.cache_dir).mkdir(parents=True, exist_ok=True)
 
@@ -100,7 +102,7 @@ class O1Azure(CompletionFn):
         client = AzureOpenAI(
             azure_endpoint=api_base,
             api_key=api_key,
-            api_version="2024-09-01-preview"
+            api_version=self.api_version
         )
         response = client.chat.completions.create(
             model=self.model,
@@ -110,11 +112,4 @@ class O1Azure(CompletionFn):
             stream=False
         )
         result = SimpleCompletionResult(response.choices[0].message.content)
-        # result = OpenAIChatCompletionResult(raw_data=response, prompt=openai_create_prompt)
-        # try:
-        #     result.get_completions()[0]
-        # except:
-        #     raise Exception("no response error")
-
-        # record_sampling(prompt=result.prompt, sampled=result.get_completions())
         return result
