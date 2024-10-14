@@ -1,0 +1,7 @@
+solubility_extraction:
+  id: solubility_extraction.val.csv
+  metrics: [accuracy_value]
+solubility_extraction.val.csv:
+  class: sciassess.Implement.rag_table_extract:TableExtract
+  args:
+    samples_jsonl: CHEM_solubility_extraction/samples.jsonl

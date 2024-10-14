@@ -1,0 +1,4 @@
+moonshot:
+  class: sciassess.Implement.completion_fns.moonshot:MoonshotCompletionFn
+  args:
+    pdf_parser: internal

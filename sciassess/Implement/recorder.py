@@ -31,26 +31,26 @@ class SciRecorder(RecorderBase):
             self.project_name = f"{self.completion_fns}"
         self.id = f"{self.eval}"
         self.log_path = \
-            (f"{PROJECT_PATH}/SciAssess_library/logs/eval_records/"
+            (f"{PROJECT_PATH}/SciAssess_library/logs/eval_records/{self.completion_fns}/"
              f"{run_spec.run_id}-{self.completion_fns}-{self.eval}.jsonl")
         Path(self.log_path).parent.mkdir(parents=True, exist_ok=True)
         self.result_path = \
-            (f"{PROJECT_PATH}/SciAssess_library/logs/eval_results/"
+            (f"{PROJECT_PATH}/SciAssess_library/logs/eval_results/{self.completion_fns}/"
              f"{run_spec.run_id}-{self.completion_fns}-{self.eval}-result.json")
         Path(self.result_path).parent.mkdir(parents=True, exist_ok=True)
         self.count_first_fail = 0
-        try:
-            wandb.ensure_configured()
-            if not wandb.api.api_key:
-                raise ValueError("Wandb login not detected. Please run 'wandb login'.")
-            wandb.init(project=self.project_name, name=self.eval, reinit=True)
-            wandb.config.completion_fns = self.completion_fns
-            wandb.config.run_id = self.run_id
-            wandb.config.eval = self.eval
-            self.results_table = wandb.Table(columns=["expected", "result", "prompt", "metric", "file_name"])
-            self.fail_table = wandb.Table(columns=["traceback", "prompt", "file_name"])
-        except (ValueError, wandb.errors.UsageError) as e:
-            logger.info("wandb not be used. Please login wandb first.")
+        # try:
+        #     wandb.ensure_configured()
+        #     if not wandb.api.api_key:
+        #         raise ValueError("Wandb login not detected. Please run 'wandb login'.")
+        #     wandb.init(project=self.project_name, name=self.eval, reinit=True)
+        #     wandb.config.completion_fns = self.completion_fns
+        #     wandb.config.run_id = self.run_id
+        #     wandb.config.eval = self.eval
+        #     self.results_table = wandb.Table(columns=["expected", "result", "prompt", "metric", "file_name"])
+        #     self.fail_table = wandb.Table(columns=["traceback", "prompt", "file_name"])
+        # except (ValueError, wandb.errors.UsageError) as e:
+        #     logger.info("wandb not be used. Please login wandb first.")
 
     def record_error(self,
                      traceback: str,
@@ -66,7 +66,8 @@ class SciRecorder(RecorderBase):
         with global_lock:
             with open(self.log_path, 'a+') as f:
                 f.write(json.dumps(sample_record) + '\n')
-            self.fail_table.add_data(traceback, prompt, file_name)
+            # wandb
+            # self.fail_table.add_data(traceback, prompt, file_name)
         if isinstance(zero_metric, bool):
             super().record_match(
                 correct=False, expected='None', picked='None', prompt=prompt)
@@ -99,7 +100,7 @@ class SciRecorder(RecorderBase):
                 f.write(json.dumps(sample_record) + '\n')
 
             # wandb
-            self.results_table.add_data(str(expected), str(result), prompt, metric, kwargs.get('file_name', 'None'))
+            # self.results_table.add_data(str(expected), str(result), prompt, metric, kwargs.get('file_name', 'None'))
         if isinstance(metric, bool):
             super().record_match(
                 correct=metric, expected=str(expected), picked=str(result), prompt=prompt)
@@ -110,13 +111,13 @@ class SciRecorder(RecorderBase):
 
     def record_final_report(self, final_report):
         final_report['num_samples'] = self.count
-        wandb.log({'samples': self.results_table})
-        wandb.log({'failed_samples': self.fail_table})
-        wandb.log({'final_result': final_report})
+        # wandb.log({'samples': self.results_table})
+        # wandb.log({'failed_samples': self.fail_table})
+        # wandb.log({'final_result': final_report})
         with open(self.result_path, 'w') as f:
             json.dump(final_report, f)
         super().record_final_report(final_report)
-        wandb.finish()
+        # wandb.finish()
 
 
 

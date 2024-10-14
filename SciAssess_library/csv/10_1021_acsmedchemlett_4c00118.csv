@@ -1,8 +1,0 @@
-﻿Compound,SMILES,Affinities
-,,rhACC1 (IC50)
-14,CCOc4cc(C(=O)N1CCC3(CC1)CC(=O)c2nc(C(C)(C)C)sc2C3)cc5c(C)nn(C)c45,2.2
-22,CC(C)(C)c5nc4C(=O)CC3(CCN(C(=O)c2cccc(c1ccc(C(N)=O)cc1)n2)CC3)Cc4s5,0.9
-34,Cc5cc(C(=O)N1CCC3(CC1)CC(=O)c2nc(C(C)(C)C)sc2C3)c4[nH]ncc4c5Cl,1.3
-37,COc5cc(C(=O)N1CCC3(CC1)CC(=O)c2nc(C(C)(C)C)sc2C3)c4[nH]ccc4c5Cl,1.3
-40,CNc5ccc4c(OC)cc(C(=O)N1CCC3(CC1)CC(=O)c2nc(C(C)(C)C)sc2C3)cc4n5,1.5
-97,CNc2nc1c(C)cccc1cc2C(=O)N3CCC5(CC3)CC(=O)c4nc(C(C)(C)C)sc4C5,1.8

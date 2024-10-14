@@ -1,2 +1,0 @@
-qwen2:
-    class: sciassess.Implement.completion_fns.qwen2:Qwen2CompletionFn

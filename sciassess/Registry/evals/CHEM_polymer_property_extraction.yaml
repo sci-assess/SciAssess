@@ -1,0 +1,7 @@
+polymer_property_extraction:
+  id: polymer_property_extraction.val.csv
+  metrics: [accuracy_value]
+polymer_property_extraction.val.csv:
+  class: sciassess.Implement.rag_table_extract:TableExtract
+  args:
+    samples_jsonl: CHEM_polymer_property_extraction/samples.jsonl

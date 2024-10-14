@@ -1,0 +1,11 @@
+gene_disease_function:
+  id: gene_disease_function.test.v1
+  metrics: [f1_score]
+  description: Test the model's ability to retrieve GDAS recognition from literature. 
+
+gene_disease_function.test.v1:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: BIO_gene_disease_function/samples.jsonl
+    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_triplets
+    func_comparison: sciassess.Implement.utils.metrics:match_bio_entities

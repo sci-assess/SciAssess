@@ -1,0 +1,8 @@
+medicine:
+  evals:
+    - mmlu_pro_health
+    - affinity_extraction
+    - drug_chart_qa
+    - tag2mol
+    - markush2mol
+    - mol_in_document

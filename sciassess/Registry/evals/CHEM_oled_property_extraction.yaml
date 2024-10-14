@@ -1,0 +1,8 @@
+oled_property_extraction:
+  id: oled_property_extraction.val.csv
+  metrics: [accuracy_value]
+
+oled_property_extraction.val.csv:
+  class: sciassess.Implement.rag_table_extract:TableExtract
+  args:
+    samples_jsonl: CHEM_oled_property_extraction/samples.jsonl

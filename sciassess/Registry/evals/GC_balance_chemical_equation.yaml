@@ -1,9 +1,0 @@
-balance_chemical_equation:
-  id: balance_chemical_equation.dev.v1
-  metrics: [accuracy]
-
-balance_chemical_equation.dev.v1:
-  class: sciassess.Implement.match_with_func:MatchWithFunc
-  args:
-    samples_jsonl: GC_balance_chemical_equation/samples.jsonl
-    func_comparison: sciassess.Implement.utils.metrics:compare_without_space

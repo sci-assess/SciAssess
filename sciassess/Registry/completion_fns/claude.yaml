@@ -1,0 +1,2 @@
+claude3:
+  class: sciassess.Implement.completion_fns.claude:AwsClaude

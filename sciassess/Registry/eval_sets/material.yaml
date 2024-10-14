@@ -1,0 +1,8 @@
+material:
+  evals:
+    - material_qa
+    - alloy_chart_qa
+    - composition_extraction
+    - temperature_qa
+    - sample_differentiation
+    - treatment_sequence

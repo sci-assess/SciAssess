@@ -10,12 +10,11 @@ dependencies = [
     "gensim",
     "google-generativeai",
     "sentence_transformers",
-    "wandb"
+    "wandb",
+    "Levenshtein",
+    "munkres",
+    "rdkit"
 ]
-
-[project.urls]
-repository = "https://github.com/sci-assess/SciAssess"
-
 
 [project.scripts]
 scieval = "sciassess.Implement.cli.scieval:main"

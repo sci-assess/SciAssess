@@ -1,8 +1,0 @@
-﻿Compound,SMILES,Affinities
-,,PKal (IC50)
-45,c1(Cl)ccc2NC(=O)O[C@@]3(CN(C(=O)C4=CN(C(CC)c5cc6NC=Nc6c(C)c5)N=C4)CCC3)c2c1F,0.8
-98,c1(Cl)ccc2NC(=O)O[C@@]3(CN(C(=O)C4NC(C(CC(F)(F)F)c5ccccc5)=NN=4)CCC3)c2c1F,1.3
-106,c1(Cl)ccc2NC(=O)O[C@@]3(CN(C(=O)C4NC(C(C5CC5)c5ccccc5)=NN=4)CCC3)c2c1F,1.6
-109,c1(Cl)ccc2NC(=O)O[C@@]3(CN(C(=O)C4NC([C@@H](CC)c5cc6NC=Nc6c(C)c5)=NN=4)CCC3)c2c1F,1.3
-110,c1(Cl)ccc2NC(=O)O[C@@]3(CN(C(=O)C4=NC([C@H](CC)c5cc6NC=Nc6c(C)c5)=NN4)CCC3)c2c1F,1
-112,c1(Cl)ccc2NC(=O)O[C@@]3(CN(C(=O)C4=NC(C(CC)c5ccc6COCc6c5)=NN4)CCC3)c2c1F,1

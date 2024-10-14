@@ -22,7 +22,7 @@ completion_fn = args.completion_fn
 
 # get eval results file
 # TODO: The most recent result for obtaining the specified eval and completion should be modified to search directly by run_id
-eval_result_dir = f"{PROJECT_PATH}/SciAssess_library/logs/eval_results"
+eval_result_dir = f"{PROJECT_PATH}/SciAssess_library/logs/eval_results/{completion_fn}"
 eval_results_filenames = [os.path.join(eval_result_dir, file) for file in os.listdir(eval_result_dir)]
 eval_results_filenames = sorted(eval_results_filenames, key=os.path.getctime)
 
@@ -78,7 +78,7 @@ def highlight(str: str) -> str:
 print(highlight('-------------------------------------------------'))
 print(highlight(f"Evaluation results for {completion_fn}"))
 print()
-for category, experiments in eval_results.items():
+for category, experiments in sorted(eval_results.items()):
     print(highlight(f"{category.replace('_', ' ').title()}:"))
     for experiment, result in experiments.items():
         if experiment.startswith('_'):

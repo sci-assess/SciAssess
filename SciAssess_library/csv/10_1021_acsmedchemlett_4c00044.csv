@@ -1,8 +1,0 @@
-﻿Compound,SMILES,Affinities
-,,NIK (IC50)
-19,CN5CCC(O)(c4cn(c3cccc(c2nc(C(N)=O)c1ccccc1n2)c3)cn4)C5=O,＜100
-32,Cc5nc(N)c4nc(c3cccc(c2cnc(C1(O)CCN(C)C1=O)s2)c3)ccc4n5,＜100
-85,CN5CCC(O)(c4cc(c3cccc(c2cc(C1CC1)nc(C(N)=O)n2)c3)no4)C5=O,＜100
-100,CN5CCC(O)(c4cc(c3cccc(c2cc(N1CC(F)(F)C1)cc(C(N)=O)n2)c3)no4)C5=O,＜100
-207,CN4CCC(O)(c3cc(c2cccc(c1ccc(C(N)=O)o1)c2)no3)C4=O,＜100
-215,CN4CCC(O)(c3cc(c2cccc(c1nc(C(N)=O)c(Br)s1)c2)no3)C4=O,＜100

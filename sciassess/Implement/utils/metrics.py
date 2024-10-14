@@ -15,8 +15,6 @@ def get_edit_distance_score(str1, str2):
     import Levenshtein
     base_score = max(len(str1), len(str2))
     dist = Levenshtein.distance(str1, str2)
-    if base_score == 0:
-        return 0
     return 1- dist / base_score
 
 
@@ -123,17 +121,25 @@ def fuzzy_compare_value(a: str, b: str, metric="EditDistance", **kwargs) -> Unio
 
 def compare_multi_choice(ans, sampled, **kwargs) -> bool:
     options = kwargs['option']
-    def split_option(option):
+    def split_option(option, letters=None):
         if ')' not in option:
             if len(option) < 3:
                 return option.strip().replace('(', '').lower(), option.strip()
             else:
                 # 模型可能输出了许多无关内容，取最后一个字母作为选项
-                letters = [c for c in option.lower() if c.isalpha() and c in {'a', 'b', 'c', 'd'}]
+                if letters is None:
+                    letters = [c for c in option.lower() if c.isalpha() and c in {'a', 'b', 'c', 'd'}]
+                else:
+                    letters = [c for c in option.lower() if c.isalpha() and c in letters]
                 letter = letters[-1] if len(letters) > 0 else ''
                 return letter, option.strip()
         else:
-            return option.split(')')[0].strip().replace('(', '').lower()[-1], ')'.join(option.split(')')[1:]).strip()
+            try:
+                return option.split(')')[0].strip().replace('(', '').lower()[-1], ')'.join(option.split(')')[1:]).strip()
+            except:
+                return option.strip(), option.strip()
+    if sampled == "Unknown":
+        return False
 
     letters = []
     contents = []
@@ -142,7 +148,7 @@ def compare_multi_choice(ans, sampled, **kwargs) -> bool:
         letters.append(letter)
         contents.append(content)
     def match_option(ans):
-        l, c = split_option(ans)
+        l, c = split_option(ans, letters)
         for letter in letters:
             if letter in l:
                 return letter

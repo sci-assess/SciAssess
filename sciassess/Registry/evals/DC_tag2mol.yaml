@@ -1,9 +1,0 @@
-tag2mol:
-  id: tag2mol.dev.v0
-  metrics: [accuracy]
-
-tag2mol.dev.v0:
-  class: sciassess.Implement.match_with_func:MatchWithFunc
-  args:
-    samples_jsonl: DC_tag2mol/samples.jsonl
-    func_comparison: sciassess.Implement.utils.metrics:compare_molecule_similarity

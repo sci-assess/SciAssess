@@ -1,8 +1,0 @@
-﻿Compound,SMILES,Affinities
-,,hAHR (EC50)
-1,C[n]1c2c(cccc2)cc(C(Nc2ccc(OC)cc2)=O)c1=O,0.304
-4,C[n]1c2c(cccc2)cc(C(Nc2ccc(F)cc2)=O)c1=O,0.214
-5,C[n]1c2c(cccc2)cc(C(Nc2ccc(C)cc2)=O)c1=O,0.0971
-18,C[n]1c2c(ccc[n]2)cc(C(Nc2ccc(F)cc2)=O)c1=O,0.468
-22,C[n]1c2c(cccc2)cc(C(Nc2[n]cc(F)cc2)=O)c1=O,0.389
-30,C1Cc2c3[n]1c(c(cc3ccc2)C(Nc1ccc(F)cc1)=O)=O,0.511

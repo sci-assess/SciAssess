@@ -1,0 +1,9 @@
+reaction_mechanism_qa:
+  id: reaction_mechanism_qa.dev.v0
+  metrics: [accuracy]
+
+reaction_mechanism_qa.dev.v0:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: CHEM_reaction_mechanism_qa/samples.jsonl
+    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice

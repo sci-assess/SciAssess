@@ -1,5 +1,0 @@
-solute_name,solvent_name,temperature,pressure,solubility
-H2,Methanol,314.4-476.6 °C,4.49-10.98 MPa,0.0102-0.0525 mol%
-H2,Ethanol,299.9-476.5 °C,3.70-9.03 MPa,0.0132-0.0704 mol%
-H2,1-Propanol,299.9-513.6 °C,3.64-10.19 MPa,0.0111-0.1052 mol%
-H2,1-Butanol,295.3-524.9 °C,3.91-8.82 MPa,0.0137-0.1064 mol%

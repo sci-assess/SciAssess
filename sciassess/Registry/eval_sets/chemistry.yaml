@@ -1,0 +1,11 @@
+chemistry:
+  evals:
+    - mmlu_pro_chemistry
+    - electrolyte_table_qa
+    - oled_property_extraction
+    - polymer_chart_qa
+    - polymer_composition_qa
+    - polymer_property_extraction
+    - solubility_extraction
+    - reactant_qa
+    - reaction_mechanism_qa

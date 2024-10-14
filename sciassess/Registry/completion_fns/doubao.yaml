@@ -1,0 +1,2 @@
+doubao:
+  class: sciassess.Implement.completion_fns.doubao:DoubaoCompletionFn
