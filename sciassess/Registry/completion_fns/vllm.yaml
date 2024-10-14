@@ -1,0 +1,65 @@
+Qwen2.5-72B-Instruct:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: 8000
+      max_len: 131072
+
+Llama-3.1-70B-Instruct:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: 8000
+      max_len: 131072
+
+Mixtral-8x22B-Instruct-v0.1:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: 8000
+      max_len: 65536
+
+Mistral-7B-Instruct-v0.3:
+  class: sciassess.Implement.completion_fns.mistral:MistralCompletionFn
+  args:
+      port: 8002
+      max_len: 32768
+
+Llama-3.1-8B-Instruct:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: [8000,8001,8002,8003,8004,8005,8006,8007]
+      max_len: 131072
+
+Llama-3.2-90B-Vision-Instruct:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: 8000
+      max_len: 32768
+
+Qwen2.5-14B-Instruct:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: 8000
+      max_len: 131072
+
+Qwen2.5-7B-Instruct:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: 8001
+      max_len: 131072
+
+scitulu-7b:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: 8002
+      max_len: 
+
+SciLitLLM-7B:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: [8000,8001,8002]
+      max_len: 131072
+
+SciLitLLM-14B:
+  class: sciassess.Implement.completion_fns.vllm:VllmCompletionFn
+  args:
+      port: 8002
+      max_len: 131072

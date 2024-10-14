@@ -1,0 +1,9 @@
+mmlu_pro_biology:
+  id: mmlu_pro_biology.val.v0
+  metrics: [accuracy]
+
+mmlu_pro_biology.val.v0:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: BIO_mmlu_pro_biology/samples.jsonl
+    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice

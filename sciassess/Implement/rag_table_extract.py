@@ -1,5 +1,5 @@
 from typing import Optional
-
+import os
 import numpy as np
 from evals.api import CompletionFn
 from evals.record import RecorderBase
@@ -7,7 +7,7 @@ from evals.record import RecorderBase
 from sciassess.Implement.match_with_func import MatchWithFunc
 from sciassess.Implement.utils.metrics import tableMatching
 from sciassess.Implement.utils.postprocess import extract_table
-from sciassess.Implement.utils.storage import update_dataset_files
+from sciassess.Implement.utils.storage import update_dataset_files, prepare_cot
 
 
 class TableExtract(MatchWithFunc):
@@ -32,11 +32,23 @@ class TableExtract(MatchWithFunc):
 
     def run(self, recorder: RecorderBase):
         raw_samples = self.get_samples()
+        
+        # cot
+        cot_path = os.path.join(os.path.dirname(self.samples_jsonl), 'samples_cot.jsonl')
+        try:
+            self.samples_jsonl = cot_path
+            cot_samples = self.get_samples()
+            raw_samples = prepare_cot(raw_samples, cot_samples)
+        except:
+            pass
+
         samples = update_dataset_files(raw_samples)
+           
         self.recorder = recorder
         for sample in samples:
             sample["compare_fields"] = [field if type(field) == str else tuple(field) for field in sample["compare_fields"]]
-            sample["input"] = self.instructions
+            if "input" not in sample:
+                sample["input"] = self.instructions
             if "index" not in sample:
                 sample["index"] = ("Compound", "")
 

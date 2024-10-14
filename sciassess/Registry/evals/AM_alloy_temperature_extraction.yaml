@@ -1,9 +1,0 @@
-alloy_temperature_extraction:
-  id: alloy_temperature_extraction.dev.v0
-  metrics: [accuracy]
-
-alloy_temperature_extraction.dev.v0:
-  class: sciassess.Implement.match_with_func:MatchWithFunc
-  args:
-    samples_jsonl: AM_alloy_temperature_extraction/samples.jsonl
-    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice

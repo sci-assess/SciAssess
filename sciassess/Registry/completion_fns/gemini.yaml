@@ -1,0 +1,2 @@
+gemini:
+  class: sciassess.Implement.completion_fns.gemini:GeminiCompletionFn

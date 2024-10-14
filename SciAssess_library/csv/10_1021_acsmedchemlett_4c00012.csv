@@ -1,8 +1,0 @@
-﻿Compound,SMILES,Affinities
-,,RFMS1 (IC50)
-150,Cn7c(c3cc2cccc(OCCn1cncn1)c2n3CC4CC4)nc6cc5C(=O)N(CC(N)CF)CCc5cc67,≤10
-186,Cn7c(c3cc2cccc(OCCn1cnnn1)c2n3CC4CC4)nc6cc5C(=O)N(CC(N)CF)CCc5cc67,≤10
-198,Cn7c(c3cc2cccc(OCCn1ccnc1)c2n3CC4CC4)nc6cc5C(=O)N(CC(N)CF)CCc5cc67,≤10
-201,COC(=O)N(C)CCOc5cccc6cc(c3nc2cc1C(=O)N(CC(N)CF)CCc1cc2n3C)n(CC4CC4)c56,≤10
-204,Cn7c(c3cc2cccc(OCCc1cnoc1)c2n3CC4CC4)nc6cc5C(=O)N(CC(N)CF)CCc5cc67,≤10
-206,Cn7c(c3cc2cccc(OCC1CNC(=O)O1)c2n3CC4CC4)nc6cc5C(=O)N(CC(N)CF)CCc5cc67,≤10

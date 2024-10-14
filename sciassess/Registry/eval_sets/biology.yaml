@@ -1,0 +1,8 @@
+biology:
+  evals:
+    - mmlu_pro_biology
+    - biology_chart_qa
+    - chemical_entities_recognition
+    - compound_disease_recognition
+    - disease_entities_recognition
+    - gene_disease_function

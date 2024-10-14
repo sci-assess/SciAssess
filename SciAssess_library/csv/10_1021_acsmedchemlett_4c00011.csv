@@ -1,8 +1,0 @@
-﻿Compound,SMILES,Affinities
-,,RIPK1 (EC50)
-1-5,C12(C#N)CC(n3nc4n(c3=O)[C@H](c3cc(F)cc(F)c3)CC4)(C1)C2,14.8
-1-51,C12(CC(C1)([n]1c(=O)[n]3[C@@H](CCc3n1)c1cc(F)c(C)c(F)c1)C2)C#N,16.1
-1-56,C12(F)CC([n]3nc4[n]([C@H](c5cc(F)c(C)c(F)c5)CC4)c3=O)(C1)C2,15.75
-1-75,C12(CC(C1)([n]1c(=O)[n]3[C@@H](CCc3n1)c1cc(F)c(Cl)cc1)C2)F,17.1
-1-77,C12(F)CC([n]3nc4[n]([C@H](c5cc(F)c(Cl)c(F)c5)CC4)c3=O)(C1)C2,16.7
-4-9,C12(CC(C1)([n]1c(=O)[n]3[C@@H](CCc3n1)c1cc(F)cc(C)c1)C2)F,17

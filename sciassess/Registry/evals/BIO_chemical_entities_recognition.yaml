@@ -1,0 +1,11 @@
+chemical_entities_recognition:
+  id: chemical_entities_recognition.test.v1
+  metrics: [f1_score]
+  description: Test the model's ability to retrieve chemical entities recognition from literature. 
+  
+chemical_entities_recognition.test.v1:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: BIO_chemical_entities_recognition/samples.jsonl
+    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_entities
+    func_comparison: sciassess.Implement.utils.metrics:match_bio_entities

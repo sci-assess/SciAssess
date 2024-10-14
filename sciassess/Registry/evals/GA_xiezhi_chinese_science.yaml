@@ -1,9 +1,0 @@
-xiezhi_chinese_science:
-  id: xiezhi_chinese_science.val.v0
-  metrics: [accuracy]
-
-xiezhi_chinese_science.val.v0:
-  class: sciassess.Implement.match_with_func:MatchWithFunc
-  args:
-    samples_jsonl: GA_xiezhi_chinese_science/samples.jsonl
-    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice

@@ -1,0 +1,9 @@
+affinity_extraction:
+  id: affinity_extraction.val.csv
+  metrics: [accuracy_value]
+
+
+affinity_extraction.val.csv:
+  class: sciassess.Implement.rag_table_extract:TableExtract
+  args:
+    samples_jsonl: MED_affinity_extraction/samples.jsonl

@@ -82,10 +82,10 @@ def prepare_few_shot(raw_samples, n_shot_samples):
         n_shot_text = "\nHere is input/output examples:\n"
         for example in random.choices(examples, k=n_shot):
             n_shot_text += "<input>\n"
-            n_shot_text += example['input'] + '\n'
+            n_shot_text += str(example['input']) + '\n'
             n_shot_text += "<input>\n"
             n_shot_text += "<output>\n"
-            n_shot_text += example['output'] + '\n'
+            n_shot_text += str(example['output']) + '\n'
             n_shot_text += "<output>\n"
             n_shot_text += '\n'
 
@@ -95,4 +95,11 @@ def prepare_few_shot(raw_samples, n_shot_samples):
             sample['input'][0]['content'] = sample['input'][0]['content'] + n_shot_text
 
     return raw_samples
+
+
+def prepare_cot(raw_samples, cot_samples):
+    use_cot = int(os.environ.get('USE_COT', 0))
+    if use_cot == 0:
+        return raw_samples
+    return cot_samples
 

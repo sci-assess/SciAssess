@@ -1,9 +1,0 @@
-drug_discovery:
-  evals:
-    - affinity_extraction
-    - tag2mol
-    - is_mol_covered
-    - markush2mol
-    - targets_extraction
-    - reaction_qa
-    - drug_chart_qa

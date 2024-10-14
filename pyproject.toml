@@ -10,7 +10,10 @@ dependencies = [
     "gensim",
     "google-generativeai",
     "sentence_transformers",
-    "wandb"
+    "wandb",
+    "Levenshtein",
+    "munkres",
+    "rdkit"
 ]
 
 [project.urls]

@@ -1,7 +1,7 @@
 from evals.api import CompletionFn, CompletionResult
 from sciassess.Implement.completion_fns.utils import call_without_throw
 from typing import Any, Optional, Union
-from .utils import extract_text
+from .utils import load_from_cache, get_file_content
 import logging
 from typing import List, Dict
 logger = logging.getLogger(__name__)
@@ -11,7 +11,12 @@ class SimpleCompletionResult(CompletionResult):
         self.response = response
 
     def get_completions(self) -> list[str]:
-        return [self.response.strip()] if self.response else ["Unknown"]
+        if not self.response:
+            return ["Unknown"]
+        self.response = self.response.strip()
+        if "Answer:" in self.response:
+            self.response = self.response.split("Answer:")[1].strip()
+        return [self.response]
 
 class BaseCompletionFn(CompletionFn):
     def __init__(
@@ -33,14 +38,18 @@ class BaseCompletionFn(CompletionFn):
             messages = [{"role": "user", "content": prompt}]
         else:
             messages = prompt
-        if "file_name" in kwargs:
-            attached_file_content = "\nThe file is as follows:\n\n" + "".join(extract_text(kwargs["file_name"], self.pdf_parser))
-            kwargs.pop('file_name')
-        else:
-            attached_file_content = ""
-        messages[-1]['content'] += attached_file_content
-        return self.get_completions(messages=messages, **kwargs)
 
+        attached_file_content = ""
+        if "file_name" in kwargs and self.pdf_parser == 'pypdf':
+            pdf_path = kwargs['file_name']
+            attached_file_content = load_from_cache(self.cache_dir, pdf_path)
+            if len(attached_file_content) == 0:
+                attached_file_content = get_file_content(self.cache_dir, pdf_path)
+            attached_file_content = "\nThe whole content of this patent is as follow:\n```\n" + attached_file_content + "\n```\n"
+        
+        messages[-1]['content'] += attached_file_content
+        result = SimpleCompletionResult(self.get_completions(messages, **kwargs))
+        return result
 
     def get_completions(self, messages: List[Dict], **kwargs: Any) -> str:
         raise NotImplementedError

@@ -1,6 +1,0 @@
-solute_name,solvent_name,temperature,pressure,solubility
-KF,water,320 K,1 bar,513 mol/kg
-KF,water,298 K,1 bar,50.4 mol/kg
-KF,water,260 K,1 bar,49.5 mol/kg
-KF,water,230 K,1 bar,48.9 mol/kg
-NaCl,water,298 K,1 bar,4.87 mol/kg

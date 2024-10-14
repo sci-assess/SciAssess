@@ -1,9 +1,0 @@
-is_mol_covered:
-  id: is_mol_covered.dev.v0
-  metrics: [accuracy]
-
-is_mol_covered.dev.v0:
-  class: sciassess.Implement.match_with_func:MatchWithFunc
-  args:
-    samples_jsonl: DC_is_mol_covered/samples.jsonl
-    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_yes_or_no

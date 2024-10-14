@@ -1,9 +1,0 @@
-solute_name,solvent_name,temperature,pressure,solubility
-KBr,water,25 °C,Not found,40.70 w%
-LiCl,water,25 °C,Not found,44.89 w%
-NaBr,water,25 °C,Not found,48.53 w%
-KI,water,25 °C,Not found,59.84 w%
-KBr,1-butanol,25 °C,Not found,0.017 w%
-LiCl,1-butanol,25 °C,Not found,11.36 w%
-NaBr,1-butanol,25 °C,Not found,0.33 w%
-KI,1-butanol,25 °C,Not found,0.41 w%

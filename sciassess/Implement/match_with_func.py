@@ -1,6 +1,6 @@
 from typing import Any, Optional
 
-from sciassess.Implement.utils.storage import update_dataset_files, prepare_few_shot
+from sciassess.Implement.utils.storage import update_dataset_files, prepare_few_shot, prepare_cot
 from sciassess.Implement.completion_fns.utils import ErrorCompletionResult
 import evals
 import evals.metrics
@@ -72,13 +72,20 @@ class MatchWithFunc(evals.Eval):
             temperature=0.0,
             **{k: v for k, v in sample.items() if k.startswith("file")}
         )
+        ideal = sample["ideal"][0] if isinstance(sample["ideal"], list) else sample["ideal"]
+        if len(result.get_completions()) == 0:
+            self.recorder.record_error(
+                traceback="No completions returned",
+                prompt=sample["input"],
+                file_name=sample.get('file_name', None),
+                zero_metric=self.func_comparison(ideal, "", **sample) if self.func_comparison else False
+            )
+            return
         sampled = result.get_completions()[0].strip()
         is_fail = isinstance(result, ErrorCompletionResult)
 
         if hasattr(result, "extras") and "extracted_answer" in result.extras:
             sampled = result.extras["extracted_answer"].rstrip(".")
-
-        ideal = sample["ideal"][0] if isinstance(sample["ideal"], list) else sample["ideal"]
         if is_fail:
             metric = self.func_comparison(ideal, "", **sample) if self.func_comparison else False
             self.recorder.record_error(
@@ -124,14 +131,24 @@ class MatchWithFunc(evals.Eval):
 
     def run(self, recorder):
         raw_samples = self.get_samples()
-        n_shot_path = os.path.join(os.path.dirname(self.samples_jsonl), 'n_shot.jsonl')
+        # cot
+        cot_path = os.path.join(os.path.dirname(self.samples_jsonl), 'samples_cot.jsonl')
+        try:
+            self.samples_jsonl = cot_path
+            cot_samples = self.get_samples()
+            raw_samples = prepare_cot(raw_samples, cot_samples)
+        except:
+            pass
+
         # few_shot
+        n_shot_path = os.path.join(os.path.dirname(self.samples_jsonl), 'n_shot.jsonl')
         try:
             self.samples_jsonl = n_shot_path
             n_shot_samples = self.get_samples()
             raw_samples = prepare_few_shot(raw_samples, n_shot_samples)
         except:
             pass
+
         samples = update_dataset_files(raw_samples)
         for sample in samples:
             if "input" not in sample:

@@ -1,0 +1,24 @@
+gpt3.5:
+  class: sciassess.Implement.completion_fns.openai-azure:OpenAIChatCompletionFnAzure
+  args:
+      model: gpt-35-turbo-16k
+
+gpt4:
+  class: sciassess.Implement.completion_fns.openai-azure:OpenAIChatCompletionFnAzure
+  args:
+      model: gpt-4-128k
+
+gpt4o:
+  class: sciassess.Implement.completion_fns.openai-azure:OpenAIChatCompletionFnAzure
+  args:
+      model: gpt-4o
+
+o1-preview:
+  class: sciassess.Implement.completion_fns.o1-azure:O1Azure
+  args:
+      model: o1-preview
+
+o1-mini:
+  class: sciassess.Implement.completion_fns.o1-azure:O1Azure
+  args:
+      model: o1-mini

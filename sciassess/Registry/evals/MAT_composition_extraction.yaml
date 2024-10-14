@@ -1,0 +1,8 @@
+composition_extraction:
+  id: composition_extraction.dev.v0
+  metrics: [accuracy_value]
+
+composition_extraction.dev.v0:
+  class: sciassess.Implement.rag_table_extract:TableExtract
+  args:
+    samples_jsonl: MAT_composition_extraction/samples.jsonl

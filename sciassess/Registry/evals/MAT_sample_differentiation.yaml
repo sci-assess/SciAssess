@@ -1,0 +1,9 @@
+sample_differentiation:
+  id: sample_differentiation.dev.v0
+  metrics: [accuracy]
+
+sample_differentiation.dev.v0:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: MAT_sample_differentiation/samples.jsonl
+    func_comparison: sciassess.Implement.utils.metrics:compare_multi_choice

@@ -1,0 +1,9 @@
+mol_in_document:
+  id: mol_in_document.dev.v0
+  metrics: [accuracy]
+
+mol_in_document.dev.v0:
+  class: sciassess.Implement.match_with_func:MatchWithFunc
+  args:
+    samples_jsonl: MED_mol_in_document/samples.jsonl
+    func_postprocess_answer: sciassess.Implement.utils.postprocess:extract_yes_or_no
