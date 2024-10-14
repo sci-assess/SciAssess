@@ -25,7 +25,7 @@ from .utils import load_from_cache, get_file_content
 
 
 key_o1 = [
-    {"api_base": "<api_base>", "api_key": "<api_key>", },
+    {"api_base": "<api_base>", "api_key": "<api_key>", "api_version": '<api_version>'},
 ]
 
 class SimpleCompletionResult(CompletionResult):
@@ -46,7 +46,6 @@ class O1Azure(CompletionFn):
         self,
         model: Optional[str] = None,
         n_ctx: Optional[int] = None,
-        api_version = '2024-09-01-preview',
         pdf_parser: Optional[str] = 'pypdf',
         extra_options: Optional[dict] = {},
         cache_dir = os.path.join(PROJECT_PATH, "SciAssess_library/tmp/pypdf"),
@@ -57,7 +56,6 @@ class O1Azure(CompletionFn):
         self.n_ctx = n_ctx
         self.extra_options = extra_options
         self.pdf_parser = pdf_parser
-        self.api_version = api_version
         self.cache_dir = cache_dir
         Path(self.cache_dir).mkdir(parents=True, exist_ok=True)
 
@@ -98,11 +96,12 @@ class O1Azure(CompletionFn):
         choose_api = random.choice(self.key_pool)
         api_base = choose_api["api_base"]
         api_key = choose_api['api_key']
+        api_version = choose_api['api_version']
         
         client = AzureOpenAI(
             azure_endpoint=api_base,
             api_key=api_key,
-            api_version=self.api_version
+            api_version=api_version
         )
         response = client.chat.completions.create(
             model=self.model,
