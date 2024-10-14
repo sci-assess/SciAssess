@@ -16,6 +16,10 @@ dependencies = [
     "rdkit"
 ]
 
+[project.urls]
+repository = "https://github.com/sci-assess/SciAssess"
+
+
 [project.scripts]
 scieval = "sciassess.Implement.cli.scieval:main"
 scievalset = "sciassess.Implement.cli.scievalset:main"
